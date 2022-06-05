@@ -11,7 +11,11 @@ namespace TPI_Diagramador
         private Point point; //Para obtener el centro del elemento
         private bool focus; //Para saber si esta seleccionado el elemento
         private Color colorRecuadro;
+        private string nombreFigura;
+        private string colorFigura;
 
+        public string NombreFigura { get; set; }
+        public string ColorFigura { get; set; }
         public bool Focus { get; set; }
         public bool ColorRecuadroocus { get; set; } // para modificar el color del recuadro cuando esta seleccionado
         public DiagramImg()

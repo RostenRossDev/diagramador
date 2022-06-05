@@ -41,14 +41,14 @@
             this.agrandarBtn = new System.Windows.Forms.Button();
             this.guardarBtn = new System.Windows.Forms.Button();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.flecha_derecha = new System.Windows.Forms.PictureBox();
-            this.flecha_arriba = new System.Windows.Forms.PictureBox();
-            this.flecha_izquierda = new System.Windows.Forms.PictureBox();
-            this.flecha_abajo = new System.Windows.Forms.PictureBox();
-            this.flechaD_arriba_izquierda = new System.Windows.Forms.PictureBox();
-            this.flechaD_arriba_derecha = new System.Windows.Forms.PictureBox();
-            this.flechaD_abajo_derecha = new System.Windows.Forms.PictureBox();
             this.flechaD_abajo_izquierda = new System.Windows.Forms.PictureBox();
+            this.flechaD_abajo_derecha = new System.Windows.Forms.PictureBox();
+            this.flechaD_arriba_derecha = new System.Windows.Forms.PictureBox();
+            this.flechaD_arriba_izquierda = new System.Windows.Forms.PictureBox();
+            this.flecha_abajo = new System.Windows.Forms.PictureBox();
+            this.flecha_izquierda = new System.Windows.Forms.PictureBox();
+            this.flecha_arriba = new System.Windows.Forms.PictureBox();
+            this.flecha_derecha = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -56,14 +56,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.flecha_derecha)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.flecha_arriba)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.flecha_izquierda)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.flecha_abajo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.flechaD_arriba_izquierda)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.flechaD_arriba_derecha)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.flechaD_abajo_derecha)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.flechaD_abajo_izquierda)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flechaD_abajo_derecha)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flechaD_arriba_derecha)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flechaD_arriba_izquierda)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flecha_abajo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flecha_izquierda)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flecha_arriba)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flecha_derecha)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -93,7 +93,7 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
             this.splitContainer1.Size = new System.Drawing.Size(785, 450);
-            this.splitContainer1.SplitterDistance = 67;
+            this.splitContainer1.SplitterDistance = 84;
             this.splitContainer1.TabIndex = 0;
             // 
             // azulBtn
@@ -101,7 +101,7 @@
             this.azulBtn.Dock = System.Windows.Forms.DockStyle.Left;
             this.azulBtn.Location = new System.Drawing.Point(750, 0);
             this.azulBtn.Name = "azulBtn";
-            this.azulBtn.Size = new System.Drawing.Size(75, 50);
+            this.azulBtn.Size = new System.Drawing.Size(75, 67);
             this.azulBtn.TabIndex = 10;
             this.azulBtn.Text = "Azul";
             this.azulBtn.UseVisualStyleBackColor = true;
@@ -112,7 +112,7 @@
             this.moradoBtn.Dock = System.Windows.Forms.DockStyle.Left;
             this.moradoBtn.Location = new System.Drawing.Point(675, 0);
             this.moradoBtn.Name = "moradoBtn";
-            this.moradoBtn.Size = new System.Drawing.Size(75, 50);
+            this.moradoBtn.Size = new System.Drawing.Size(75, 67);
             this.moradoBtn.TabIndex = 9;
             this.moradoBtn.Text = "morado";
             this.moradoBtn.UseVisualStyleBackColor = true;
@@ -123,7 +123,7 @@
             this.verdeBtn.Dock = System.Windows.Forms.DockStyle.Left;
             this.verdeBtn.Location = new System.Drawing.Point(600, 0);
             this.verdeBtn.Name = "verdeBtn";
-            this.verdeBtn.Size = new System.Drawing.Size(75, 50);
+            this.verdeBtn.Size = new System.Drawing.Size(75, 67);
             this.verdeBtn.TabIndex = 8;
             this.verdeBtn.Text = "verde";
             this.verdeBtn.UseVisualStyleBackColor = true;
@@ -134,7 +134,7 @@
             this.rojoBtn.Dock = System.Windows.Forms.DockStyle.Left;
             this.rojoBtn.Location = new System.Drawing.Point(525, 0);
             this.rojoBtn.Name = "rojoBtn";
-            this.rojoBtn.Size = new System.Drawing.Size(75, 50);
+            this.rojoBtn.Size = new System.Drawing.Size(75, 67);
             this.rojoBtn.TabIndex = 7;
             this.rojoBtn.Text = "Rojo";
             this.rojoBtn.UseVisualStyleBackColor = true;
@@ -145,7 +145,7 @@
             this.toJPGBtn.Dock = System.Windows.Forms.DockStyle.Left;
             this.toJPGBtn.Location = new System.Drawing.Point(450, 0);
             this.toJPGBtn.Name = "toJPGBtn";
-            this.toJPGBtn.Size = new System.Drawing.Size(75, 50);
+            this.toJPGBtn.Size = new System.Drawing.Size(75, 67);
             this.toJPGBtn.TabIndex = 6;
             this.toJPGBtn.Text = "ToJpg";
             this.toJPGBtn.UseVisualStyleBackColor = true;
@@ -156,7 +156,7 @@
             this.cargarBtn.Dock = System.Windows.Forms.DockStyle.Left;
             this.cargarBtn.Location = new System.Drawing.Point(375, 0);
             this.cargarBtn.Name = "cargarBtn";
-            this.cargarBtn.Size = new System.Drawing.Size(75, 50);
+            this.cargarBtn.Size = new System.Drawing.Size(75, 67);
             this.cargarBtn.TabIndex = 5;
             this.cargarBtn.Text = "Cargar";
             this.cargarBtn.UseVisualStyleBackColor = true;
@@ -167,7 +167,7 @@
             this.textoBtn.Dock = System.Windows.Forms.DockStyle.Left;
             this.textoBtn.Location = new System.Drawing.Point(300, 0);
             this.textoBtn.Name = "textoBtn";
-            this.textoBtn.Size = new System.Drawing.Size(75, 50);
+            this.textoBtn.Size = new System.Drawing.Size(75, 67);
             this.textoBtn.TabIndex = 4;
             this.textoBtn.Text = "Texto(experimental)";
             this.textoBtn.UseVisualStyleBackColor = true;
@@ -178,7 +178,7 @@
             this.borrarBtn.Dock = System.Windows.Forms.DockStyle.Left;
             this.borrarBtn.Location = new System.Drawing.Point(225, 0);
             this.borrarBtn.Name = "borrarBtn";
-            this.borrarBtn.Size = new System.Drawing.Size(75, 50);
+            this.borrarBtn.Size = new System.Drawing.Size(75, 67);
             this.borrarBtn.TabIndex = 3;
             this.borrarBtn.Text = "Borrar";
             this.borrarBtn.UseVisualStyleBackColor = true;
@@ -189,7 +189,7 @@
             this.achicarBtn.Dock = System.Windows.Forms.DockStyle.Left;
             this.achicarBtn.Location = new System.Drawing.Point(150, 0);
             this.achicarBtn.Name = "achicarBtn";
-            this.achicarBtn.Size = new System.Drawing.Size(75, 50);
+            this.achicarBtn.Size = new System.Drawing.Size(75, 67);
             this.achicarBtn.TabIndex = 2;
             this.achicarBtn.Text = "-";
             this.achicarBtn.UseVisualStyleBackColor = true;
@@ -200,7 +200,7 @@
             this.agrandarBtn.Dock = System.Windows.Forms.DockStyle.Left;
             this.agrandarBtn.Location = new System.Drawing.Point(75, 0);
             this.agrandarBtn.Name = "agrandarBtn";
-            this.agrandarBtn.Size = new System.Drawing.Size(75, 50);
+            this.agrandarBtn.Size = new System.Drawing.Size(75, 67);
             this.agrandarBtn.TabIndex = 1;
             this.agrandarBtn.Text = "+";
             this.agrandarBtn.UseVisualStyleBackColor = true;
@@ -211,7 +211,7 @@
             this.guardarBtn.Dock = System.Windows.Forms.DockStyle.Left;
             this.guardarBtn.Location = new System.Drawing.Point(0, 0);
             this.guardarBtn.Name = "guardarBtn";
-            this.guardarBtn.Size = new System.Drawing.Size(75, 50);
+            this.guardarBtn.Size = new System.Drawing.Size(75, 67);
             this.guardarBtn.TabIndex = 0;
             this.guardarBtn.Text = "Guardar";
             this.guardarBtn.UseVisualStyleBackColor = true;
@@ -240,93 +240,9 @@
             // 
             this.splitContainer2.Panel2.AutoScroll = true;
             this.splitContainer2.Panel2.BackColor = System.Drawing.Color.LimeGreen;
-            this.splitContainer2.Size = new System.Drawing.Size(785, 379);
-            this.splitContainer2.SplitterDistance = 172;
+            this.splitContainer2.Size = new System.Drawing.Size(785, 362);
+            this.splitContainer2.SplitterDistance = 165;
             this.splitContainer2.TabIndex = 0;
-            // 
-            // flecha_derecha
-            // 
-            this.flecha_derecha.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flecha_derecha.Dock = System.Windows.Forms.DockStyle.Top;
-            this.flecha_derecha.Image = global::TPI_Diagramador.Properties.Resources.flecha_izquierda_negra;
-            this.flecha_derecha.Location = new System.Drawing.Point(0, 0);
-            this.flecha_derecha.Name = "flecha_derecha";
-            this.flecha_derecha.Size = new System.Drawing.Size(155, 50);
-            this.flecha_derecha.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.flecha_derecha.TabIndex = 27;
-            this.flecha_derecha.TabStop = false;
-            // 
-            // flecha_arriba
-            // 
-            this.flecha_arriba.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flecha_arriba.Dock = System.Windows.Forms.DockStyle.Top;
-            this.flecha_arriba.Image = global::TPI_Diagramador.Properties.Resources.flecha_arriba_negra;
-            this.flecha_arriba.Location = new System.Drawing.Point(0, 50);
-            this.flecha_arriba.Name = "flecha_arriba";
-            this.flecha_arriba.Size = new System.Drawing.Size(155, 50);
-            this.flecha_arriba.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.flecha_arriba.TabIndex = 28;
-            this.flecha_arriba.TabStop = false;
-            // 
-            // flecha_izquierda
-            // 
-            this.flecha_izquierda.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flecha_izquierda.Dock = System.Windows.Forms.DockStyle.Top;
-            this.flecha_izquierda.Image = global::TPI_Diagramador.Properties.Resources.flecha_izquierda_negra1;
-            this.flecha_izquierda.Location = new System.Drawing.Point(0, 100);
-            this.flecha_izquierda.Name = "flecha_izquierda";
-            this.flecha_izquierda.Size = new System.Drawing.Size(155, 50);
-            this.flecha_izquierda.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.flecha_izquierda.TabIndex = 29;
-            this.flecha_izquierda.TabStop = false;
-            // 
-            // flecha_abajo
-            // 
-            this.flecha_abajo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flecha_abajo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.flecha_abajo.Image = global::TPI_Diagramador.Properties.Resources.flecha_abajo_negra;
-            this.flecha_abajo.Location = new System.Drawing.Point(0, 150);
-            this.flecha_abajo.Name = "flecha_abajo";
-            this.flecha_abajo.Size = new System.Drawing.Size(155, 50);
-            this.flecha_abajo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.flecha_abajo.TabIndex = 30;
-            this.flecha_abajo.TabStop = false;
-            // 
-            // flechaD_arriba_izquierda
-            // 
-            this.flechaD_arriba_izquierda.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flechaD_arriba_izquierda.Dock = System.Windows.Forms.DockStyle.Top;
-            this.flechaD_arriba_izquierda.Image = global::TPI_Diagramador.Properties.Resources.flechaD_arriba_izquierda_negra;
-            this.flechaD_arriba_izquierda.Location = new System.Drawing.Point(0, 200);
-            this.flechaD_arriba_izquierda.Name = "flechaD_arriba_izquierda";
-            this.flechaD_arriba_izquierda.Size = new System.Drawing.Size(155, 50);
-            this.flechaD_arriba_izquierda.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.flechaD_arriba_izquierda.TabIndex = 31;
-            this.flechaD_arriba_izquierda.TabStop = false;
-            // 
-            // flechaD_arriba_derecha
-            // 
-            this.flechaD_arriba_derecha.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flechaD_arriba_derecha.Dock = System.Windows.Forms.DockStyle.Top;
-            this.flechaD_arriba_derecha.Image = global::TPI_Diagramador.Properties.Resources.flechaD_arriba_derecha_negra;
-            this.flechaD_arriba_derecha.Location = new System.Drawing.Point(0, 250);
-            this.flechaD_arriba_derecha.Name = "flechaD_arriba_derecha";
-            this.flechaD_arriba_derecha.Size = new System.Drawing.Size(155, 50);
-            this.flechaD_arriba_derecha.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.flechaD_arriba_derecha.TabIndex = 32;
-            this.flechaD_arriba_derecha.TabStop = false;
-            // 
-            // flechaD_abajo_derecha
-            // 
-            this.flechaD_abajo_derecha.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flechaD_abajo_derecha.Dock = System.Windows.Forms.DockStyle.Top;
-            this.flechaD_abajo_derecha.Image = global::TPI_Diagramador.Properties.Resources.flechaD_abajo_derecha_negra;
-            this.flechaD_abajo_derecha.Location = new System.Drawing.Point(0, 300);
-            this.flechaD_abajo_derecha.Name = "flechaD_abajo_derecha";
-            this.flechaD_abajo_derecha.Size = new System.Drawing.Size(155, 49);
-            this.flechaD_abajo_derecha.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.flechaD_abajo_derecha.TabIndex = 33;
-            this.flechaD_abajo_derecha.TabStop = false;
             // 
             // flechaD_abajo_izquierda
             // 
@@ -335,10 +251,102 @@
             this.flechaD_abajo_izquierda.Image = global::TPI_Diagramador.Properties.Resources.flechaD_abajo_izquierda_negra;
             this.flechaD_abajo_izquierda.Location = new System.Drawing.Point(0, 349);
             this.flechaD_abajo_izquierda.Name = "flechaD_abajo_izquierda";
-            this.flechaD_abajo_izquierda.Size = new System.Drawing.Size(155, 50);
+            this.flechaD_abajo_izquierda.Size = new System.Drawing.Size(148, 50);
             this.flechaD_abajo_izquierda.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.flechaD_abajo_izquierda.TabIndex = 34;
             this.flechaD_abajo_izquierda.TabStop = false;
+            this.flechaD_abajo_izquierda.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mouseDownDrag);
+            // 
+            // flechaD_abajo_derecha
+            // 
+            this.flechaD_abajo_derecha.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.flechaD_abajo_derecha.Dock = System.Windows.Forms.DockStyle.Top;
+            this.flechaD_abajo_derecha.Image = global::TPI_Diagramador.Properties.Resources.flechaD_abajo_derecha_negra;
+            this.flechaD_abajo_derecha.Location = new System.Drawing.Point(0, 300);
+            this.flechaD_abajo_derecha.Name = "flechaD_abajo_derecha";
+            this.flechaD_abajo_derecha.Size = new System.Drawing.Size(148, 49);
+            this.flechaD_abajo_derecha.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.flechaD_abajo_derecha.TabIndex = 33;
+            this.flechaD_abajo_derecha.TabStop = false;
+            this.flechaD_abajo_derecha.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mouseDownDrag);
+            // 
+            // flechaD_arriba_derecha
+            // 
+            this.flechaD_arriba_derecha.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.flechaD_arriba_derecha.Dock = System.Windows.Forms.DockStyle.Top;
+            this.flechaD_arriba_derecha.Image = global::TPI_Diagramador.Properties.Resources.flechaD_arriba_derecha_negra;
+            this.flechaD_arriba_derecha.Location = new System.Drawing.Point(0, 250);
+            this.flechaD_arriba_derecha.Name = "flechaD_arriba_derecha";
+            this.flechaD_arriba_derecha.Size = new System.Drawing.Size(148, 50);
+            this.flechaD_arriba_derecha.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.flechaD_arriba_derecha.TabIndex = 32;
+            this.flechaD_arriba_derecha.TabStop = false;
+            this.flechaD_arriba_derecha.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mouseDownDrag);
+            // 
+            // flechaD_arriba_izquierda
+            // 
+            this.flechaD_arriba_izquierda.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.flechaD_arriba_izquierda.Dock = System.Windows.Forms.DockStyle.Top;
+            this.flechaD_arriba_izquierda.Image = global::TPI_Diagramador.Properties.Resources.flechaD_arriba_izquierda_negra;
+            this.flechaD_arriba_izquierda.Location = new System.Drawing.Point(0, 200);
+            this.flechaD_arriba_izquierda.Name = "flechaD_arriba_izquierda";
+            this.flechaD_arriba_izquierda.Size = new System.Drawing.Size(148, 50);
+            this.flechaD_arriba_izquierda.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.flechaD_arriba_izquierda.TabIndex = 31;
+            this.flechaD_arriba_izquierda.TabStop = false;
+            this.flechaD_arriba_izquierda.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mouseDownDrag);
+            // 
+            // flecha_abajo
+            // 
+            this.flecha_abajo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.flecha_abajo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.flecha_abajo.Image = global::TPI_Diagramador.Properties.Resources.flecha_abajo_negra;
+            this.flecha_abajo.Location = new System.Drawing.Point(0, 150);
+            this.flecha_abajo.Name = "flecha_abajo";
+            this.flecha_abajo.Size = new System.Drawing.Size(148, 50);
+            this.flecha_abajo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.flecha_abajo.TabIndex = 30;
+            this.flecha_abajo.TabStop = false;
+            this.flecha_abajo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mouseDownDrag);
+            // 
+            // flecha_izquierda
+            // 
+            this.flecha_izquierda.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.flecha_izquierda.Dock = System.Windows.Forms.DockStyle.Top;
+            this.flecha_izquierda.Image = global::TPI_Diagramador.Properties.Resources.flecha_derecha_negra;
+            this.flecha_izquierda.Location = new System.Drawing.Point(0, 100);
+            this.flecha_izquierda.Name = "flecha_izquierda";
+            this.flecha_izquierda.Size = new System.Drawing.Size(148, 50);
+            this.flecha_izquierda.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.flecha_izquierda.TabIndex = 29;
+            this.flecha_izquierda.TabStop = false;
+            this.flecha_izquierda.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mouseDownDrag);
+            // 
+            // flecha_arriba
+            // 
+            this.flecha_arriba.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.flecha_arriba.Dock = System.Windows.Forms.DockStyle.Top;
+            this.flecha_arriba.Image = global::TPI_Diagramador.Properties.Resources.flecha_arriba_negra;
+            this.flecha_arriba.Location = new System.Drawing.Point(0, 50);
+            this.flecha_arriba.Name = "flecha_arriba";
+            this.flecha_arriba.Size = new System.Drawing.Size(148, 50);
+            this.flecha_arriba.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.flecha_arriba.TabIndex = 28;
+            this.flecha_arriba.TabStop = false;
+            this.flecha_arriba.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mouseDownDrag);
+            // 
+            // flecha_derecha
+            // 
+            this.flecha_derecha.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.flecha_derecha.Dock = System.Windows.Forms.DockStyle.Top;
+            this.flecha_derecha.Image = global::TPI_Diagramador.Properties.Resources.flecha_izquierda_negra;
+            this.flecha_derecha.Location = new System.Drawing.Point(0, 0);
+            this.flecha_derecha.Name = "flecha_derecha";
+            this.flecha_derecha.Size = new System.Drawing.Size(148, 50);
+            this.flecha_derecha.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.flecha_derecha.TabIndex = 27;
+            this.flecha_derecha.TabStop = false;
+            this.flecha_derecha.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mouseDownDrag);
             // 
             // Form1
             // 
@@ -348,6 +356,8 @@
             this.Controls.Add(this.splitContainer1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.keyDown);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.altKeyUp);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
@@ -355,14 +365,14 @@
             this.splitContainer2.Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.flecha_derecha)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.flecha_arriba)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.flecha_izquierda)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.flecha_abajo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.flechaD_arriba_izquierda)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.flechaD_arriba_derecha)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.flechaD_abajo_derecha)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.flechaD_abajo_izquierda)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flechaD_abajo_derecha)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flechaD_arriba_derecha)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flechaD_arriba_izquierda)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flecha_abajo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flecha_izquierda)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flecha_arriba)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flecha_derecha)).EndInit();
             this.ResumeLayout(false);
 
         }

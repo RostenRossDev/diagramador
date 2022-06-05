@@ -123,6 +123,16 @@ namespace TPI_Diagramador.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap flecha_derecha_negra {
+            get {
+                object obj = ResourceManager.GetObject("flecha_derecha_negra", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap flecha_derecha_roja {
             get {
                 object obj = ResourceManager.GetObject("flecha_derecha_roja", resourceCulture);
