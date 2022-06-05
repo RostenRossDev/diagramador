@@ -63,9 +63,449 @@ namespace TPI_Diagramador.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap flecha_abajo_negra {
+            get {
+                object obj = ResourceManager.GetObject("flecha_abajo_negra", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flecha_arriba_negra {
+            get {
+                object obj = ResourceManager.GetObject("flecha_arriba_negra", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flecha_derecha_amarilla {
+            get {
+                object obj = ResourceManager.GetObject("flecha_derecha_amarilla", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flecha_derecha_celeste {
+            get {
+                object obj = ResourceManager.GetObject("flecha_derecha_celeste", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flecha_derecha_morada {
+            get {
+                object obj = ResourceManager.GetObject("flecha_derecha_morada", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flecha_derecha_naranja {
+            get {
+                object obj = ResourceManager.GetObject("flecha_derecha_naranja", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flecha_derecha_roja {
+            get {
+                object obj = ResourceManager.GetObject("flecha_derecha_roja", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flecha_derecha_verde {
+            get {
+                object obj = ResourceManager.GetObject("flecha_derecha_verde", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flecha_izquierda_amarilla {
+            get {
+                object obj = ResourceManager.GetObject("flecha_izquierda_amarilla", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flecha_izquierda_celeste {
+            get {
+                object obj = ResourceManager.GetObject("flecha_izquierda_celeste", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flecha_izquierda_celeste___copia__2_ {
+            get {
+                object obj = ResourceManager.GetObject("flecha_izquierda_celeste - copia (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flecha_izquierda_morada {
+            get {
+                object obj = ResourceManager.GetObject("flecha_izquierda_morada", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flecha_izquierda_naranja {
+            get {
+                object obj = ResourceManager.GetObject("flecha_izquierda_naranja", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap flecha_izquierda_negra {
             get {
                 object obj = ResourceManager.GetObject("flecha_izquierda_negra", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flecha_izquierda_negra1 {
+            get {
+                object obj = ResourceManager.GetObject("flecha_izquierda_negra1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flecha_izquierda_roja {
+            get {
+                object obj = ResourceManager.GetObject("flecha_izquierda_roja", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flecha_izquierda_verde {
+            get {
+                object obj = ResourceManager.GetObject("flecha_izquierda_verde", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flechaD_abajo_derecha_amarillo {
+            get {
+                object obj = ResourceManager.GetObject("flechaD_abajo_derecha_amarillo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flechaD_abajo_derecha_celeste {
+            get {
+                object obj = ResourceManager.GetObject("flechaD_abajo_derecha_celeste", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flechaD_abajo_derecha_morado {
+            get {
+                object obj = ResourceManager.GetObject("flechaD_abajo_derecha_morado", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flechaD_abajo_derecha_naranja {
+            get {
+                object obj = ResourceManager.GetObject("flechaD_abajo_derecha_naranja", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flechaD_abajo_derecha_negra {
+            get {
+                object obj = ResourceManager.GetObject("flechaD_abajo_derecha_negra", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flechaD_abajo_derecha_rojo {
+            get {
+                object obj = ResourceManager.GetObject("flechaD_abajo_derecha_rojo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flechaD_abajo_derecha_verde {
+            get {
+                object obj = ResourceManager.GetObject("flechaD_abajo_derecha_verde", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flechaD_abajo_izquierda_amarillo {
+            get {
+                object obj = ResourceManager.GetObject("flechaD_abajo_izquierda_amarillo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flechaD_abajo_izquierda_celeste {
+            get {
+                object obj = ResourceManager.GetObject("flechaD_abajo_izquierda_celeste", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flechaD_abajo_izquierda_morado {
+            get {
+                object obj = ResourceManager.GetObject("flechaD_abajo_izquierda_morado", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flechaD_abajo_izquierda_naranja {
+            get {
+                object obj = ResourceManager.GetObject("flechaD_abajo_izquierda_naranja", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flechaD_abajo_izquierda_negra {
+            get {
+                object obj = ResourceManager.GetObject("flechaD_abajo_izquierda_negra", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flechaD_abajo_izquierda_rojo {
+            get {
+                object obj = ResourceManager.GetObject("flechaD_abajo_izquierda_rojo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flechaD_abajo_izquierda_verde {
+            get {
+                object obj = ResourceManager.GetObject("flechaD_abajo_izquierda_verde", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flechaD_arriba_derecha_amarilla {
+            get {
+                object obj = ResourceManager.GetObject("flechaD_arriba_derecha_amarilla", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flechaD_arriba_derecha_celeste {
+            get {
+                object obj = ResourceManager.GetObject("flechaD_arriba_derecha_celeste", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flechaD_arriba_derecha_morado {
+            get {
+                object obj = ResourceManager.GetObject("flechaD_arriba_derecha_morado", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flechaD_arriba_derecha_naranja {
+            get {
+                object obj = ResourceManager.GetObject("flechaD_arriba_derecha_naranja", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flechaD_arriba_derecha_negra {
+            get {
+                object obj = ResourceManager.GetObject("flechaD_arriba_derecha_negra", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flechaD_arriba_derecha_rojo {
+            get {
+                object obj = ResourceManager.GetObject("flechaD_arriba_derecha_rojo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flechaD_arriba_derecha_verde {
+            get {
+                object obj = ResourceManager.GetObject("flechaD_arriba_derecha_verde", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flechaD_arriba_izquierda_amarillo {
+            get {
+                object obj = ResourceManager.GetObject("flechaD_arriba_izquierda_amarillo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flechaD_arriba_izquierda_celeste {
+            get {
+                object obj = ResourceManager.GetObject("flechaD_arriba_izquierda_celeste", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flechaD_arriba_izquierda_morado {
+            get {
+                object obj = ResourceManager.GetObject("flechaD_arriba_izquierda_morado", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flechaD_arriba_izquierda_naranja {
+            get {
+                object obj = ResourceManager.GetObject("flechaD_arriba_izquierda_naranja", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flechaD_arriba_izquierda_negra {
+            get {
+                object obj = ResourceManager.GetObject("flechaD_arriba_izquierda_negra", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flechaD_arriba_izquierda_rojo {
+            get {
+                object obj = ResourceManager.GetObject("flechaD_arriba_izquierda_rojo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flechaD_arriba_izquierda_verde {
+            get {
+                object obj = ResourceManager.GetObject("flechaD_arriba_izquierda_verde", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

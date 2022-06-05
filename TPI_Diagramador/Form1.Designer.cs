@@ -42,6 +42,13 @@
             this.guardarBtn = new System.Windows.Forms.Button();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.flecha_derecha = new System.Windows.Forms.PictureBox();
+            this.flecha_arriba = new System.Windows.Forms.PictureBox();
+            this.flecha_izquierda = new System.Windows.Forms.PictureBox();
+            this.flecha_abajo = new System.Windows.Forms.PictureBox();
+            this.flechaD_arriba_izquierda = new System.Windows.Forms.PictureBox();
+            this.flechaD_arriba_derecha = new System.Windows.Forms.PictureBox();
+            this.flechaD_abajo_derecha = new System.Windows.Forms.PictureBox();
+            this.flechaD_abajo_izquierda = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -50,6 +57,13 @@
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.flecha_derecha)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flecha_arriba)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flecha_izquierda)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flecha_abajo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flechaD_arriba_izquierda)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flechaD_arriba_derecha)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flechaD_abajo_derecha)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flechaD_abajo_izquierda)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -213,6 +227,13 @@
             // 
             this.splitContainer2.Panel1.AutoScroll = true;
             this.splitContainer2.Panel1.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.splitContainer2.Panel1.Controls.Add(this.flechaD_abajo_izquierda);
+            this.splitContainer2.Panel1.Controls.Add(this.flechaD_abajo_derecha);
+            this.splitContainer2.Panel1.Controls.Add(this.flechaD_arriba_derecha);
+            this.splitContainer2.Panel1.Controls.Add(this.flechaD_arriba_izquierda);
+            this.splitContainer2.Panel1.Controls.Add(this.flecha_abajo);
+            this.splitContainer2.Panel1.Controls.Add(this.flecha_izquierda);
+            this.splitContainer2.Panel1.Controls.Add(this.flecha_arriba);
             this.splitContainer2.Panel1.Controls.Add(this.flecha_derecha);
             // 
             // splitContainer2.Panel2
@@ -227,11 +248,97 @@
             // 
             this.flecha_derecha.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flecha_derecha.Dock = System.Windows.Forms.DockStyle.Top;
+            this.flecha_derecha.Image = global::TPI_Diagramador.Properties.Resources.flecha_izquierda_negra;
             this.flecha_derecha.Location = new System.Drawing.Point(0, 0);
             this.flecha_derecha.Name = "flecha_derecha";
-            this.flecha_derecha.Size = new System.Drawing.Size(172, 50);
+            this.flecha_derecha.Size = new System.Drawing.Size(155, 50);
+            this.flecha_derecha.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.flecha_derecha.TabIndex = 27;
             this.flecha_derecha.TabStop = false;
+            // 
+            // flecha_arriba
+            // 
+            this.flecha_arriba.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.flecha_arriba.Dock = System.Windows.Forms.DockStyle.Top;
+            this.flecha_arriba.Image = global::TPI_Diagramador.Properties.Resources.flecha_arriba_negra;
+            this.flecha_arriba.Location = new System.Drawing.Point(0, 50);
+            this.flecha_arriba.Name = "flecha_arriba";
+            this.flecha_arriba.Size = new System.Drawing.Size(155, 50);
+            this.flecha_arriba.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.flecha_arriba.TabIndex = 28;
+            this.flecha_arriba.TabStop = false;
+            // 
+            // flecha_izquierda
+            // 
+            this.flecha_izquierda.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.flecha_izquierda.Dock = System.Windows.Forms.DockStyle.Top;
+            this.flecha_izquierda.Image = global::TPI_Diagramador.Properties.Resources.flecha_izquierda_negra1;
+            this.flecha_izquierda.Location = new System.Drawing.Point(0, 100);
+            this.flecha_izquierda.Name = "flecha_izquierda";
+            this.flecha_izquierda.Size = new System.Drawing.Size(155, 50);
+            this.flecha_izquierda.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.flecha_izquierda.TabIndex = 29;
+            this.flecha_izquierda.TabStop = false;
+            // 
+            // flecha_abajo
+            // 
+            this.flecha_abajo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.flecha_abajo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.flecha_abajo.Image = global::TPI_Diagramador.Properties.Resources.flecha_abajo_negra;
+            this.flecha_abajo.Location = new System.Drawing.Point(0, 150);
+            this.flecha_abajo.Name = "flecha_abajo";
+            this.flecha_abajo.Size = new System.Drawing.Size(155, 50);
+            this.flecha_abajo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.flecha_abajo.TabIndex = 30;
+            this.flecha_abajo.TabStop = false;
+            // 
+            // flechaD_arriba_izquierda
+            // 
+            this.flechaD_arriba_izquierda.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.flechaD_arriba_izquierda.Dock = System.Windows.Forms.DockStyle.Top;
+            this.flechaD_arriba_izquierda.Image = global::TPI_Diagramador.Properties.Resources.flechaD_arriba_izquierda_negra;
+            this.flechaD_arriba_izquierda.Location = new System.Drawing.Point(0, 200);
+            this.flechaD_arriba_izquierda.Name = "flechaD_arriba_izquierda";
+            this.flechaD_arriba_izquierda.Size = new System.Drawing.Size(155, 50);
+            this.flechaD_arriba_izquierda.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.flechaD_arriba_izquierda.TabIndex = 31;
+            this.flechaD_arriba_izquierda.TabStop = false;
+            // 
+            // flechaD_arriba_derecha
+            // 
+            this.flechaD_arriba_derecha.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.flechaD_arriba_derecha.Dock = System.Windows.Forms.DockStyle.Top;
+            this.flechaD_arriba_derecha.Image = global::TPI_Diagramador.Properties.Resources.flechaD_arriba_derecha_negra;
+            this.flechaD_arriba_derecha.Location = new System.Drawing.Point(0, 250);
+            this.flechaD_arriba_derecha.Name = "flechaD_arriba_derecha";
+            this.flechaD_arriba_derecha.Size = new System.Drawing.Size(155, 50);
+            this.flechaD_arriba_derecha.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.flechaD_arriba_derecha.TabIndex = 32;
+            this.flechaD_arriba_derecha.TabStop = false;
+            // 
+            // flechaD_abajo_derecha
+            // 
+            this.flechaD_abajo_derecha.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.flechaD_abajo_derecha.Dock = System.Windows.Forms.DockStyle.Top;
+            this.flechaD_abajo_derecha.Image = global::TPI_Diagramador.Properties.Resources.flechaD_abajo_derecha_negra;
+            this.flechaD_abajo_derecha.Location = new System.Drawing.Point(0, 300);
+            this.flechaD_abajo_derecha.Name = "flechaD_abajo_derecha";
+            this.flechaD_abajo_derecha.Size = new System.Drawing.Size(155, 49);
+            this.flechaD_abajo_derecha.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.flechaD_abajo_derecha.TabIndex = 33;
+            this.flechaD_abajo_derecha.TabStop = false;
+            // 
+            // flechaD_abajo_izquierda
+            // 
+            this.flechaD_abajo_izquierda.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.flechaD_abajo_izquierda.Dock = System.Windows.Forms.DockStyle.Top;
+            this.flechaD_abajo_izquierda.Image = global::TPI_Diagramador.Properties.Resources.flechaD_abajo_izquierda_negra;
+            this.flechaD_abajo_izquierda.Location = new System.Drawing.Point(0, 349);
+            this.flechaD_abajo_izquierda.Name = "flechaD_abajo_izquierda";
+            this.flechaD_abajo_izquierda.Size = new System.Drawing.Size(155, 50);
+            this.flechaD_abajo_izquierda.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.flechaD_abajo_izquierda.TabIndex = 34;
+            this.flechaD_abajo_izquierda.TabStop = false;
             // 
             // Form1
             // 
@@ -249,6 +356,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.flecha_derecha)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flecha_arriba)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flecha_izquierda)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flecha_abajo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flechaD_arriba_izquierda)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flechaD_arriba_derecha)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flechaD_abajo_derecha)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flechaD_abajo_izquierda)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -269,5 +383,12 @@
         private Button moradoBtn;
         private Button verdeBtn;
         private PictureBox flecha_derecha;
+        private PictureBox flechaD_abajo_izquierda;
+        private PictureBox flechaD_abajo_derecha;
+        private PictureBox flechaD_arriba_derecha;
+        private PictureBox flechaD_arriba_izquierda;
+        private PictureBox flecha_abajo;
+        private PictureBox flecha_izquierda;
+        private PictureBox flecha_arriba;
     }
 }
