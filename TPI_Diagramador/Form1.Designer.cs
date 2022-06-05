@@ -239,7 +239,7 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.AutoScroll = true;
-            this.splitContainer2.Panel2.BackColor = System.Drawing.Color.LimeGreen;
+            this.splitContainer2.Panel2.BackColor = System.Drawing.SystemColors.Control;
             this.splitContainer2.Size = new System.Drawing.Size(785, 362);
             this.splitContainer2.SplitterDistance = 165;
             this.splitContainer2.TabIndex = 0;
@@ -356,8 +356,6 @@
             this.Controls.Add(this.splitContainer1);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.keyDown);
-            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.altKeyUp);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();

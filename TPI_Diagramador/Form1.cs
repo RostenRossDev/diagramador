@@ -15,108 +15,11 @@ namespace TPI_Diagramador
             isAltPressed = false;
         }
 
-
-
-
-        private void guardarBtn_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void agrandarBtn_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void achicarBtn_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void borrarBtn_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textoBtn_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cargarBtn_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void toJPGBtn_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void rojoBtn_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void verdeBtn_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void moradoBtn_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void azulBtn_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void mouseDownDrag(object sender, MouseEventArgs e)
         {
 
-            //DiagramImg newPicture = new DiagramImg();
-            ////newPicture.BackColor = System.Drawing.Color.Teal;
-            //newPicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            //newPicture.BackColor = Color.Transparent;
-            //newPicture.Dock = System.Windows.Forms.DockStyle.None;
-            //newPicture.Size = new System.Drawing.Size(116, 89);
-            //newPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            //newPicture.TabIndex = 2;
-            //newPicture.TabStop = false;
-            //newPicture.MouseDown += new System.Windows.Forms.MouseEventHandler(OnMouseDown);
-            //newPicture.MouseMove += new System.Windows.Forms.MouseEventHandler(OnMouseMove);
-            //newPicture.Cursor = System.Windows.Forms.Cursors.Hand;
-
             PictureBox pictureBox = sender as PictureBox;
             System.Diagnostics.Debug.WriteLine("pb: "+pictureBox.Name);
-
-
-            //if (pictureBox.Name == "pictureFlechaDerecha")
-            //{
-            //    System.Diagnostics.Debug.WriteLine("flecha negra derecha");
-
-            //    newPicture.Image = Properties.Resources.flecha_derecha_negra;
-            //}
-            //else if (pictureBox.Name == "pictureFlechaIzquierda")
-            //{
-            //    System.Diagnostics.Debug.WriteLine("flecha negra izquierda");
-            //    newPicture.Image = Properties.Resources.flecha_izquierda_negra;
-
-            //}
-            //else if (pictureBox.Name == "pictureFlechaArriba")
-            //{
-            //    System.Diagnostics.Debug.WriteLine("flecha negra arriba");
-            //    newPicture.Image = Properties.Resources.flecha_arriba_negra;
-            //}
-            //else if (pictureBox.Name == "pictureFlechaAbajo")
-            //{
-            //    System.Diagnostics.Debug.WriteLine("flecha negra abajo");
-            //    newPicture.Image = Properties.Resources.flecha_abajo_negra;
-            //}
-            //System.Diagnostics.Debug.WriteLine(newPicture.Image.Tag);
-
 
             DiagramImg newPic = selectFigura(pictureBox.Name);
 
@@ -203,37 +106,14 @@ namespace TPI_Diagramador
         }
         protected void OnMouseDown(object sender, MouseEventArgs e)
         {
-            var imagen = sender as DiagramImg;
-            if (figurasSeleccionadas.Contains(imagen))
-            {
-                figurasSeleccionadas.Remove(imagen);
-                imagen.Focus = false;
-            }
-            else
-            {
-                if (isAltPressed)
-                {
-                    figurasSeleccionadas.Add(imagen);
-                    points.Add(e.Location);
-                    imagen.Focus = true;
-                }
-            }
+            DiagramImg img = sender as DiagramImg;
 
-            imagen.Refresh();
-            //var imagenPrevia = focused as DiagramImg;
-
-            //imagenPrevia.Focus=false;
-            //imagen.Focus = true;
-            //focused = imagen as DiagramImg;
-            //imagenPrevia.Refresh();
-
-            _dragging = true;
-            //point = e.Location;
+            KeyPress(img);
+            base.OnMouseDown(e);
         }
 
         protected void OnMouseMove(object sender, MouseEventArgs e)
         {
-            System.Diagnostics.Debug.WriteLine("Se mueve imagen");
 
             var c = sender as DiagramImg;
 
@@ -265,36 +145,33 @@ namespace TPI_Diagramador
             
         }
 
-        private void KeyPress(object sender, KeyPressEventArgs e)
+        private void KeyPress(DiagramImg img)
         {
-            System.Diagnostics.Debug.WriteLine("KeyPress: { "+ Convert.ToInt32(e.KeyChar)+", "+Convert.ToInt32(Keys.Alt)+" }");
-
-            if (Convert.ToInt32(e.KeyChar) == Convert.ToInt32(Keys.Alt))
+            if (Form.ModifierKeys == Keys.Alt)
             {
                 isAltPressed = true;
-                System.Diagnostics.Debug.WriteLine("Alt es presionado");
-            }
-        }
-        private void keyDown(object sender, KeyEventArgs e)
-        {
-            System.Diagnostics.Debug.WriteLine("KeyUp: { " + Convert.ToInt32(e.Alt) + ", " + Convert.ToInt32(Keys.Alt) + " }");
-
-            if (Convert.ToInt32(e.Alt) == Convert.ToInt32(Keys.Alt))
+            }else
             {
                 isAltPressed = false;
-                System.Diagnostics.Debug.WriteLine("Alt es presionado");
             }
-        }
-        private void altKeyUp(object sender, KeyEventArgs e)
-        {
-            System.Diagnostics.Debug.WriteLine("KeyUp: { " + Convert.ToInt32(e.Alt) + ", " + Convert.ToInt32(Keys.Alt) + " }");
 
-            if (Convert.ToInt32(e.Alt) == Convert.ToInt32(Keys.Alt))
+
+            if (isAltPressed)
             {
-                isAltPressed = false;
-                System.Diagnostics.Debug.WriteLine("Alt es soltado");
-            }
+                if (figurasSeleccionadas.Contains(img)) 
+                {
+                    figurasSeleccionadas.Remove(img);
+                    img.eliminarContorno(this.BackColor);
+                }
+                else
+                {
+                    figurasSeleccionadas.Add(img);
+                    img.dibujarContorno();
+                }                                   
+            }           
+            
         }
+       
         private void Borrar(object sender, EventArgs e)
         {
            
@@ -307,6 +184,63 @@ namespace TPI_Diagramador
         private void MasGrande(object sender, EventArgs e)
         {
                         
+
+        }
+
+
+
+        private void guardarBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void agrandarBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void achicarBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void borrarBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textoBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cargarBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toJPGBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rojoBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void verdeBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void moradoBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void azulBtn_Click(object sender, EventArgs e)
+        {
 
         }
     }

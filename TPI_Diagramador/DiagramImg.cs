@@ -23,24 +23,40 @@ namespace TPI_Diagramador
             focus = false;
             colorRecuadro = Color.Coral;
 
-    }
+        }
 
-    //Cuando el mouse dekja la superficie del elemento
-    protected override void OnMouseLeave(EventArgs e)
+        public override string ToString()
+        {
+            return "color: " + this.colorFigura + ", figura: " + nombreFigura + ", focus: " + this.focus;
+        }
+        public void setFocusTrue()
+        {
+            this.focus = true;
+        }
+        public void setFocusFalse()
+        {
+            this.focus = false;
+        }
+        //Cuando el mouse dekja la superficie del elemento
+        protected override void OnMouseLeave(EventArgs e)
         {
             System.Diagnostics.Debug.WriteLine("OnMouseLeave" + this.focus + ", " + this.Name);
             this.Refresh();
         }
 
-        //Se llama cuando se pinta el elemento
-        protected override void OnPaint(PaintEventArgs e)
+       
+        public void dibujarContorno() 
         {
-            System.Diagnostics.Debug.WriteLine("OnPaint" + this.focus + ", " + this.Name);
-            base.OnPaint(e);
-            if (this.focus) //si es un elemento seleccionado tambien le pinta un recuadro al rededor
-            {
-                ControlPaint.DrawBorder(e.Graphics, e.ClipRectangle, Color.Coral, ButtonBorderStyle.Solid);
-            }
+            Graphics g = Graphics.FromImage(this.Image);
+            Rectangle r = Rectangle.FromLTRB(0, 0, this.Width, this.Height);
+            ControlPaint.DrawBorder(g, r, Color.Coral, ButtonBorderStyle.Solid);
+        }
+
+        public void eliminarContorno(Color color)
+        {
+            Graphics g = Graphics.FromImage(this.Image);
+            Rectangle r = Rectangle.FromLTRB(0, 0, this.Width, this.Height);
+            ControlPaint.DrawBorder(g, r, color, ButtonBorderStyle.Solid);
         }
 
         //Cuando el mouse entra en el area del elemento
