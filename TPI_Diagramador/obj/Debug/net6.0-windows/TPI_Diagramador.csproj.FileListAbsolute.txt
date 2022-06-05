@@ -1,0 +1,17 @@
+C:\Users\nesto\source\repos\TPI_Diagramador\TPI_Diagramador\bin\Debug\net6.0-windows\TPI_Diagramador.exe
+C:\Users\nesto\source\repos\TPI_Diagramador\TPI_Diagramador\bin\Debug\net6.0-windows\TPI_Diagramador.deps.json
+C:\Users\nesto\source\repos\TPI_Diagramador\TPI_Diagramador\bin\Debug\net6.0-windows\TPI_Diagramador.runtimeconfig.json
+C:\Users\nesto\source\repos\TPI_Diagramador\TPI_Diagramador\bin\Debug\net6.0-windows\TPI_Diagramador.dll
+C:\Users\nesto\source\repos\TPI_Diagramador\TPI_Diagramador\bin\Debug\net6.0-windows\TPI_Diagramador.pdb
+C:\Users\nesto\source\repos\TPI_Diagramador\TPI_Diagramador\obj\Debug\net6.0-windows\TPI_Diagramador.csproj.AssemblyReference.cache
+C:\Users\nesto\source\repos\TPI_Diagramador\TPI_Diagramador\obj\Debug\net6.0-windows\TPI_Diagramador.Form1.resources
+C:\Users\nesto\source\repos\TPI_Diagramador\TPI_Diagramador\obj\Debug\net6.0-windows\TPI_Diagramador.csproj.GenerateResource.cache
+C:\Users\nesto\source\repos\TPI_Diagramador\TPI_Diagramador\obj\Debug\net6.0-windows\TPI_Diagramador.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nesto\source\repos\TPI_Diagramador\TPI_Diagramador\obj\Debug\net6.0-windows\TPI_Diagramador.AssemblyInfoInputs.cache
+C:\Users\nesto\source\repos\TPI_Diagramador\TPI_Diagramador\obj\Debug\net6.0-windows\TPI_Diagramador.AssemblyInfo.cs
+C:\Users\nesto\source\repos\TPI_Diagramador\TPI_Diagramador\obj\Debug\net6.0-windows\TPI_Diagramador.csproj.CoreCompileInputs.cache
+C:\Users\nesto\source\repos\TPI_Diagramador\TPI_Diagramador\obj\Debug\net6.0-windows\TPI_Diagramador.dll
+C:\Users\nesto\source\repos\TPI_Diagramador\TPI_Diagramador\obj\Debug\net6.0-windows\refint\TPI_Diagramador.dll
+C:\Users\nesto\source\repos\TPI_Diagramador\TPI_Diagramador\obj\Debug\net6.0-windows\TPI_Diagramador.pdb
+C:\Users\nesto\source\repos\TPI_Diagramador\TPI_Diagramador\obj\Debug\net6.0-windows\TPI_Diagramador.genruntimeconfig.cache
+C:\Users\nesto\source\repos\TPI_Diagramador\TPI_Diagramador\obj\Debug\net6.0-windows\ref\TPI_Diagramador.dll
