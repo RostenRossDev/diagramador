@@ -1,3 +1,5 @@
+using Newtonsoft.Json;
+
 namespace TPI_Diagramador
 {
     public partial class Form1 : Form
@@ -191,7 +193,33 @@ namespace TPI_Diagramador
 
         private void guardarBtn_Click(object sender, EventArgs e)
         {
+            string input = "";
 
+            InputBox inputBox = new InputBox();
+            inputBox.ShowDialog();
+
+            input=inputBox.getName();
+            //Print the input provided by the user
+            System.Diagnostics.Debug.WriteLine("input: " + input);
+
+            this.folderBrowserDialog1.ShowDialog();
+            string path = folderBrowserDialog1.SelectedPath;
+            System.Diagnostics.Debug.WriteLine("path: " + path);
+
+            List<DiagramImg> diagramasParaPersistir = new List<DiagramImg>();
+            foreach (var item in this.splitContainer2.Panel2.Controls)
+            {
+                diagramasParaPersistir.Add(item as DiagramImg);
+            }
+
+            var json = JsonConvert.SerializeObject(diagramasParaPersistir,
+                new JsonSerializerSettings()
+                {
+                    ReferenceLoopHandling = ReferenceLoopHandling.Ignore
+                }
+            );
+            //System.Diagnostics.Debug.WriteLine("json: " + json);
+            System.IO.File.WriteAllText(path, json);
         }
 
         private void agrandarBtn_Click(object sender, EventArgs e)

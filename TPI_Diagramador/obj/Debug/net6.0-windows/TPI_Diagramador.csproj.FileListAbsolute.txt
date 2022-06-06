@@ -16,3 +16,6 @@ C:\Users\nesto\source\repos\TPI_Diagramador\TPI_Diagramador\obj\Debug\net6.0-win
 C:\Users\nesto\source\repos\TPI_Diagramador\TPI_Diagramador\obj\Debug\net6.0-windows\TPI_Diagramador.genruntimeconfig.cache
 C:\Users\nesto\source\repos\TPI_Diagramador\TPI_Diagramador\obj\Debug\net6.0-windows\ref\TPI_Diagramador.dll
 C:\Users\nesto\source\repos\TPI_Diagramador\TPI_Diagramador\obj\Debug\net6.0-windows\TPI_Diagramador.Properties.Resources.resources
+C:\Users\nesto\source\repos\TPI_Diagramador\TPI_Diagramador\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
+C:\Users\nesto\source\repos\TPI_Diagramador\TPI_Diagramador\obj\Debug\net6.0-windows\TPI_Diagramador.csproj.CopyComplete
+C:\Users\nesto\source\repos\TPI_Diagramador\TPI_Diagramador\obj\Debug\net6.0-windows\TPI_Diagramador.InputBox.resources

@@ -49,6 +49,7 @@
             this.flecha_izquierda = new System.Windows.Forms.PictureBox();
             this.flecha_arriba = new System.Windows.Forms.PictureBox();
             this.flecha_derecha = new System.Windows.Forms.PictureBox();
+            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -398,5 +399,6 @@
         private PictureBox flecha_abajo;
         private PictureBox flecha_izquierda;
         private PictureBox flecha_arriba;
+        private FolderBrowserDialog folderBrowserDialog1;
     }
 }
