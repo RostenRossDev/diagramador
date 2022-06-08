@@ -189,8 +189,31 @@ namespace TPI_Diagramador
 
         }
 
+        private void cargarBtn_Click(object sender, EventArgs e)
+        {
+            string pathFile = "";
+            string json = "";
+            this.openFileDialog1.ShowDialog();
+            pathFile = this.openFileDialog1.FileName;
+            System.Diagnostics.Debug.WriteLine("pathFile: " + pathFile);
+            using (StreamReader sr = new StreamReader(pathFile))
+            {
+                json = sr.ReadToEnd();
+                sr.Close();
+            }
+            
+            var diagramas= JsonConvert.DeserializeObject<List<DiagramDTO>>(json);
 
+            foreach (var item in diagramas)
+            {
+                DiagramImg newPic = selectFigura(item.TipoFigura);
+                newPic.ColorFigura = item.ColorFigura;
+                newPic.Location = item.Point;
 
+                this.splitContainer2.Panel2.Controls.Add(newPic);
+            }
+            this.splitContainer2.Panel2.Refresh();
+        }
         private void guardarBtn_Click(object sender, EventArgs e)
         {
             string input = "";
@@ -198,7 +221,7 @@ namespace TPI_Diagramador
             InputBox inputBox = new InputBox();
             inputBox.ShowDialog();
 
-            input=inputBox.getName();
+            input=inputBox.getName()+".json";
             //Print the input provided by the user
             System.Diagnostics.Debug.WriteLine("input: " + input);
 
@@ -206,25 +229,44 @@ namespace TPI_Diagramador
             string path = folderBrowserDialog1.SelectedPath;
             System.Diagnostics.Debug.WriteLine("path: " + path);
 
+            List<DiagramDTO> diagramasDTO = new List<DiagramDTO>();
+
             List<DiagramImg> diagramasParaPersistir = new List<DiagramImg>();
-            foreach (var item in this.splitContainer2.Panel2.Controls)
+            foreach (Control item in this.splitContainer2.Panel2.Controls)
             {
-                diagramasParaPersistir.Add(item as DiagramImg);
+
+                DiagramImg diagram = item as DiagramImg;
+                System.Diagnostics.Debug.WriteLine("NombreFigura: " + diagram.NombreFigura);
+
+                DiagramDTO newDiagramDTO = new DiagramDTO();
+                newDiagramDTO.ColorFigura = diagram.ColorFigura;
+                newDiagramDTO.Point = diagram.Location;
+                newDiagramDTO.TipoFigura = diagram.NombreFigura;
+                System.Diagnostics.Debug.WriteLine("newDiagramDTO: " + newDiagramDTO.TipoFigura);
+                System.Diagnostics.Debug.WriteLine("newDiagramDTO: " + newDiagramDTO.Point);
+                System.Diagnostics.Debug.WriteLine("newDiagramDTO: " + newDiagramDTO.ColorFigura);
+
+                diagramasDTO.Add(newDiagramDTO);
             }
 
-            var json = JsonConvert.SerializeObject(diagramasParaPersistir,
+            var json = JsonConvert.SerializeObject(diagramasDTO,
                 new JsonSerializerSettings()
                 {
                     ReferenceLoopHandling = ReferenceLoopHandling.Ignore
                 }
             );
-            //System.Diagnostics.Debug.WriteLine("json: " + json);
-            System.IO.File.WriteAllText(path, json);
-        }
+            System.Diagnostics.Debug.WriteLine("file: " + path+"\\"+ input);
+            FileInfo f = new FileInfo(@path+"\\"+input);
+            FileStream fs = f.Open(FileMode.OpenOrCreate, FileAccess.ReadWrite);
 
-        private void agrandarBtn_Click(object sender, EventArgs e)
-        {
+            using (StreamWriter writer = new StreamWriter(fs))
+            {
+                writer.WriteLine(json);
+                writer.Close();
+            }
+            System.Diagnostics.Debug.WriteLine(f.FullName);
 
+            fs.Close();
         }
 
         private void achicarBtn_Click(object sender, EventArgs e)
@@ -242,10 +284,7 @@ namespace TPI_Diagramador
 
         }
 
-        private void cargarBtn_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void toJPGBtn_Click(object sender, EventArgs e)
         {

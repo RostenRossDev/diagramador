@@ -17,7 +17,7 @@ namespace TPI_Diagramador
         public string NombreFigura { get; set; }
         public string ColorFigura { get; set; }
         public bool Focus { get; set; }
-        public bool ColorRecuadroocus { get; set; } // para modificar el color del recuadro cuando esta seleccionado
+        public bool ColorRecuadro { get; set; } // para modificar el color del recuadro cuando esta seleccionado
         public DiagramImg()
         {
             focus = false;

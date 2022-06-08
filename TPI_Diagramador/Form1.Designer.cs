@@ -34,11 +34,11 @@
             this.verdeBtn = new System.Windows.Forms.Button();
             this.rojoBtn = new System.Windows.Forms.Button();
             this.toJPGBtn = new System.Windows.Forms.Button();
-            this.cargarBtn = new System.Windows.Forms.Button();
-            this.textoBtn = new System.Windows.Forms.Button();
             this.borrarBtn = new System.Windows.Forms.Button();
-            this.achicarBtn = new System.Windows.Forms.Button();
+            this.textoBtn = new System.Windows.Forms.Button();
             this.agrandarBtn = new System.Windows.Forms.Button();
+            this.achicarBtn = new System.Windows.Forms.Button();
+            this.abrirBtn = new System.Windows.Forms.Button();
             this.guardarBtn = new System.Windows.Forms.Button();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.flechaD_abajo_izquierda = new System.Windows.Forms.PictureBox();
@@ -50,6 +50,7 @@
             this.flecha_arriba = new System.Windows.Forms.PictureBox();
             this.flecha_derecha = new System.Windows.Forms.PictureBox();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -83,11 +84,11 @@
             this.splitContainer1.Panel1.Controls.Add(this.verdeBtn);
             this.splitContainer1.Panel1.Controls.Add(this.rojoBtn);
             this.splitContainer1.Panel1.Controls.Add(this.toJPGBtn);
-            this.splitContainer1.Panel1.Controls.Add(this.cargarBtn);
-            this.splitContainer1.Panel1.Controls.Add(this.textoBtn);
             this.splitContainer1.Panel1.Controls.Add(this.borrarBtn);
-            this.splitContainer1.Panel1.Controls.Add(this.achicarBtn);
+            this.splitContainer1.Panel1.Controls.Add(this.textoBtn);
             this.splitContainer1.Panel1.Controls.Add(this.agrandarBtn);
+            this.splitContainer1.Panel1.Controls.Add(this.achicarBtn);
+            this.splitContainer1.Panel1.Controls.Add(this.abrirBtn);
             this.splitContainer1.Panel1.Controls.Add(this.guardarBtn);
             // 
             // splitContainer1.Panel2
@@ -152,16 +153,16 @@
             this.toJPGBtn.UseVisualStyleBackColor = true;
             this.toJPGBtn.Click += new System.EventHandler(this.toJPGBtn_Click);
             // 
-            // cargarBtn
+            // borrarBtn
             // 
-            this.cargarBtn.Dock = System.Windows.Forms.DockStyle.Left;
-            this.cargarBtn.Location = new System.Drawing.Point(375, 0);
-            this.cargarBtn.Name = "cargarBtn";
-            this.cargarBtn.Size = new System.Drawing.Size(75, 67);
-            this.cargarBtn.TabIndex = 5;
-            this.cargarBtn.Text = "Cargar";
-            this.cargarBtn.UseVisualStyleBackColor = true;
-            this.cargarBtn.Click += new System.EventHandler(this.cargarBtn_Click);
+            this.borrarBtn.Dock = System.Windows.Forms.DockStyle.Left;
+            this.borrarBtn.Location = new System.Drawing.Point(375, 0);
+            this.borrarBtn.Name = "borrarBtn";
+            this.borrarBtn.Size = new System.Drawing.Size(75, 67);
+            this.borrarBtn.TabIndex = 5;
+            this.borrarBtn.Text = "Borrar";
+            this.borrarBtn.UseVisualStyleBackColor = true;
+            this.borrarBtn.Click += new System.EventHandler(this.cargarBtn_Click);
             // 
             // textoBtn
             // 
@@ -174,16 +175,16 @@
             this.textoBtn.UseVisualStyleBackColor = true;
             this.textoBtn.Click += new System.EventHandler(this.textoBtn_Click);
             // 
-            // borrarBtn
+            // agrandarBtn
             // 
-            this.borrarBtn.Dock = System.Windows.Forms.DockStyle.Left;
-            this.borrarBtn.Location = new System.Drawing.Point(225, 0);
-            this.borrarBtn.Name = "borrarBtn";
-            this.borrarBtn.Size = new System.Drawing.Size(75, 67);
-            this.borrarBtn.TabIndex = 3;
-            this.borrarBtn.Text = "Borrar";
-            this.borrarBtn.UseVisualStyleBackColor = true;
-            this.borrarBtn.Click += new System.EventHandler(this.borrarBtn_Click);
+            this.agrandarBtn.Dock = System.Windows.Forms.DockStyle.Left;
+            this.agrandarBtn.Location = new System.Drawing.Point(225, 0);
+            this.agrandarBtn.Name = "agrandarBtn";
+            this.agrandarBtn.Size = new System.Drawing.Size(75, 67);
+            this.agrandarBtn.TabIndex = 3;
+            this.agrandarBtn.Text = "+";
+            this.agrandarBtn.UseVisualStyleBackColor = true;
+            this.agrandarBtn.Click += new System.EventHandler(this.borrarBtn_Click);
             // 
             // achicarBtn
             // 
@@ -196,16 +197,16 @@
             this.achicarBtn.UseVisualStyleBackColor = true;
             this.achicarBtn.Click += new System.EventHandler(this.achicarBtn_Click);
             // 
-            // agrandarBtn
+            // abrirBtn
             // 
-            this.agrandarBtn.Dock = System.Windows.Forms.DockStyle.Left;
-            this.agrandarBtn.Location = new System.Drawing.Point(75, 0);
-            this.agrandarBtn.Name = "agrandarBtn";
-            this.agrandarBtn.Size = new System.Drawing.Size(75, 67);
-            this.agrandarBtn.TabIndex = 1;
-            this.agrandarBtn.Text = "+";
-            this.agrandarBtn.UseVisualStyleBackColor = true;
-            this.agrandarBtn.Click += new System.EventHandler(this.agrandarBtn_Click);
+            this.abrirBtn.Dock = System.Windows.Forms.DockStyle.Left;
+            this.abrirBtn.Location = new System.Drawing.Point(75, 0);
+            this.abrirBtn.Name = "abrirBtn";
+            this.abrirBtn.Size = new System.Drawing.Size(75, 67);
+            this.abrirBtn.TabIndex = 1;
+            this.abrirBtn.Text = "Abrir";
+            this.abrirBtn.UseVisualStyleBackColor = true;
+            this.abrirBtn.Click += new System.EventHandler(this.cargarBtn_Click);
             // 
             // guardarBtn
             // 
@@ -349,6 +350,11 @@
             this.flecha_derecha.TabStop = false;
             this.flecha_derecha.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mouseDownDrag);
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.DefaultExt = "json";
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -381,11 +387,11 @@
         private SplitContainer splitContainer1;
         private Button rojoBtn;
         private Button toJPGBtn;
-        private Button cargarBtn;
-        private Button textoBtn;
         private Button borrarBtn;
-        private Button achicarBtn;
+        private Button textoBtn;
         private Button agrandarBtn;
+        private Button achicarBtn;
+        private Button abrirBtn;
         private Button guardarBtn;
         private SplitContainer splitContainer2;
         private Button azulBtn;
@@ -400,5 +406,6 @@
         private PictureBox flecha_izquierda;
         private PictureBox flecha_arriba;
         private FolderBrowserDialog folderBrowserDialog1;
+        private OpenFileDialog openFileDialog1;
     }
 }
