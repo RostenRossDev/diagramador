@@ -78,7 +78,6 @@ namespace TPI_Diagramador
         protected override void OnMouseMove(MouseEventArgs e)
         {
             this.Refresh();
-            System.Diagnostics.Debug.WriteLine("OnMouseMove" + this.focus + ", " + this.Name);
 
             if (e.Button == MouseButtons.Left)
             {
@@ -87,5 +86,14 @@ namespace TPI_Diagramador
             }
         }               
 
+        public void moverFigura(MouseEventArgs e)
+        {
+            int X = e.X;
+            int Y = e.Y;
+            int delta = e.Delta;
+
+            MouseEventArgs evento = new MouseEventArgs(e.Button,e.Clicks, X, Y, delta);
+            OnMouseMove(evento);
+        }
     }
 }

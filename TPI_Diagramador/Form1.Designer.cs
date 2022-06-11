@@ -242,6 +242,8 @@
             // 
             this.splitContainer2.Panel2.AutoScroll = true;
             this.splitContainer2.Panel2.BackColor = System.Drawing.SystemColors.Control;
+            this.splitContainer2.Panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MouseDown);
+            this.splitContainer2.Panel2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.MouseUp);
             this.splitContainer2.Size = new System.Drawing.Size(785, 362);
             this.splitContainer2.SplitterDistance = 165;
             this.splitContainer2.TabIndex = 0;

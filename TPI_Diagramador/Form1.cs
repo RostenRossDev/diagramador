@@ -5,34 +5,32 @@ namespace TPI_Diagramador
     public partial class Form1 : Form
     {
         private List<DiagramImg> figurasSeleccionadas;
-        private List<Point> points;
+        //private List<Point> points;
         private bool isAltPressed;
-        private bool _dragging;
-
+        private bool dragging;
         public Form1()
         {
             InitializeComponent();
             figurasSeleccionadas = new List<DiagramImg>();
-            points = new List<Point>();
+            //points = new List<Point>();
             isAltPressed = false;
+            this.splitContainer2.Panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(OnMouseMove);
+            dragging = false;
         }
 
         private void mouseDownDrag(object sender, MouseEventArgs e)
         {
 
             PictureBox pictureBox = sender as PictureBox;
-            System.Diagnostics.Debug.WriteLine("pb: "+pictureBox.Name);
 
             DiagramImg newPic = selectFigura(pictureBox.Name);
 
-            System.Diagnostics.Debug.WriteLine("name: "+newPic.NombreFigura+" "+newPic.ColorFigura);
             this.splitContainer2.Panel2.Controls.Add(newPic);
 
         }
 
         private DiagramImg selectFigura(string name)
         {
-            System.Diagnostics.Debug.WriteLine("name fun: "+ name);
 
             DiagramImg newPicture = new DiagramImg();
             newPicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
@@ -43,7 +41,6 @@ namespace TPI_Diagramador
             newPicture.TabIndex = 2;
             newPicture.TabStop = false;
             newPicture.MouseDown += new System.Windows.Forms.MouseEventHandler(OnMouseDown);
-            newPicture.MouseMove += new System.Windows.Forms.MouseEventHandler(OnMouseMove);
             newPicture.Cursor = System.Windows.Forms.Cursors.Hand;
             if (name == "flecha_derecha")
             {
@@ -106,10 +103,15 @@ namespace TPI_Diagramador
 
             return newPicture;
         }
+        protected void OnMpuseUp(MouseEventArgs e)
+        {
+            dragging = false;
+
+        }
         protected void OnMouseDown(object sender, MouseEventArgs e)
         {
-            DiagramImg img = sender as DiagramImg;
 
+            DiagramImg img = sender as DiagramImg;
             KeyPress(img);
             base.OnMouseDown(e);
         }
@@ -117,24 +119,39 @@ namespace TPI_Diagramador
         protected void OnMouseMove(object sender, MouseEventArgs e)
         {
 
-            var c = sender as DiagramImg;
+            
+            if (dragging && this.figurasSeleccionadas.Count>0 && isAltPressed) {
 
-            if (!_dragging || null == c) return;
+                for (int i = 0; i < figurasSeleccionadas.Count; i++)
+                {
+                    Point location = figurasSeleccionadas[i].Location;
+                    DiagramImg picture = figurasSeleccionadas[i];
+                    int X = e.X - picture.Left;
+                    int Y= e.Y - picture.Top;
+                    System.Diagnostics.Debug.WriteLine("Figura location: " + X+", "+Y);
 
-            for (int i = 0; i < figurasSeleccionadas.Count; i++)
-            {
-                System.Diagnostics.Debug.WriteLine("x: " + points[i].X + ", y: " + points[i].Y);
-                System.Diagnostics.Debug.WriteLine("cX: " + figurasSeleccionadas[i].Left + ", cY: " + figurasSeleccionadas[i].Top);
+                    //if (X < 0 || Y < 0)
+                    //{
+                    //    System.Diagnostics.Debug.WriteLine("Figura location: " + X+", "+Y);
 
-                figurasSeleccionadas[i].Left = e.X - points[i].X;
-                figurasSeleccionadas[i].Top = e.Y - points[i].Y;
-            }            
+                    //    return;
+                    //}
+                    MouseEventArgs evento = new MouseEventArgs(e.Button, e.Clicks, X, Y, e.Delta);
+                    picture.moverFigura(evento);
+                    //picture.Left = X;
+                    //picture.Top = Y;
+                    
+                    //picture.Refresh();
+                    System.Diagnostics.Debug.WriteLine("Figura numero: " + i);
+                    System.Diagnostics.Debug.WriteLine("x: " + location.X + ", y: " + location.Y);
+                    System.Diagnostics.Debug.WriteLine("X: " + picture.Left + ", Y: " + picture.Top);
+                }
+            }
 
         }
 
         protected void OnMouseEnter(object sender, MouseEventArgs e)
         {
-            System.Diagnostics.Debug.WriteLine("Encima de la imagen");
             //var pic = sender as PictureBox;            
 
             foreach (var item in figurasSeleccionadas)
@@ -152,9 +169,13 @@ namespace TPI_Diagramador
             if (Form.ModifierKeys == Keys.Alt)
             {
                 isAltPressed = true;
-            }else
+
+
+            }
+            else
             {
                 isAltPressed = false;
+
             }
 
 
@@ -195,7 +216,6 @@ namespace TPI_Diagramador
             string json = "";
             this.openFileDialog1.ShowDialog();
             pathFile = this.openFileDialog1.FileName;
-            System.Diagnostics.Debug.WriteLine("pathFile: " + pathFile);
             using (StreamReader sr = new StreamReader(pathFile))
             {
                 json = sr.ReadToEnd();
@@ -223,11 +243,9 @@ namespace TPI_Diagramador
 
             input=inputBox.getName()+".json";
             //Print the input provided by the user
-            System.Diagnostics.Debug.WriteLine("input: " + input);
 
             this.folderBrowserDialog1.ShowDialog();
             string path = folderBrowserDialog1.SelectedPath;
-            System.Diagnostics.Debug.WriteLine("path: " + path);
 
             List<DiagramDTO> diagramasDTO = new List<DiagramDTO>();
 
@@ -236,15 +254,11 @@ namespace TPI_Diagramador
             {
 
                 DiagramImg diagram = item as DiagramImg;
-                System.Diagnostics.Debug.WriteLine("NombreFigura: " + diagram.NombreFigura);
 
                 DiagramDTO newDiagramDTO = new DiagramDTO();
                 newDiagramDTO.ColorFigura = diagram.ColorFigura;
                 newDiagramDTO.Point = diagram.Location;
                 newDiagramDTO.TipoFigura = diagram.NombreFigura;
-                System.Diagnostics.Debug.WriteLine("newDiagramDTO: " + newDiagramDTO.TipoFigura);
-                System.Diagnostics.Debug.WriteLine("newDiagramDTO: " + newDiagramDTO.Point);
-                System.Diagnostics.Debug.WriteLine("newDiagramDTO: " + newDiagramDTO.ColorFigura);
 
                 diagramasDTO.Add(newDiagramDTO);
             }
@@ -255,7 +269,6 @@ namespace TPI_Diagramador
                     ReferenceLoopHandling = ReferenceLoopHandling.Ignore
                 }
             );
-            System.Diagnostics.Debug.WriteLine("file: " + path+"\\"+ input);
             FileInfo f = new FileInfo(@path+"\\"+input);
             FileStream fs = f.Open(FileMode.OpenOrCreate, FileAccess.ReadWrite);
 
@@ -264,7 +277,6 @@ namespace TPI_Diagramador
                 writer.WriteLine(json);
                 writer.Close();
             }
-            System.Diagnostics.Debug.WriteLine(f.FullName);
 
             fs.Close();
         }
@@ -308,6 +320,18 @@ namespace TPI_Diagramador
 
         private void azulBtn_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void MouseUp(object sender, MouseEventArgs e)
+        {
+            dragging = false;
+        
+        }
+
+        private void MouseDown(object sender, MouseEventArgs e)
+        {
+            dragging = true;
 
         }
     }
