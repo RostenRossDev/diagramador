@@ -334,5 +334,14 @@ namespace TPI_Diagramador
             dragging = true;
 
         }
+
+        private void borrar(object sender, EventArgs e)
+        {
+            foreach (var item in figurasSeleccionadas)
+            {
+                item.Dispose();
+            }
+            figurasSeleccionadas.Clear();
+        }
     }
 }
