@@ -98,8 +98,21 @@ namespace TPI_Diagramador
                 newPicture.Image = Properties.Resources.flechaD_abajo_izquierda_negra;
                 newPicture.NombreFigura = "flecha_abajo";
                 newPicture.ColorFigura = "negro";
+            }
+            else if (name == "circulo_negro")
+            {
+                System.Diagnostics.Debug.WriteLine("circulo_negro");
+                newPicture.Image = Properties.Resources.circulo_vacio_negro;
+                newPicture.NombreFigura = "circulo_negro";
+                newPicture.ColorFigura = "negro";
+            }
+            else if (name == "cuadrado_negro")
+            {
+                System.Diagnostics.Debug.WriteLine("cuadrado_negro");
+                newPicture.Image = Properties.Resources.cuadrado_vacio_negro;
+                newPicture.NombreFigura = "cuadrado_negro";
+                newPicture.ColorFigura = "negro";
             }//agregar mas else if segun imagenes se agreguen
-            System.Diagnostics.Debug.WriteLine("asd");
 
             return newPicture;
         }

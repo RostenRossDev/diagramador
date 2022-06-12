@@ -41,6 +41,7 @@
             this.abrirBtn = new System.Windows.Forms.Button();
             this.guardarBtn = new System.Windows.Forms.Button();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.circulo_negro = new System.Windows.Forms.PictureBox();
             this.flechaD_abajo_izquierda = new System.Windows.Forms.PictureBox();
             this.flechaD_abajo_derecha = new System.Windows.Forms.PictureBox();
             this.flechaD_arriba_derecha = new System.Windows.Forms.PictureBox();
@@ -51,6 +52,7 @@
             this.flecha_derecha = new System.Windows.Forms.PictureBox();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.cuadrado_negro = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -58,6 +60,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.circulo_negro)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.flechaD_abajo_izquierda)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.flechaD_abajo_derecha)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.flechaD_arriba_derecha)).BeginInit();
@@ -66,6 +69,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.flecha_izquierda)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.flecha_arriba)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.flecha_derecha)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cuadrado_negro)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -229,6 +233,8 @@
             // 
             this.splitContainer2.Panel1.AutoScroll = true;
             this.splitContainer2.Panel1.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.splitContainer2.Panel1.Controls.Add(this.cuadrado_negro);
+            this.splitContainer2.Panel1.Controls.Add(this.circulo_negro);
             this.splitContainer2.Panel1.Controls.Add(this.flechaD_abajo_izquierda);
             this.splitContainer2.Panel1.Controls.Add(this.flechaD_abajo_derecha);
             this.splitContainer2.Panel1.Controls.Add(this.flechaD_arriba_derecha);
@@ -247,6 +253,19 @@
             this.splitContainer2.Size = new System.Drawing.Size(832, 362);
             this.splitContainer2.SplitterDistance = 174;
             this.splitContainer2.TabIndex = 0;
+            // 
+            // circulo_negro
+            // 
+            this.circulo_negro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.circulo_negro.Dock = System.Windows.Forms.DockStyle.Top;
+            this.circulo_negro.Image = global::TPI_Diagramador.Properties.Resources.circulo_vacio_negro;
+            this.circulo_negro.Location = new System.Drawing.Point(0, 399);
+            this.circulo_negro.Name = "circulo_negro";
+            this.circulo_negro.Size = new System.Drawing.Size(157, 50);
+            this.circulo_negro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.circulo_negro.TabIndex = 35;
+            this.circulo_negro.TabStop = false;
+            this.circulo_negro.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mouseDownDrag);
             // 
             // flechaD_abajo_izquierda
             // 
@@ -357,6 +376,19 @@
             this.openFileDialog1.DefaultExt = "json";
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // cuadrado_negro
+            // 
+            this.cuadrado_negro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cuadrado_negro.Dock = System.Windows.Forms.DockStyle.Top;
+            this.cuadrado_negro.Image = global::TPI_Diagramador.Properties.Resources.cuadrado_vacio_negro;
+            this.cuadrado_negro.Location = new System.Drawing.Point(0, 449);
+            this.cuadrado_negro.Name = "cuadrado_negro";
+            this.cuadrado_negro.Size = new System.Drawing.Size(157, 50);
+            this.cuadrado_negro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.cuadrado_negro.TabIndex = 36;
+            this.cuadrado_negro.TabStop = false;
+            this.cuadrado_negro.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mouseDownDrag);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -372,6 +404,7 @@
             this.splitContainer2.Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.circulo_negro)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.flechaD_abajo_izquierda)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.flechaD_abajo_derecha)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.flechaD_arriba_derecha)).EndInit();
@@ -380,6 +413,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.flecha_izquierda)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.flecha_arriba)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.flecha_derecha)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cuadrado_negro)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -409,5 +443,7 @@
         private PictureBox flecha_arriba;
         private FolderBrowserDialog folderBrowserDialog1;
         private OpenFileDialog openFileDialog1;
+        private PictureBox circulo_negro;
+        private PictureBox cuadrado_negro;
     }
 }
