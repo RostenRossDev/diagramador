@@ -63,6 +63,26 @@ namespace TPI_Diagramador.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap circulo_vacio_negro {
+            get {
+                object obj = ResourceManager.GetObject("circulo_vacio_negro", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cuadrado_vacio_negro {
+            get {
+                object obj = ResourceManager.GetObject("cuadrado_vacio_negro", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap flecha_abajo_negra {
             get {
                 object obj = ResourceManager.GetObject("flecha_abajo_negra", resourceCulture);
