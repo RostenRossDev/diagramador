@@ -229,7 +229,7 @@ namespace TPI_Diagramador
                 DiagramImg newPic = selectFigura(item.TipoFigura);
                 newPic.ColorFigura = item.ColorFigura;
                 newPic.Location = item.Point;
-
+               
                 this.splitContainer2.Panel2.Controls.Add(newPic);
             }
             this.splitContainer2.Panel2.Refresh();

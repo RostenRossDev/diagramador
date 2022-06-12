@@ -11,7 +11,7 @@ namespace TPI_Diagramador
         private string tipoFigura;      
         private Point point;
         private string colorFigura;
-
+        
         public string TipoFigura { get; set; }       
         public Point Point { get; set; }
         public string ColorFigura { get; set; }

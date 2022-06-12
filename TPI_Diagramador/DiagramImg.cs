@@ -13,7 +13,7 @@ namespace TPI_Diagramador
         private Color colorRecuadro;
         private string nombreFigura;
         private string colorFigura;
-
+        
         public string NombreFigura { get; set; }
         public string ColorFigura { get; set; }
         public bool Focus { get; set; }
