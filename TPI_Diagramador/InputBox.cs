@@ -13,10 +13,16 @@ namespace TPI_Diagramador
     public partial class InputBox : Form
     {
         private string text = "";
-        public InputBox()
+        private string placHolder = "";
+        public InputBox(string placHolder)
         {
+            this.placHolder = placHolder;
             InitializeComponent();
+            this.textBox1.PlaceholderText = placHolder;
+            this.label1.Text = placHolder;
         }
+       
+        
 
         public string getName()
         {

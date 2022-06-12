@@ -29,9 +29,8 @@ namespace TPI_Diagramador
 
         }
 
-        private DiagramImg selectFigura(string name)
+        private DiagramImg generarDiagramImg()
         {
-
             DiagramImg newPicture = new DiagramImg();
             newPicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             newPicture.BackColor = Color.Transparent;
@@ -42,6 +41,22 @@ namespace TPI_Diagramador
             newPicture.TabStop = false;
             newPicture.MouseDown += new System.Windows.Forms.MouseEventHandler(OnMouseDown);
             newPicture.Cursor = System.Windows.Forms.Cursors.Hand;
+            return newPicture;
+        }
+
+        private DiagramImg selectFigura(string name)
+        {
+
+            DiagramImg newPicture = generarDiagramImg();
+            //newPicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            //newPicture.BackColor = Color.Transparent;
+            //newPicture.Dock = System.Windows.Forms.DockStyle.None;
+            //newPicture.Size = new System.Drawing.Size(116, 89);
+            //newPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            //newPicture.TabIndex = 2;
+            //newPicture.TabStop = false;
+            //newPicture.MouseDown += new System.Windows.Forms.MouseEventHandler(OnMouseDown);
+            //newPicture.Cursor = System.Windows.Forms.Cursors.Hand;
             if (name == "flecha_derecha")
             {
                 System.Diagnostics.Debug.WriteLine("flecha negra derecha");
@@ -114,6 +129,7 @@ namespace TPI_Diagramador
                 newPicture.ColorFigura = "negro";
             }//agregar mas else if segun imagenes se agreguen
 
+
             return newPicture;
         }
         protected void OnMpuseUp(MouseEventArgs e)
@@ -125,8 +141,10 @@ namespace TPI_Diagramador
         {
 
             DiagramImg img = sender as DiagramImg;
+            System.Diagnostics.Debug.WriteLine(img.Texto);
+
             KeyPress(img);
-            base.OnMouseDown(e);
+            //base.OnMouseDown(e);
         }
 
         protected void OnMouseMove(object sender, MouseEventArgs e)
@@ -182,30 +200,41 @@ namespace TPI_Diagramador
             if (Form.ModifierKeys == Keys.Alt)
             {
                 isAltPressed = true;
-
+                System.Diagnostics.Debug.WriteLine("alt apretado");
 
             }
             else
             {
                 isAltPressed = false;
+                System.Diagnostics.Debug.WriteLine("alt no apretado");
 
             }
 
 
             if (isAltPressed)
             {
+                System.Diagnostics.Debug.WriteLine("alt apretado");
+
                 if (figurasSeleccionadas.Contains(img)) 
                 {
                     figurasSeleccionadas.Remove(img);
                     img.eliminarContorno(this.BackColor);
+                    System.Diagnostics.Debug.WriteLine("removido");
+
                 }
                 else
                 {
                     figurasSeleccionadas.Add(img);
                     img.dibujarContorno();
-                }                                   
-            }           
-            
+                    System.Diagnostics.Debug.WriteLine("agregado");
+                }
+            }
+            else
+            {
+                System.Diagnostics.Debug.WriteLine("alt no apretado");
+
+            }
+
         }
        
         private void Borrar(object sender, EventArgs e)
@@ -251,7 +280,7 @@ namespace TPI_Diagramador
         {
             string input = "";
 
-            InputBox inputBox = new InputBox();
+            InputBox inputBox = new InputBox("Ingrese el nombre");
             inputBox.ShowDialog();
 
             input=inputBox.getName()+".json";
@@ -356,5 +385,17 @@ namespace TPI_Diagramador
             }
             figurasSeleccionadas.Clear();
         }
+
+        private void crearTexto(object sender, MouseEventArgs e)
+        {
+            InputBox inBox = new InputBox("Ingrese el texto");
+            inBox.ShowDialog();
+            var texto = inBox.getName();
+            DiagramImg textoImagen = generarDiagramImg();
+            textoImagen.Texto = texto;
+            textoImagen.writeImage(texto);
+            this.splitContainer2.Panel2.Controls.Add(textoImagen);
+        }
+       
     }
 }

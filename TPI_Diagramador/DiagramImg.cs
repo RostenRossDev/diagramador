@@ -13,7 +13,9 @@ namespace TPI_Diagramador
         private Color colorRecuadro;
         private string nombreFigura;
         private string colorFigura;
-        
+        private string texto;
+
+        public string Texto { get; set; }
         public string NombreFigura { get; set; }
         public string ColorFigura { get; set; }
         public bool Focus { get; set; }
@@ -95,5 +97,24 @@ namespace TPI_Diagramador
             MouseEventArgs evento = new MouseEventArgs(e.Button,e.Clicks, X, Y, delta);
             OnMouseMove(evento);
         }
+
+
+        public void writeImage(string t)
+        {            
+            //conseguir tamaño del texto
+            Font fontFake = new Font("Arial", 15.0F);
+            Image fakeImage = new Bitmap(1, 1);
+            Graphics graphicsFake = Graphics.FromImage(fakeImage);
+            SizeF size = graphicsFake.MeasureString(t, fontFake);
+            System.Diagnostics.Debug.WriteLine("width" + size.Width+", heigth: "+ size.Height);
+
+            //crear iamgen
+            Image image = new Bitmap((int)size.Width, (int)size.Height);
+            var font = new Font("Arial", 20, FontStyle.Regular, GraphicsUnit.Pixel);
+            var graphics = Graphics.FromImage(image);
+            graphics.DrawString(t, font, Brushes.Black, new Point(0, 0));            
+            this.Image = image;
+
+        }       
     }
 }

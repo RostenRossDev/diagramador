@@ -11,8 +11,9 @@ namespace TPI_Diagramador
         private string tipoFigura;      
         private Point point;
         private string colorFigura;
-        
-        public string TipoFigura { get; set; }       
+        private string texto;
+        public string Texto { get; set; }
+        public string TipoFigura { get; set; }
         public Point Point { get; set; }
         public string ColorFigura { get; set; }
         public DiagramDTO(){}

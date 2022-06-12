@@ -179,6 +179,7 @@
             this.textoBtn.Text = "Texto(experimental)";
             this.textoBtn.UseVisualStyleBackColor = true;
             this.textoBtn.Click += new System.EventHandler(this.textoBtn_Click);
+            this.textoBtn.MouseClick += new System.Windows.Forms.MouseEventHandler(this.crearTexto);
             // 
             // agrandarBtn
             // 
