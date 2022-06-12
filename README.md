@@ -10,3 +10,9 @@ Consigna: Con las herramientas vistas, elabore una aplicación que permita confe
 * Mover y redimensionar elementos
 * Guardar diagrama en formato JSON o XML, para poder editarlo en diferentes sesiones
 * Copiar/Pegar o exportar como imagen
+
+Características deseables (opcionales):
+
+* Incluir diferentes figuras
+* Pintado de figuras
+* Agrupamiento/Desagrupamiento
