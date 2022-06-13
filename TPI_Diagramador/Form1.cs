@@ -1,4 +1,6 @@
-using Newtonsoft.Json;
+﻿//using Newtonsoft.Json;
+using System.Text.Json.Serialization;
+using System.Text.Json;
 
 namespace TPI_Diagramador
 {
@@ -8,6 +10,8 @@ namespace TPI_Diagramador
         //private List<Point> points;
         private bool isAltPressed;
         private bool dragging;
+        private int collapsedPanel;
+        private bool isCollpased;
         public Form1()
         {
             InitializeComponent();
@@ -16,6 +20,7 @@ namespace TPI_Diagramador
             isAltPressed = false;
             this.splitContainer2.Panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(OnMouseMove);
             dragging = false;
+            collapsedPanel = 0;
         }
 
         private void mouseDownDrag(object sender, MouseEventArgs e)
@@ -128,7 +133,10 @@ namespace TPI_Diagramador
                 newPicture.NombreFigura = "cuadrado_negro";
                 newPicture.ColorFigura = "negro";
             }//agregar mas else if segun imagenes se agreguen
-
+            else
+            {
+                newPicture.ColorFigura = "negro";
+            }
 
             return newPicture;
         }
@@ -141,7 +149,6 @@ namespace TPI_Diagramador
         {
 
             DiagramImg img = sender as DiagramImg;
-            System.Diagnostics.Debug.WriteLine(img.Texto);
 
             KeyPress(img);
             //base.OnMouseDown(e);
@@ -264,14 +271,20 @@ namespace TPI_Diagramador
                 sr.Close();
             }
             
-            var diagramas= JsonConvert.DeserializeObject<List<DiagramDTO>>(json);
+            //var diagramas= JsonConvert.DeserializeObject<List<DiagramDTO>>(json);
+            var diagramas = JsonSerializer.Deserialize< List<DiagramDTO>>(json);
 
             foreach (var item in diagramas)
             {
                 DiagramImg newPic = selectFigura(item.TipoFigura);
                 newPic.ColorFigura = item.ColorFigura;
                 newPic.Location = item.Point;
-               
+
+                if (item.Texto != null)
+                {
+                    newPic.writeImage(item.Texto);
+                }               
+                                            
                 this.splitContainer2.Panel2.Controls.Add(newPic);
             }
             this.splitContainer2.Panel2.Refresh();
@@ -283,7 +296,7 @@ namespace TPI_Diagramador
             InputBox inputBox = new InputBox("Ingrese el nombre");
             inputBox.ShowDialog();
 
-            input=inputBox.getName()+".json";
+            input=inputBox.getTexto()+".json";
             //Print the input provided by the user
 
             this.folderBrowserDialog1.ShowDialog();
@@ -295,27 +308,37 @@ namespace TPI_Diagramador
             foreach (Control item in this.splitContainer2.Panel2.Controls)
             {
 
-                DiagramImg diagram = item as DiagramImg;
+                DiagramImg diagram = (DiagramImg)item;
 
                 DiagramDTO newDiagramDTO = new DiagramDTO();
                 newDiagramDTO.ColorFigura = diagram.ColorFigura;
                 newDiagramDTO.Point = diagram.Location;
                 newDiagramDTO.TipoFigura = diagram.NombreFigura;
-
+                newDiagramDTO.Texto= diagram.TextoImagen;
+                System.Diagnostics.Debug.WriteLine("textoDTO: " + newDiagramDTO.Texto);
+                System.Diagnostics.Debug.WriteLine("textoDiagram: " + diagram.TextoImagen);
                 diagramasDTO.Add(newDiagramDTO);
             }
 
-            var json = JsonConvert.SerializeObject(diagramasDTO,
-                new JsonSerializerSettings()
-                {
-                    ReferenceLoopHandling = ReferenceLoopHandling.Ignore
-                }
-            );
-            FileInfo f = new FileInfo(@path+"\\"+input);
-            FileStream fs = f.Open(FileMode.OpenOrCreate, FileAccess.ReadWrite);
-
-            using (StreamWriter writer = new StreamWriter(fs))
+            //var json = JsonConvert.SerializeObject(diagramasDTO,
+            //    new JsonSerializerSettings()
+            //    {
+            //        ReferenceLoopHandling = ReferenceLoopHandling.Ignore
+            //    }
+            //);
+            JsonSerializerOptions options = new()
             {
+                DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingDefault
+            };
+            string json = JsonSerializer.Serialize<List<DiagramDTO>>(diagramasDTO, options);
+
+            System.Diagnostics.Debug.WriteLine("json: " + json);
+
+
+            FileInfo f = new FileInfo(@path+"\\"+input);            
+            FileStream fs = f.Open(FileMode.OpenOrCreate, FileAccess.ReadWrite);            
+            using (StreamWriter writer = new StreamWriter(fs))
+            {                
                 writer.WriteLine(json);
                 writer.Close();
             }
@@ -329,11 +352,6 @@ namespace TPI_Diagramador
         }
 
         private void borrarBtn_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textoBtn_Click(object sender, EventArgs e)
         {
 
         }
@@ -390,12 +408,94 @@ namespace TPI_Diagramador
         {
             InputBox inBox = new InputBox("Ingrese el texto");
             inBox.ShowDialog();
-            var texto = inBox.getName();
-            DiagramImg textoImagen = generarDiagramImg();
-            textoImagen.Texto = texto;
-            textoImagen.writeImage(texto);
-            this.splitContainer2.Panel2.Controls.Add(textoImagen);
+            var texto = inBox.getTexto();
+
+            if (texto.Length>0 || texto!= "")
+            {
+                DiagramImg textoImagen = generarDiagramImg();
+                textoImagen.TextoImagen = texto;
+                textoImagen.writeImage(texto);
+                this.splitContainer2.Panel2.Controls.Add(textoImagen);
+            }
+            
         }
-       
+
+        private void flechas_button_Click(object sender, EventArgs e)
+        {
+            timer1.Start();
+            this.collapsedPanel = 1;
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+
+            switch (collapsedPanel)
+            {
+                case 1:
+                    expandCollapse(this.panelDropDownFlechas, isCollpased);
+                    break;
+                case 2:
+                    expandCollapse(this.panelDropDownFiguras, isCollpased);
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        private void expandCollapse(Panel panel, bool panelIsCollapsed)
+        {
+            if (panelIsCollapsed)
+            {
+                expand(panel);
+            }
+            else
+            {
+                collapse(panel);
+            }
+
+        }
+        private void changeBtnText(Panel panel, string texto)
+        {
+            switch (panel.Name)
+            {
+                case "panelDropDownFlechas":
+                    this.flechasBtn.Text = "Flechas "+texto;
+                    break;
+                case "panelDropDownFiguras":
+                    this.figurasBtn.Text ="Figuras "+ texto;
+                    break;
+                default:
+                    break;
+            }
+        }
+        private void expand(Panel panel)
+        {       
+            
+            changeBtnText(panel, "▲");
+            panel.Height += 10;
+            if (panel.Size==panel.MaximumSize)
+            {
+                timer1.Stop();
+                isCollpased = false;
+            }
+        }
+
+        private void collapse(Panel panel)
+        {
+            changeBtnText(panel, "▼");
+            panel.Height -= 10;
+            if (panel.Size == panel.MinimumSize)
+            {
+                timer1.Stop();
+                collapsedPanel = 0;
+                isCollpased = true;
+            }
+        }
+
+        private void figurasBtn_Click(object sender, EventArgs e)
+        {
+            timer1.Start();
+            this.collapsedPanel = 2;
+        }
     }
 }

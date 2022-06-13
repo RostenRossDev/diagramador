@@ -24,7 +24,7 @@ namespace TPI_Diagramador
        
         
 
-        public string getName()
+        public string getTexto()
         {
             return this.text;
         }
@@ -36,6 +36,7 @@ namespace TPI_Diagramador
 
         private void aceptar_Click(object sender, EventArgs e)
         {
+            System.Diagnostics.Debug.WriteLine("texto: " + this.text);
             this.Close();
         }
     }

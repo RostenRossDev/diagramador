@@ -13,12 +13,12 @@ namespace TPI_Diagramador
         private Color colorRecuadro;
         private string nombreFigura;
         private string colorFigura;
-        private string texto;
+        private string textoImagen;
 
-        public string Texto { get; set; }
-        public string NombreFigura { get; set; }
-        public string ColorFigura { get; set; }
-        public bool Focus { get; set; }
+        public string TextoImagen { get { return this.textoImagen; } set { this.textoImagen = value; } }
+        public string NombreFigura { get { return this.nombreFigura; } set { this.nombreFigura = value; } }
+        public string ColorFigura { get { return this.colorFigura; } set { this.colorFigura = value; } }
+        public bool Focus { get { return this.focus; } set { this.focus = value; } }
         public bool ColorRecuadro { get; set; } // para modificar el color del recuadro cuando esta seleccionado
         public DiagramImg()
         {
@@ -100,7 +100,9 @@ namespace TPI_Diagramador
 
 
         public void writeImage(string t)
-        {            
+        {
+            System.Diagnostics.Debug.WriteLine("texto: "+t);
+            this.textoImagen = t;
             //conseguir tamaño del texto
             Font fontFake = new Font("Arial", 15.0F);
             Image fakeImage = new Bitmap(1, 1);
