@@ -17,7 +17,7 @@ namespace TPI_Diagramador
         private float fontSize=15;
         private Panel menu;
         private bool isButonsFocus;
-        private Color colorTexto = Color.Black;
+        private Color colorTexto; 
         public Color ColorTexto { get { return this.colorTexto; } set { this.colorTexto = value; } }
         public string TextoImagen { get { return this.textoImagen; } set { this.textoImagen = value; } }
         public string NombreFigura { get { return this.nombreFigura; } set { this.nombreFigura = value; } }
@@ -30,13 +30,14 @@ namespace TPI_Diagramador
             colorRecuadro = Color.Coral;
             menu= new Panel();
             menu.Name = "menu";
+            colorTexto = Color.Black;
         }
 
         public override string ToString()
         {
-            return "color: " + this.colorFigura + ", figura: " + nombreFigura + ", focus: " + this.focus;
+            return "figura: " + nombreFigura + ", point: " + this.Location + ", color texto: " + ColorTexto + ", color figura: " + ColorFigura + ", texto: " + textoImagen;
         }
-        
+
         //Cuando el mouse dekja la superficie del elemento
         protected override void OnMouseLeave(EventArgs e)
         {
@@ -239,13 +240,14 @@ namespace TPI_Diagramador
 
         public void crearMenu()
         {
-            this.menu = new Panel();
+            this.menu = new menuFigura();
+            menu.BackColor = Color.Transparent;            
             menu.Name = "menu";
             menu.AutoSize = true;
             //menu.BackColor = Color.LawnGreen;
             menu.MouseEnter += new System.EventHandler(onMouseHoverButonvoid);
             menu.MouseLeave += new System.EventHandler(onMouseLeaveButonvoid);
-            menu.Padding = new Padding(5,5,5,0);
+            menu.Padding = new Padding(5,5,5,0);            
             Button botonAgrandar = new Button();
             Button botonAchicar = new Button();
             botonAgrandar.Text = "+";
@@ -281,7 +283,7 @@ namespace TPI_Diagramador
             colorRojo.Height = 20;
             colorRojo.Width = 20;
             colorRojo.Dock = DockStyle.Right;
-           colorRojo.Click += new System.EventHandler(onClickColorRojo);
+            colorRojo.Click += new System.EventHandler(onClickColorRojo);
 
             menu.Width += colorRojo.Width;
             menu.Controls.Add(colorRojo);
@@ -300,7 +302,7 @@ namespace TPI_Diagramador
             colorAmarillo.Height = 20;
             colorAmarillo.Width = 20;
             colorAmarillo.Dock = DockStyle.Right;
-           colorAmarillo.Click += new System.EventHandler(onClickColorAmarillo);
+            colorAmarillo.Click += new System.EventHandler(onClickColorAmarillo);
 
             menu.Controls.Add(colorAmarillo);
 
@@ -351,6 +353,7 @@ namespace TPI_Diagramador
             menu.Height +=  5;
             menu.Location = new Point( (this.Location.X-(menu.Width/3)), this.Location.Y - 25);
             this.Parent.Controls.Add(menu);
+            menu.BringToFront();
         }       
     }
 }

@@ -12,10 +12,14 @@ namespace TPI_Diagramador
     {       
         public String TipoFigura { get; set; }
         public Point Point { get; set; }
-
+        public Color ColorTexto { get; set; }
         public String ColorFigura { get; set; }
         public String Texto { get; set; }
         public DiagramDTO(){}
        
+        public String toString()
+        {
+            return "figura: " + TipoFigura + ", point: "+Point+", color texto: "+ColorTexto+", color figura: "+ColorFigura+", texto: "+Texto;
+        }
     }
 }

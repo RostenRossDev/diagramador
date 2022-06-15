@@ -279,12 +279,15 @@ namespace TPI_Diagramador
                 DiagramImg newPic = selectFigura(item.TipoFigura);
                 newPic.ColorFigura = item.ColorFigura;
                 newPic.Location = item.Point;
+                newPic.ColorTexto = item.ColorTexto;
+                System.Diagnostics.Debug.WriteLine("item color texto: " + item.ColorTexto);
 
                 if (item.Texto != null)
                 {
                     newPic.writeImage(item.Texto, null);
-                }               
-                                            
+                }
+                System.Diagnostics.Debug.WriteLine("item: " + newPic.ToString());
+
                 this.splitContainer2.Panel2.Controls.Add(newPic);
             }
             this.splitContainer2.Panel2.Refresh();
@@ -315,7 +318,8 @@ namespace TPI_Diagramador
                 newDiagramDTO.Point = diagram.Location;
                 newDiagramDTO.TipoFigura = diagram.NombreFigura;
                 newDiagramDTO.Texto= diagram.TextoImagen;
-                System.Diagnostics.Debug.WriteLine("textoDTO: " + newDiagramDTO.Texto);
+                newDiagramDTO.ColorTexto = diagram.ColorTexto;
+                System.Diagnostics.Debug.WriteLine("ColorTexto: " + newDiagramDTO.ColorTexto);
                 System.Diagnostics.Debug.WriteLine("textoDiagram: " + diagram.TextoImagen);
                 diagramasDTO.Add(newDiagramDTO);
             }
