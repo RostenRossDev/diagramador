@@ -1,6 +1,7 @@
 ﻿//using Newtonsoft.Json;
 using System.Text.Json.Serialization;
 using System.Text.Json;
+using System.Drawing.Imaging;
 
 namespace TPI_Diagramador
 {
@@ -364,7 +365,15 @@ namespace TPI_Diagramador
 
         private void toJPGBtn_Click(object sender, EventArgs e)
         {
-
+            var sfd = new SaveFileDialog();
+            sfd.Filter = "Image(*.jpg)|*.jpg|(*.*|*.*";
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                Bitmap bmp = new Bitmap(this.splitContainer2.Panel2.Width, this.splitContainer2.Panel2.Height);
+                this.splitContainer2.Panel2.DrawToBitmap(bmp, new Rectangle(0, 0, bmp.Width, bmp.Height));
+                bmp.Save(sfd.FileName, ImageFormat.Jpeg);
+                //MessageBox.Show("La imagen se ha guardado correctamente");
+            }
         }
 
         private void rojoBtn_Click(object sender, EventArgs e)
