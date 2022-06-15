@@ -14,9 +14,11 @@ namespace TPI_Diagramador
         private string nombreFigura;
         private string colorFigura;
         private string textoImagen;
+        private float fontSize=15;
         private Panel menu;
         private bool isButonsFocus;
-
+        private Color colorTexto = Color.Black;
+        public Color ColorTexto { get { return this.colorTexto; } set { this.colorTexto = value; } }
         public string TextoImagen { get { return this.textoImagen; } set { this.textoImagen = value; } }
         public string NombreFigura { get { return this.nombreFigura; } set { this.nombreFigura = value; } }
         public string ColorFigura { get { return this.colorFigura; } set { this.colorFigura = value; } }
@@ -69,6 +71,13 @@ namespace TPI_Diagramador
 
         }
 
+        private void onClickCerrar(object sender, System.EventArgs e)
+        {
+            Button bt = sender as Button;            
+            bt.Parent.Dispose();
+        }
+
+
         public void dibujarContorno() 
         {
             Graphics g = Graphics.FromImage(this.Image);
@@ -116,7 +125,6 @@ namespace TPI_Diagramador
                 this.Top += e.Y - point.Y;
                 System.Diagnostics.Debug.WriteLine("mouse fuera del boton");
 
-                this.Parent.Controls.Remove(menu);
                 this.menu.Dispose();
                 this.menu = new Panel();
             }
@@ -139,64 +147,141 @@ namespace TPI_Diagramador
         }
 
 
-        public void writeImage(string t)
+        public void writeImage(string t, Brush brush)
         {
+            if (brush is null)
+            {
+                brush = new SolidBrush(this.colorTexto);
+            }
+
+            StringFormat drawFormat = new StringFormat();
+            drawFormat.Alignment = StringAlignment.Near;
+            drawFormat.LineAlignment = StringAlignment.Near;
+            
             System.Diagnostics.Debug.WriteLine("texto: "+t);
             this.textoImagen = t;
+            if (this.Image != null) this.Image.Dispose();
+
             //conseguir tamaño del texto
-            Font fontFake = new Font("Arial", 15.0F);
+            Font fontFake = new Font("Arial", this.fontSize);
             Image fakeImage = new Bitmap(1, 1);
             Graphics graphicsFake = Graphics.FromImage(fakeImage);
             SizeF size = graphicsFake.MeasureString(t, fontFake);
-            System.Diagnostics.Debug.WriteLine("width" + size.Width+", heigth: "+ size.Height);
+            System.Diagnostics.Debug.WriteLine("width: " + (size.Width)+", heigth: "+ size.Height);
 
             //crear iamgen
-            Image image = new Bitmap((int)size.Width, (int)size.Height);
-            var font = new Font("Arial", 20, FontStyle.Regular, GraphicsUnit.Pixel);
+            
+            Image image = new Bitmap((int)size.Width/*-(int(this.Size.Width*0.07)*/, (int)size.Height/*- (int)(this.Size.Width * 0.07)*/);
+            var font = new Font("Arial", (int) this.fontSize, FontStyle.Regular);
+            
             var graphics = Graphics.FromImage(image);
-            graphics.DrawString(t, font, Brushes.Black, new Point(0, 0));            
+
+            //graphics.DrawString(t, font, Brushes.Black, new Point(0, 0));            
+            graphics.DrawString(t, font, brush, new Point(0, 0), drawFormat);
             this.Image = image;
 
-        }       
+        }
+        private void onClickAgrandarFontSize (object sender, System.EventArgs e)
+        {
+            if (this.fontSize <60) this.fontSize++;
+            System.Diagnostics.Debug.WriteLine("size: " + this.fontSize);
+            this.writeImage(this.textoImagen, null);
+        }
+        private void onClickAchicarFontSize(object sender, System.EventArgs e)
+        {
+            if(this.fontSize>2) this.fontSize--;
+            System.Diagnostics.Debug.WriteLine("size: " + this.fontSize);
+            this.writeImage(this.textoImagen, null);
+        }
+        private void onClickColorRojo(object sender, System.EventArgs e)
+        {
+            this.colorTexto = Color.FromArgb(255,28,0);
+            Brush br = new SolidBrush(colorTexto);
+            writeImage(this.textoImagen, br);
+        }
+
+        private void onClickColorVerde(object sender, System.EventArgs e)
+        {
+            this.colorTexto = Color.FromArgb(0, 242, 0);
+            Brush br = new SolidBrush(colorTexto);
+            writeImage(this.textoImagen, br);
+        }
+        private void onClickColorNaranja(object sender, System.EventArgs e)
+        {
+            this.colorTexto = Color.FromArgb(255, 146, 0);
+            Brush br = new SolidBrush(colorTexto);
+            writeImage(this.textoImagen, br);
+        }
+        private void onClickColorCeleste(object sender, System.EventArgs e)
+        {
+            this.colorTexto = Color.FromArgb(0, 178, 250);
+            Brush br = new SolidBrush(colorTexto);
+            writeImage(this.textoImagen, br);
+        }
+        private void onClickColorAmarillo(object sender, System.EventArgs e)
+        {
+            this.colorTexto = Color.FromArgb(246, 231, 250);
+            Brush br = new SolidBrush(colorTexto);
+            writeImage(this.textoImagen, br);
+        }
+        private void onClickColorMorado(object sender, System.EventArgs e)
+        {
+            this.colorTexto = Color.FromArgb(120, 0, 255);
+            Brush br = new SolidBrush(colorTexto);
+            writeImage(this.textoImagen, br);
+        }
+        private void onClickColorNegro(object sender, System.EventArgs e)
+        {
+            this.colorTexto = Color.Black;
+            Brush br = new SolidBrush(colorTexto);
+            writeImage(this.textoImagen, br);
+        }
 
         public void crearMenu()
         {
             this.menu = new Panel();
             menu.Name = "menu";
             menu.AutoSize = true;
-            menu.BackColor = Color.LawnGreen;
+            //menu.BackColor = Color.LawnGreen;
             menu.MouseEnter += new System.EventHandler(onMouseHoverButonvoid);
             menu.MouseLeave += new System.EventHandler(onMouseLeaveButonvoid);
-  
-
+            menu.Padding = new Padding(5,5,5,0);
             Button botonAgrandar = new Button();
-            botonAgrandar.Text = "+";
-            botonAgrandar.Height = 20;
-            botonAgrandar.Width = 20;
-            botonAgrandar.Dock= DockStyle.Right;
-            //botonAgrandar.MouseLeave += new System.EventHandler(onMouseLeaveButonvoid);
-            //botonAgrandar.Location = new Point(this.Location.X + (this.Width / 3), this.Location.Y - 20);            
-            menu.Width = botonAgrandar.Width;
-            menu.Height = botonAgrandar.Height;
-            menu.Controls.Add(botonAgrandar);
-
-
             Button botonAchicar = new Button();
+            botonAgrandar.Text = "+";
             botonAchicar.Text = "-";
+
+            if (this.textoImagen != null )
+            {         
+                botonAgrandar.Dock = DockStyle.Right;
+                botonAgrandar.Click += new System.EventHandler(onClickAgrandarFontSize);
+
+                botonAchicar.Dock = DockStyle.Right;
+                botonAchicar.Click += new System.EventHandler(onClickAchicarFontSize);    
+
+            }
+            else
+            {                
+                botonAgrandar.Dock = DockStyle.Right;
+                //botonAgrandar.MouseLeave += new System.EventHandler(onMouseLeaveButonvoid);
+
+                botonAchicar.Dock = DockStyle.Right;
+                // botonAchicar.MouseLeave += new System.EventHandler(onMouseLeaveButonvoid);                
+            }
             botonAchicar.Height = 20;
             botonAchicar.Width = 20;
-            botonAchicar.Dock = DockStyle.Right;
-           // botonAchicar.MouseLeave += new System.EventHandler(onMouseLeaveButonvoid);
+            botonAgrandar.Height = 20;
+            botonAgrandar.Width = 20;
 
-            menu.Width += botonAchicar.Width;
+            menu.Height = 20;
+            menu.Controls.Add(botonAgrandar);
             menu.Controls.Add(botonAchicar);
-
             Button colorRojo = new Button();
             colorRojo.BackColor = Color.Red;
             colorRojo.Height = 20;
             colorRojo.Width = 20;
             colorRojo.Dock = DockStyle.Right;
-           // colorRojo.MouseLeave += new System.EventHandler(onMouseLeaveButonvoid);
+           colorRojo.Click += new System.EventHandler(onClickColorRojo);
 
             menu.Width += colorRojo.Width;
             menu.Controls.Add(colorRojo);
@@ -206,9 +291,8 @@ namespace TPI_Diagramador
             colorNegro.Height = 20;
             colorNegro.Width = 20;
             colorNegro.Dock = DockStyle.Right;
-           // colorNegro.MouseLeave += new System.EventHandler(onMouseLeaveButonvoid);
+           colorNegro.Click += new System.EventHandler(onClickColorNegro);
 
-            menu.Width += colorNegro.Width;
             menu.Controls.Add(colorNegro);
 
             Button colorAmarillo = new Button();
@@ -216,9 +300,8 @@ namespace TPI_Diagramador
             colorAmarillo.Height = 20;
             colorAmarillo.Width = 20;
             colorAmarillo.Dock = DockStyle.Right;
-           // colorAmarillo.MouseLeave += new System.EventHandler(onMouseLeaveButonvoid);
+           colorAmarillo.Click += new System.EventHandler(onClickColorAmarillo);
 
-            menu.Width += colorAmarillo.Width;
             menu.Controls.Add(colorAmarillo);
 
             Button colorVerde = new Button();
@@ -226,9 +309,8 @@ namespace TPI_Diagramador
             colorVerde.Height = 20;
             colorVerde.Width = 20;
             colorVerde.Dock = DockStyle.Right;
-            //colorVerde.MouseLeave += new System.EventHandler(onMouseLeaveButonvoid);
+            colorVerde.Click += new System.EventHandler(onClickColorVerde);
 
-            menu.Width += colorVerde.Width;
             menu.Controls.Add(colorVerde);
 
             Button colorCeleste = new Button();
@@ -236,9 +318,8 @@ namespace TPI_Diagramador
             colorCeleste.Height = 20;
             colorCeleste.Width = 20;
             colorCeleste.Dock = DockStyle.Right;
-           // colorCeleste.MouseLeave += new System.EventHandler(onMouseLeaveButonvoid);
+            colorCeleste.Click += new System.EventHandler(onClickColorCeleste);
 
-            menu.Width += colorCeleste.Width;
             menu.Controls.Add(colorCeleste);
 
             Button colorNaranja = new Button();
@@ -246,9 +327,8 @@ namespace TPI_Diagramador
             colorNaranja.Height = 20;
             colorNaranja.Width = 20;
             colorNaranja.Dock = DockStyle.Right;
-          // colorNaranja.MouseLeave += new System.EventHandler(onMouseLeaveButonvoid);
+            colorNaranja.Click += new System.EventHandler(onClickColorNaranja);
 
-            menu.Width += colorNaranja.Width;
             menu.Controls.Add(colorNaranja);
 
             Button colorMorado = new Button();
@@ -256,11 +336,20 @@ namespace TPI_Diagramador
             colorMorado.Height = 20;
             colorMorado.Width = 20;
             colorMorado.Dock = DockStyle.Right;
-          //  colorMorado.MouseLeave += new System.EventHandler(onMouseLeaveButonvoid);
 
-            menu.Width += colorMorado.Width;
             menu.Controls.Add(colorMorado);
-            menu.Location = new Point( (this.Location.X-(menu.Width/3)), this.Location.Y - 20);
+            colorMorado.Click += new System.EventHandler(onClickColorMorado);
+
+            Button cobtnCerrar = new Button();
+            cobtnCerrar.Text = "X";
+            cobtnCerrar.Height = 20;
+            cobtnCerrar.Width = 20;
+            cobtnCerrar.Dock = DockStyle.Right;
+            cobtnCerrar.Click += new System.EventHandler(onClickCerrar);
+
+            menu.Controls.Add(cobtnCerrar);          
+            menu.Height +=  5;
+            menu.Location = new Point( (this.Location.X-(menu.Width/3)), this.Location.Y - 25);
             this.Parent.Controls.Add(menu);
         }       
     }

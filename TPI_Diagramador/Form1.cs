@@ -282,7 +282,7 @@ namespace TPI_Diagramador
 
                 if (item.Texto != null)
                 {
-                    newPic.writeImage(item.Texto);
+                    newPic.writeImage(item.Texto, null);
                 }               
                                             
                 this.splitContainer2.Panel2.Controls.Add(newPic);
@@ -414,7 +414,7 @@ namespace TPI_Diagramador
             {
                 DiagramImg textoImagen = generarDiagramImg();
                 textoImagen.TextoImagen = texto;
-                textoImagen.writeImage(texto);
+                textoImagen.writeImage(texto, null);
                 this.splitContainer2.Panel2.Controls.Add(textoImagen);
             }
             
