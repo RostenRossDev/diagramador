@@ -46,20 +46,29 @@
             this.btnAbrirJson = new FontAwesome.Sharp.IconButton();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.panelDropDownFiguras = new System.Windows.Forms.Panel();
-            this.figurasBtn = new System.Windows.Forms.Button();
-            this.circulo_negro = new System.Windows.Forms.PictureBox();
-            this.cuadrado_negro = new System.Windows.Forms.PictureBox();
+            this.panelDropDownLineas = new System.Windows.Forms.Panel();
+            this.btnLineas = new System.Windows.Forms.Button();
+            this.linea_abajo_izquierda_negro = new System.Windows.Forms.PictureBox();
+            this.linea_arriba_izquierda_negro = new System.Windows.Forms.PictureBox();
+            this.linea_horizontal_negra = new System.Windows.Forms.PictureBox();
+            this.linea_vertical_negra = new System.Windows.Forms.PictureBox();
             this.panelDropDownFlechas = new System.Windows.Forms.Panel();
+            this.flechasBtn = new System.Windows.Forms.Button();
             this.flechaD_arriba_derecha = new System.Windows.Forms.PictureBox();
             this.flechaD_abajo_izquierda = new System.Windows.Forms.PictureBox();
             this.flechaD_abajo_derecha = new System.Windows.Forms.PictureBox();
-            this.flechasBtn = new System.Windows.Forms.Button();
             this.flechaD_arriba_izquierda = new System.Windows.Forms.PictureBox();
             this.flecha_izquierda = new System.Windows.Forms.PictureBox();
             this.flecha_abajo = new System.Windows.Forms.PictureBox();
             this.flecha_derecha = new System.Windows.Forms.PictureBox();
             this.flecha_arriba = new System.Windows.Forms.PictureBox();
+            this.panelDropDownFiguras = new System.Windows.Forms.Panel();
+            this.figurasBtn = new System.Windows.Forms.Button();
+            this.cuadrado_negro = new System.Windows.Forms.PictureBox();
+            this.circulo_negro = new System.Windows.Forms.PictureBox();
+            this.rombo_negro = new System.Windows.Forms.PictureBox();
+            this.paralelogramo_negro = new System.Windows.Forms.PictureBox();
+            this.rectangulo_negro = new System.Windows.Forms.PictureBox();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
@@ -71,9 +80,11 @@
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
-            this.panelDropDownFiguras.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.circulo_negro)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cuadrado_negro)).BeginInit();
+            this.panelDropDownLineas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.linea_abajo_izquierda_negro)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.linea_arriba_izquierda_negro)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.linea_horizontal_negra)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.linea_vertical_negra)).BeginInit();
             this.panelDropDownFlechas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.flechaD_arriba_derecha)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.flechaD_abajo_izquierda)).BeginInit();
@@ -83,6 +94,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.flecha_abajo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.flecha_derecha)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.flecha_arriba)).BeginInit();
+            this.panelDropDownFiguras.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cuadrado_negro)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.circulo_negro)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rombo_negro)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.paralelogramo_negro)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rectangulo_negro)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -115,8 +132,8 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
             this.splitContainer1.Panel2MinSize = 40;
-            this.splitContainer1.Size = new System.Drawing.Size(1051, 475);
-            this.splitContainer1.SplitterDistance = 53;
+            this.splitContainer1.Size = new System.Drawing.Size(1051, 579);
+            this.splitContainer1.SplitterDistance = 64;
             this.splitContainer1.TabIndex = 0;
             // 
             // btnAmarillo
@@ -127,7 +144,7 @@
             this.btnAmarillo.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAmarillo.Location = new System.Drawing.Point(975, 0);
             this.btnAmarillo.Name = "btnAmarillo";
-            this.btnAmarillo.Size = new System.Drawing.Size(75, 53);
+            this.btnAmarillo.Size = new System.Drawing.Size(75, 64);
             this.btnAmarillo.TabIndex = 24;
             this.btnAmarillo.UseVisualStyleBackColor = true;
             // 
@@ -139,7 +156,7 @@
             this.btnNaranja.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnNaranja.Location = new System.Drawing.Point(900, 0);
             this.btnNaranja.Name = "btnNaranja";
-            this.btnNaranja.Size = new System.Drawing.Size(75, 53);
+            this.btnNaranja.Size = new System.Drawing.Size(75, 64);
             this.btnNaranja.TabIndex = 23;
             this.btnNaranja.UseVisualStyleBackColor = true;
             // 
@@ -151,7 +168,7 @@
             this.btnMorado.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMorado.Location = new System.Drawing.Point(825, 0);
             this.btnMorado.Name = "btnMorado";
-            this.btnMorado.Size = new System.Drawing.Size(75, 53);
+            this.btnMorado.Size = new System.Drawing.Size(75, 64);
             this.btnMorado.TabIndex = 22;
             this.btnMorado.UseVisualStyleBackColor = true;
             // 
@@ -163,7 +180,7 @@
             this.btnVerde.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnVerde.Location = new System.Drawing.Point(750, 0);
             this.btnVerde.Name = "btnVerde";
-            this.btnVerde.Size = new System.Drawing.Size(75, 53);
+            this.btnVerde.Size = new System.Drawing.Size(75, 64);
             this.btnVerde.TabIndex = 21;
             this.btnVerde.UseVisualStyleBackColor = true;
             // 
@@ -175,7 +192,7 @@
             this.btnCeleste.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCeleste.Location = new System.Drawing.Point(675, 0);
             this.btnCeleste.Name = "btnCeleste";
-            this.btnCeleste.Size = new System.Drawing.Size(75, 53);
+            this.btnCeleste.Size = new System.Drawing.Size(75, 64);
             this.btnCeleste.TabIndex = 20;
             this.btnCeleste.UseVisualStyleBackColor = true;
             // 
@@ -187,7 +204,7 @@
             this.btnNegro.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnNegro.Location = new System.Drawing.Point(600, 0);
             this.btnNegro.Name = "btnNegro";
-            this.btnNegro.Size = new System.Drawing.Size(75, 53);
+            this.btnNegro.Size = new System.Drawing.Size(75, 64);
             this.btnNegro.TabIndex = 19;
             this.btnNegro.UseVisualStyleBackColor = true;
             // 
@@ -199,7 +216,7 @@
             this.btnRojo.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnRojo.Location = new System.Drawing.Point(525, 0);
             this.btnRojo.Name = "btnRojo";
-            this.btnRojo.Size = new System.Drawing.Size(75, 53);
+            this.btnRojo.Size = new System.Drawing.Size(75, 64);
             this.btnRojo.TabIndex = 18;
             this.btnRojo.UseVisualStyleBackColor = true;
             // 
@@ -211,7 +228,7 @@
             this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton2.Location = new System.Drawing.Point(450, 0);
             this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(75, 53);
+            this.iconButton2.Size = new System.Drawing.Size(75, 64);
             this.iconButton2.TabIndex = 17;
             this.iconButton2.UseVisualStyleBackColor = true;
             // 
@@ -224,7 +241,7 @@
             this.iconButton1.IconSize = 40;
             this.iconButton1.Location = new System.Drawing.Point(375, 0);
             this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(75, 53);
+            this.iconButton1.Size = new System.Drawing.Size(75, 64);
             this.iconButton1.TabIndex = 16;
             this.iconButton1.UseVisualStyleBackColor = true;
             // 
@@ -236,7 +253,7 @@
             this.btnEscribir.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEscribir.Location = new System.Drawing.Point(300, 0);
             this.btnEscribir.Name = "btnEscribir";
-            this.btnEscribir.Size = new System.Drawing.Size(75, 53);
+            this.btnEscribir.Size = new System.Drawing.Size(75, 64);
             this.btnEscribir.TabIndex = 14;
             this.btnEscribir.UseVisualStyleBackColor = true;
             this.btnEscribir.MouseClick += new System.Windows.Forms.MouseEventHandler(this.crearTexto);
@@ -249,7 +266,7 @@
             this.btnToJpg.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnToJpg.Location = new System.Drawing.Point(225, 0);
             this.btnToJpg.Name = "btnToJpg";
-            this.btnToJpg.Size = new System.Drawing.Size(75, 53);
+            this.btnToJpg.Size = new System.Drawing.Size(75, 64);
             this.btnToJpg.TabIndex = 15;
             this.btnToJpg.UseVisualStyleBackColor = true;
             this.btnToJpg.Click += new System.EventHandler(this.toJPGBtn_Click);
@@ -262,7 +279,7 @@
             this.btnBorrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnBorrar.Location = new System.Drawing.Point(150, 0);
             this.btnBorrar.Name = "btnBorrar";
-            this.btnBorrar.Size = new System.Drawing.Size(75, 53);
+            this.btnBorrar.Size = new System.Drawing.Size(75, 64);
             this.btnBorrar.TabIndex = 13;
             this.btnBorrar.UseVisualStyleBackColor = true;
             this.btnBorrar.Click += new System.EventHandler(this.borrar);
@@ -276,7 +293,7 @@
             this.btnGuardar.IconSize = 50;
             this.btnGuardar.Location = new System.Drawing.Point(75, 0);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(75, 53);
+            this.btnGuardar.Size = new System.Drawing.Size(75, 64);
             this.btnGuardar.TabIndex = 11;
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.guardarBtn_Click);
@@ -289,7 +306,7 @@
             this.btnAbrirJson.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAbrirJson.Location = new System.Drawing.Point(0, 0);
             this.btnAbrirJson.Name = "btnAbrirJson";
-            this.btnAbrirJson.Size = new System.Drawing.Size(75, 53);
+            this.btnAbrirJson.Size = new System.Drawing.Size(75, 64);
             this.btnAbrirJson.TabIndex = 12;
             this.btnAbrirJson.UseVisualStyleBackColor = true;
             this.btnAbrirJson.Click += new System.EventHandler(this.cargarBtn_Click);
@@ -312,87 +329,125 @@
             this.splitContainer2.Panel2.BackColor = System.Drawing.SystemColors.Control;
             this.splitContainer2.Panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MouseDown);
             this.splitContainer2.Panel2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.MouseUp);
-            this.splitContainer2.Size = new System.Drawing.Size(1051, 418);
+            this.splitContainer2.Size = new System.Drawing.Size(1051, 511);
             this.splitContainer2.SplitterDistance = 200;
             this.splitContainer2.TabIndex = 0;
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Controls.Add(this.panelDropDownFiguras);
+            this.flowLayoutPanel1.Controls.Add(this.panelDropDownLineas);
             this.flowLayoutPanel1.Controls.Add(this.panelDropDownFlechas);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(2, 3);
-            this.flowLayoutPanel1.MaximumSize = new System.Drawing.Size(152, 900);
+            this.flowLayoutPanel1.Controls.Add(this.panelDropDownFiguras);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.MinimumSize = new System.Drawing.Size(152, 415);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(152, 415);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(200, 511);
             this.flowLayoutPanel1.TabIndex = 37;
             // 
-            // panelDropDownFiguras
+            // panelDropDownLineas
             // 
-            this.panelDropDownFiguras.Controls.Add(this.figurasBtn);
-            this.panelDropDownFiguras.Controls.Add(this.circulo_negro);
-            this.panelDropDownFiguras.Controls.Add(this.cuadrado_negro);
-            this.panelDropDownFiguras.Location = new System.Drawing.Point(3, 3);
-            this.panelDropDownFiguras.MaximumSize = new System.Drawing.Size(147, 243);
-            this.panelDropDownFiguras.MinimumSize = new System.Drawing.Size(147, 35);
-            this.panelDropDownFiguras.Name = "panelDropDownFiguras";
-            this.panelDropDownFiguras.Size = new System.Drawing.Size(147, 35);
-            this.panelDropDownFiguras.TabIndex = 0;
+            this.panelDropDownLineas.Controls.Add(this.btnLineas);
+            this.panelDropDownLineas.Controls.Add(this.linea_abajo_izquierda_negro);
+            this.panelDropDownLineas.Controls.Add(this.linea_arriba_izquierda_negro);
+            this.panelDropDownLineas.Controls.Add(this.linea_horizontal_negra);
+            this.panelDropDownLineas.Controls.Add(this.linea_vertical_negra);
+            this.panelDropDownLineas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelDropDownLineas.Location = new System.Drawing.Point(3, 3);
+            this.panelDropDownLineas.MaximumSize = new System.Drawing.Size(147, 243);
+            this.panelDropDownLineas.MinimumSize = new System.Drawing.Size(147, 35);
+            this.panelDropDownLineas.Name = "panelDropDownLineas";
+            this.panelDropDownLineas.Size = new System.Drawing.Size(147, 36);
+            this.panelDropDownLineas.TabIndex = 1;
             // 
-            // figurasBtn
+            // btnLineas
             // 
-            this.figurasBtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.figurasBtn.Location = new System.Drawing.Point(0, 0);
-            this.figurasBtn.Name = "figurasBtn";
-            this.figurasBtn.Size = new System.Drawing.Size(147, 35);
-            this.figurasBtn.TabIndex = 1;
-            this.figurasBtn.Text = "Figuras ▼";
-            this.figurasBtn.UseVisualStyleBackColor = true;
-            this.figurasBtn.Click += new System.EventHandler(this.figurasBtn_Click);
+            this.btnLineas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLineas.Location = new System.Drawing.Point(0, 0);
+            this.btnLineas.Name = "btnLineas";
+            this.btnLineas.Size = new System.Drawing.Size(147, 40);
+            this.btnLineas.TabIndex = 0;
+            this.btnLineas.Text = "Líneas ▼";
+            this.btnLineas.UseVisualStyleBackColor = true;
+            this.btnLineas.Click += new System.EventHandler(this.lineas_button_Click);
             // 
-            // circulo_negro
+            // linea_abajo_izquierda_negro
             // 
-            this.circulo_negro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.circulo_negro.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.circulo_negro.Image = global::TPI_Diagramador.Properties.Resources.circulo_vacio_negro;
-            this.circulo_negro.Location = new System.Drawing.Point(0, -65);
-            this.circulo_negro.Name = "circulo_negro";
-            this.circulo_negro.Size = new System.Drawing.Size(147, 50);
-            this.circulo_negro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.circulo_negro.TabIndex = 35;
-            this.circulo_negro.TabStop = false;
-            this.circulo_negro.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mouseDownDrag);
+            this.linea_abajo_izquierda_negro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.linea_abajo_izquierda_negro.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.linea_abajo_izquierda_negro.Image = global::TPI_Diagramador.Properties.Resources.lineaD_abajo_izquierda_negro;
+            this.linea_abajo_izquierda_negro.Location = new System.Drawing.Point(0, -164);
+            this.linea_abajo_izquierda_negro.Name = "linea_abajo_izquierda_negro";
+            this.linea_abajo_izquierda_negro.Size = new System.Drawing.Size(147, 50);
+            this.linea_abajo_izquierda_negro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.linea_abajo_izquierda_negro.TabIndex = 34;
+            this.linea_abajo_izquierda_negro.TabStop = false;
             // 
-            // cuadrado_negro
+            // linea_arriba_izquierda_negro
             // 
-            this.cuadrado_negro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cuadrado_negro.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.cuadrado_negro.Image = global::TPI_Diagramador.Properties.Resources.cuadrado_vacio_negro;
-            this.cuadrado_negro.Location = new System.Drawing.Point(0, -15);
-            this.cuadrado_negro.Name = "cuadrado_negro";
-            this.cuadrado_negro.Size = new System.Drawing.Size(147, 50);
-            this.cuadrado_negro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.cuadrado_negro.TabIndex = 36;
-            this.cuadrado_negro.TabStop = false;
-            this.cuadrado_negro.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mouseDownDrag);
+            this.linea_arriba_izquierda_negro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.linea_arriba_izquierda_negro.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.linea_arriba_izquierda_negro.Image = global::TPI_Diagramador.Properties.Resources.lineaD_arriba_izquierda_negro;
+            this.linea_arriba_izquierda_negro.Location = new System.Drawing.Point(0, -114);
+            this.linea_arriba_izquierda_negro.Name = "linea_arriba_izquierda_negro";
+            this.linea_arriba_izquierda_negro.Size = new System.Drawing.Size(147, 50);
+            this.linea_arriba_izquierda_negro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.linea_arriba_izquierda_negro.TabIndex = 31;
+            this.linea_arriba_izquierda_negro.TabStop = false;
+            // 
+            // linea_horizontal_negra
+            // 
+            this.linea_horizontal_negra.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.linea_horizontal_negra.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.linea_horizontal_negra.Image = global::TPI_Diagramador.Properties.Resources.linea_horizontal_negra;
+            this.linea_horizontal_negra.Location = new System.Drawing.Point(0, -64);
+            this.linea_horizontal_negra.Name = "linea_horizontal_negra";
+            this.linea_horizontal_negra.Size = new System.Drawing.Size(147, 50);
+            this.linea_horizontal_negra.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.linea_horizontal_negra.TabIndex = 27;
+            this.linea_horizontal_negra.TabStop = false;
+            // 
+            // linea_vertical_negra
+            // 
+            this.linea_vertical_negra.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.linea_vertical_negra.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.linea_vertical_negra.Image = global::TPI_Diagramador.Properties.Resources.linea_vertical_negra;
+            this.linea_vertical_negra.Location = new System.Drawing.Point(0, -14);
+            this.linea_vertical_negra.Name = "linea_vertical_negra";
+            this.linea_vertical_negra.Size = new System.Drawing.Size(147, 50);
+            this.linea_vertical_negra.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.linea_vertical_negra.TabIndex = 28;
+            this.linea_vertical_negra.TabStop = false;
             // 
             // panelDropDownFlechas
             // 
+            this.panelDropDownFlechas.Controls.Add(this.flechasBtn);
             this.panelDropDownFlechas.Controls.Add(this.flechaD_arriba_derecha);
             this.panelDropDownFlechas.Controls.Add(this.flechaD_abajo_izquierda);
             this.panelDropDownFlechas.Controls.Add(this.flechaD_abajo_derecha);
-            this.panelDropDownFlechas.Controls.Add(this.flechasBtn);
             this.panelDropDownFlechas.Controls.Add(this.flechaD_arriba_izquierda);
             this.panelDropDownFlechas.Controls.Add(this.flecha_izquierda);
             this.panelDropDownFlechas.Controls.Add(this.flecha_abajo);
             this.panelDropDownFlechas.Controls.Add(this.flecha_derecha);
             this.panelDropDownFlechas.Controls.Add(this.flecha_arriba);
-            this.panelDropDownFlechas.Location = new System.Drawing.Point(3, 44);
+            this.panelDropDownFlechas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelDropDownFlechas.Location = new System.Drawing.Point(3, 45);
             this.panelDropDownFlechas.MaximumSize = new System.Drawing.Size(147, 434);
             this.panelDropDownFlechas.MinimumSize = new System.Drawing.Size(147, 35);
             this.panelDropDownFlechas.Name = "panelDropDownFlechas";
             this.panelDropDownFlechas.Size = new System.Drawing.Size(147, 35);
             this.panelDropDownFlechas.TabIndex = 0;
+            // 
+            // flechasBtn
+            // 
+            this.flechasBtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.flechasBtn.Location = new System.Drawing.Point(0, 0);
+            this.flechasBtn.Name = "flechasBtn";
+            this.flechasBtn.Size = new System.Drawing.Size(147, 40);
+            this.flechasBtn.TabIndex = 0;
+            this.flechasBtn.Text = "Flechas ▼";
+            this.flechasBtn.UseVisualStyleBackColor = true;
+            this.flechasBtn.Click += new System.EventHandler(this.flechas_button_Click);
             // 
             // flechaD_arriba_derecha
             // 
@@ -432,16 +487,6 @@
             this.flechaD_abajo_derecha.TabIndex = 33;
             this.flechaD_abajo_derecha.TabStop = false;
             this.flechaD_abajo_derecha.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mouseDownDrag);
-            // 
-            // flechasBtn
-            // 
-            this.flechasBtn.Location = new System.Drawing.Point(0, 0);
-            this.flechasBtn.Name = "flechasBtn";
-            this.flechasBtn.Size = new System.Drawing.Size(147, 35);
-            this.flechasBtn.TabIndex = 0;
-            this.flechasBtn.Text = "Flechas ▼";
-            this.flechasBtn.UseVisualStyleBackColor = true;
-            this.flechasBtn.Click += new System.EventHandler(this.flechas_button_Click);
             // 
             // flechaD_arriba_izquierda
             // 
@@ -508,6 +553,95 @@
             this.flecha_arriba.TabStop = false;
             this.flecha_arriba.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mouseDownDrag);
             // 
+            // panelDropDownFiguras
+            // 
+            this.panelDropDownFiguras.Controls.Add(this.figurasBtn);
+            this.panelDropDownFiguras.Controls.Add(this.cuadrado_negro);
+            this.panelDropDownFiguras.Controls.Add(this.circulo_negro);
+            this.panelDropDownFiguras.Controls.Add(this.rombo_negro);
+            this.panelDropDownFiguras.Controls.Add(this.paralelogramo_negro);
+            this.panelDropDownFiguras.Controls.Add(this.rectangulo_negro);
+            this.panelDropDownFiguras.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelDropDownFiguras.Location = new System.Drawing.Point(3, 86);
+            this.panelDropDownFiguras.MaximumSize = new System.Drawing.Size(147, 290);
+            this.panelDropDownFiguras.MinimumSize = new System.Drawing.Size(147, 35);
+            this.panelDropDownFiguras.Name = "panelDropDownFiguras";
+            this.panelDropDownFiguras.Size = new System.Drawing.Size(147, 35);
+            this.panelDropDownFiguras.TabIndex = 0;
+            // 
+            // figurasBtn
+            // 
+            this.figurasBtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.figurasBtn.Location = new System.Drawing.Point(0, 0);
+            this.figurasBtn.Name = "figurasBtn";
+            this.figurasBtn.Size = new System.Drawing.Size(147, 34);
+            this.figurasBtn.TabIndex = 1;
+            this.figurasBtn.Text = "Figuras ▼";
+            this.figurasBtn.UseVisualStyleBackColor = true;
+            this.figurasBtn.Click += new System.EventHandler(this.figurasBtn_Click);
+            // 
+            // cuadrado_negro
+            // 
+            this.cuadrado_negro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cuadrado_negro.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.cuadrado_negro.Image = global::TPI_Diagramador.Properties.Resources.cuadrado_vacio_negro;
+            this.cuadrado_negro.Location = new System.Drawing.Point(0, -215);
+            this.cuadrado_negro.Name = "cuadrado_negro";
+            this.cuadrado_negro.Size = new System.Drawing.Size(147, 50);
+            this.cuadrado_negro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.cuadrado_negro.TabIndex = 36;
+            this.cuadrado_negro.TabStop = false;
+            this.cuadrado_negro.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mouseDownDrag);
+            // 
+            // circulo_negro
+            // 
+            this.circulo_negro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.circulo_negro.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.circulo_negro.Image = global::TPI_Diagramador.Properties.Resources.circulo_vacio_negro;
+            this.circulo_negro.Location = new System.Drawing.Point(0, -165);
+            this.circulo_negro.Name = "circulo_negro";
+            this.circulo_negro.Size = new System.Drawing.Size(147, 50);
+            this.circulo_negro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.circulo_negro.TabIndex = 35;
+            this.circulo_negro.TabStop = false;
+            this.circulo_negro.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mouseDownDrag);
+            // 
+            // rombo_negro
+            // 
+            this.rombo_negro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.rombo_negro.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.rombo_negro.Image = global::TPI_Diagramador.Properties.Resources.rombo_vacio_negro;
+            this.rombo_negro.Location = new System.Drawing.Point(0, -115);
+            this.rombo_negro.Name = "rombo_negro";
+            this.rombo_negro.Size = new System.Drawing.Size(147, 50);
+            this.rombo_negro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.rombo_negro.TabIndex = 39;
+            this.rombo_negro.TabStop = false;
+            // 
+            // paralelogramo_negro
+            // 
+            this.paralelogramo_negro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.paralelogramo_negro.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.paralelogramo_negro.Image = global::TPI_Diagramador.Properties.Resources.paralelogramo_vacio_negro;
+            this.paralelogramo_negro.Location = new System.Drawing.Point(0, -65);
+            this.paralelogramo_negro.Name = "paralelogramo_negro";
+            this.paralelogramo_negro.Size = new System.Drawing.Size(147, 50);
+            this.paralelogramo_negro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.paralelogramo_negro.TabIndex = 38;
+            this.paralelogramo_negro.TabStop = false;
+            // 
+            // rectangulo_negro
+            // 
+            this.rectangulo_negro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.rectangulo_negro.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.rectangulo_negro.Image = global::TPI_Diagramador.Properties.Resources.rectaungulo_vacio_negro;
+            this.rectangulo_negro.Location = new System.Drawing.Point(0, -15);
+            this.rectangulo_negro.Name = "rectangulo_negro";
+            this.rectangulo_negro.Size = new System.Drawing.Size(147, 50);
+            this.rectangulo_negro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.rectangulo_negro.TabIndex = 37;
+            this.rectangulo_negro.TabStop = false;
+            // 
             // openFileDialog1
             // 
             this.openFileDialog1.DefaultExt = "json";
@@ -522,7 +656,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1051, 475);
+            this.ClientSize = new System.Drawing.Size(1051, 579);
             this.Controls.Add(this.splitContainer1);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -534,9 +668,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
-            this.panelDropDownFiguras.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.circulo_negro)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cuadrado_negro)).EndInit();
+            this.panelDropDownLineas.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.linea_abajo_izquierda_negro)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.linea_arriba_izquierda_negro)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.linea_horizontal_negra)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.linea_vertical_negra)).EndInit();
             this.panelDropDownFlechas.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.flechaD_arriba_derecha)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.flechaD_abajo_izquierda)).EndInit();
@@ -546,6 +682,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.flecha_abajo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.flecha_derecha)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.flecha_arriba)).EndInit();
+            this.panelDropDownFiguras.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.cuadrado_negro)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.circulo_negro)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rombo_negro)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.paralelogramo_negro)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rectangulo_negro)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -586,5 +728,14 @@
         private FontAwesome.Sharp.IconButton btnVerde;
         private FontAwesome.Sharp.IconButton btnCeleste;
         private FontAwesome.Sharp.IconButton btnNegro;
+        private PictureBox paralelogramo_negro;
+        private PictureBox rectangulo_negro;
+        private PictureBox rombo_negro;
+        private Panel panelDropDownLineas;
+        private Button btnLineas;
+        private PictureBox linea_abajo_izquierda_negro;
+        private PictureBox linea_arriba_izquierda_negro;
+        private PictureBox linea_horizontal_negra;
+        private PictureBox linea_vertical_negra;
     }
 }
