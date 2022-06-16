@@ -115,6 +115,34 @@ namespace TPI_Diagramador
                 newPicture.NombreFigura = "flechaD_abajo_izquierda";
                 newPicture.ColorFigura = "negro";
             }
+            else if (name == "linea_abajo_izquierda_negro")
+            {
+                System.Diagnostics.Debug.WriteLine("linea abajo izquierda negro");
+                newPicture.Image = Properties.Resources.lineaD_abajo_izquierda_negro;
+                newPicture.NombreFigura = "linea_abajo_izquierda_negro";
+                newPicture.ColorFigura = "negro";
+            }
+            else if (name == "linea_arriba_izquierda_negro")
+            {
+                System.Diagnostics.Debug.WriteLine("linea arriba izquierda negro");
+                newPicture.Image = Properties.Resources.lineaD_arriba_izquierda_negro;
+                newPicture.NombreFigura = "linea_arriba_izquierda_negro";
+                newPicture.ColorFigura = "negro";
+            }
+            else if (name == "linea_horizontal_negra")
+            {
+                System.Diagnostics.Debug.WriteLine("linea horizontal negra");
+                newPicture.Image = Properties.Resources.linea_horizontal_negra;
+                newPicture.NombreFigura = "linea_horizontal_negra";
+                newPicture.ColorFigura = "negro";
+            }
+            else if (name == "linea_vertical_negra")
+            {
+                System.Diagnostics.Debug.WriteLine("linea vertical negra");
+                newPicture.Image = Properties.Resources.linea_vertical_negra;
+                newPicture.NombreFigura = "linea_vertical_negra";
+                newPicture.ColorFigura = "negro";
+            }
             else if (name == "circulo_negro")
             {
                 System.Diagnostics.Debug.WriteLine("circulo_negro");
@@ -127,6 +155,27 @@ namespace TPI_Diagramador
                 System.Diagnostics.Debug.WriteLine("cuadrado_negro");
                 newPicture.Image = Properties.Resources.cuadrado_vacio_negro;
                 newPicture.NombreFigura = "cuadrado_negro";
+                newPicture.ColorFigura = "negro";
+            }
+            else if (name == "paralelogramo_negro")
+            {
+                System.Diagnostics.Debug.WriteLine("paralelogramo_negro");
+                newPicture.Image = Properties.Resources.paralelogramo_vacio_negro;
+                newPicture.NombreFigura = "paralelogramo_negro";
+                newPicture.ColorFigura = "negro";
+            }
+            else if (name == "rectangulo_negro")
+            {
+                System.Diagnostics.Debug.WriteLine("rectangulo_negro");
+                newPicture.Image = Properties.Resources.rectaungulo_vacio_negro;
+                newPicture.NombreFigura = "rectangulo_negro";
+                newPicture.ColorFigura = "negro";
+            }
+            else if (name == "rombo_negro")
+            {
+                System.Diagnostics.Debug.WriteLine("rombo_negro");
+                newPicture.Image = Properties.Resources.rombo_vacio_negro;
+                newPicture.NombreFigura = "rombo_negro";
                 newPicture.ColorFigura = "negro";
             }//agregar mas else if segun imagenes se agreguen
             else
@@ -535,6 +584,9 @@ namespace TPI_Diagramador
             this.collapsedPanel = 2;
         }
 
+        private void mouseDownDrag(object sender, EventArgs e)
+        {
 
+        }
     }
 }
