@@ -14,10 +14,12 @@ namespace TPI_Diagramador
         private string nombreFigura;
         private string colorFigura;
         private string textoImagen;
+        private string fontFam;
         private float fontSize=15;
         private Panel menu;
         private bool isButonsFocus;
-        private Color colorTexto; 
+        private Color colorTexto;
+        public string FontFam { get { return this.fontFam; } set { this.fontFam = value; } }
         public Color ColorTexto { get { return this.colorTexto; } set { this.colorTexto = value; } }
         public string TextoImagen { get { return this.textoImagen; } set { this.textoImagen = value; } }
         public string NombreFigura { get { return this.nombreFigura; } set { this.nombreFigura = value; } }
@@ -31,6 +33,7 @@ namespace TPI_Diagramador
             menu= new Panel();
             menu.Name = "menu";
             colorTexto = Color.Black;
+            fontFam = "Arial";
         }
 
         public override string ToString()
@@ -164,7 +167,7 @@ namespace TPI_Diagramador
             if (this.Image != null) this.Image.Dispose();
 
             //conseguir tamaño del texto
-            Font fontFake = new Font("Arial", this.fontSize);
+            Font fontFake = new Font(this.fontFam, this.fontSize);
             Image fakeImage = new Bitmap(1, 1);
             Graphics graphicsFake = Graphics.FromImage(fakeImage);
             SizeF size = graphicsFake.MeasureString(t, fontFake);
@@ -173,7 +176,7 @@ namespace TPI_Diagramador
             //crear iamgen
             
             Image image = new Bitmap((int)size.Width/*-(int(this.Size.Width*0.07)*/, (int)size.Height/*- (int)(this.Size.Width * 0.07)*/);
-            var font = new Font("Arial", (int) this.fontSize, FontStyle.Regular);
+            var font = new Font(this.fontFam, (int) this.fontSize, FontStyle.Regular);
             
             var graphics = Graphics.FromImage(image);
 
@@ -238,6 +241,26 @@ namespace TPI_Diagramador
             writeImage(this.textoImagen, br);
         }
 
+        private void comboBoxSelectedChange(object sender, System.EventArgs e)
+        {
+            ComboBox cmb = (ComboBox)sender;
+            this.fontFam =cmb.Items[cmb.SelectedIndex] as string;
+            Brush br = new SolidBrush(colorTexto);
+            this.writeImage(this.textoImagen, br);
+        }
+        private void editarTexto(object sender, System.EventArgs e)
+        {
+            InputBox inbox = new InputBox("Escriba el nuevo texto");
+            inbox.ShowDialog();
+            this.textoImagen = inbox.getTexto();
+
+            if (this.textoImagen.Length > 0 || this.textoImagen != "")
+            {
+                Brush br = new SolidBrush(colorTexto);
+                this.writeImage(this.textoImagen, br);
+            }
+        }
+
         public void crearMenu()
         {
             this.menu = new menuFigura();
@@ -255,26 +278,40 @@ namespace TPI_Diagramador
             botonAchicar.IconSize = 15;
             botonAgrandar.IconSize = 15;
 
-            if (this.textoImagen != null )
-            {         
+            if (this.textoImagen != null)
+            {
                 botonAgrandar.Dock = DockStyle.Right;
                 botonAgrandar.Click += new System.EventHandler(onClickAgrandarFontSize);
 
                 botonAchicar.Dock = DockStyle.Right;
                 botonAchicar.Click += new System.EventHandler(onClickAchicarFontSize);
 
-                FontAwesome.Sharp.IconButton btnEditar =   new FontAwesome.Sharp.IconButton();
+                FontAwesome.Sharp.IconButton btnEditar = new FontAwesome.Sharp.IconButton();
                 btnEditar.IconChar = FontAwesome.Sharp.IconChar.Edit;
                 btnEditar.BackColor = Color.SkyBlue;
                 btnEditar.IconSize = 20;
-                //botonAgrandar.Click += new System.EventHandler(onClickAgrandarFontSize);
+                btnEditar.Click += new System.EventHandler(editarTexto);
                 btnEditar.Height = 20;
                 btnEditar.Width = 20;
                 btnEditar.Dock = DockStyle.Right;
 
+                ComboBox comboBoxFonts = new ComboBox();
+                comboBoxFonts.Dock = DockStyle.Right;
+                comboBoxFonts.Width = 200;
+                comboBoxFonts.Height = 20;
+                foreach (var font in FontFamily.Families)
+                {
+                    comboBoxFonts.Items.Add(font.Name);
+                    System.Diagnostics.Debug.WriteLine(font);
+
+                }
+                int index = comboBoxFonts.FindString(this.fontFam);
+                comboBoxFonts.SelectedIndex = index;
+                comboBoxFonts.SelectedIndexChanged += new System.EventHandler(comboBoxSelectedChange);
+
+                menu.Width += 200;
                 menu.Controls.Add(btnEditar);
-
-
+                menu.Controls.Add(comboBoxFonts);
             }
             else
             {                

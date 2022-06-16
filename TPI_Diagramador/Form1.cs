@@ -244,11 +244,6 @@ namespace TPI_Diagramador
             }
 
         }
-       
-        private void Borrar(object sender, EventArgs e)
-        {
-           
-        }
 
         private void MasChico(object sender, EventArgs e)
         {
@@ -354,13 +349,7 @@ namespace TPI_Diagramador
         private void achicarBtn_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void borrarBtn_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        }      
         
 
         private void toJPGBtn_Click(object sender, EventArgs e)
@@ -416,6 +405,13 @@ namespace TPI_Diagramador
         {
             foreach (var item in figurasSeleccionadas)
             {
+                //evita que el menu queden al borrar el item lo cual proboca un erro al intenta borrar despues al menu ya que su padre
+                // no existe mas, por lo tanto borramos todos los menus primero y luego la figura.
+                foreach (var menu in this.splitContainer2.Panel2.Controls.Find("menu", false))
+                {
+                    menu.Dispose();
+                }                
+
                 item.Dispose();
             }
             figurasSeleccionadas.Clear();

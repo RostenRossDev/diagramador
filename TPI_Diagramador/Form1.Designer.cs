@@ -265,7 +265,7 @@
             this.btnBorrar.Size = new System.Drawing.Size(75, 53);
             this.btnBorrar.TabIndex = 13;
             this.btnBorrar.UseVisualStyleBackColor = true;
-            this.btnBorrar.Click += new System.EventHandler(this.Borrar);
+            this.btnBorrar.Click += new System.EventHandler(this.borrar);
             // 
             // btnGuardar
             // 
