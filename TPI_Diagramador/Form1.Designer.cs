@@ -30,17 +30,20 @@
         {
             this.components = new System.ComponentModel.Container();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.azulBtn = new System.Windows.Forms.Button();
-            this.moradoBtn = new System.Windows.Forms.Button();
-            this.verdeBtn = new System.Windows.Forms.Button();
-            this.rojoBtn = new System.Windows.Forms.Button();
-            this.toJPGBtn = new System.Windows.Forms.Button();
-            this.borrarBtn = new System.Windows.Forms.Button();
-            this.textoBtn = new System.Windows.Forms.Button();
-            this.agrandarBtn = new System.Windows.Forms.Button();
-            this.achicarBtn = new System.Windows.Forms.Button();
-            this.abrirBtn = new System.Windows.Forms.Button();
-            this.guardarBtn = new System.Windows.Forms.Button();
+            this.btnAmarillo = new FontAwesome.Sharp.IconButton();
+            this.btnNaranja = new FontAwesome.Sharp.IconButton();
+            this.btnMorado = new FontAwesome.Sharp.IconButton();
+            this.btnVerde = new FontAwesome.Sharp.IconButton();
+            this.btnCeleste = new FontAwesome.Sharp.IconButton();
+            this.btnNegro = new FontAwesome.Sharp.IconButton();
+            this.btnRojo = new FontAwesome.Sharp.IconButton();
+            this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.btnEscribir = new FontAwesome.Sharp.IconButton();
+            this.btnToJpg = new FontAwesome.Sharp.IconButton();
+            this.btnBorrar = new FontAwesome.Sharp.IconButton();
+            this.btnGuardar = new FontAwesome.Sharp.IconButton();
+            this.btnAbrirJson = new FontAwesome.Sharp.IconButton();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panelDropDownFiguras = new System.Windows.Forms.Panel();
@@ -93,146 +96,203 @@
             // 
             this.splitContainer1.Panel1.AutoScroll = true;
             this.splitContainer1.Panel1.BackColor = System.Drawing.Color.Coral;
-            this.splitContainer1.Panel1.Controls.Add(this.azulBtn);
-            this.splitContainer1.Panel1.Controls.Add(this.moradoBtn);
-            this.splitContainer1.Panel1.Controls.Add(this.verdeBtn);
-            this.splitContainer1.Panel1.Controls.Add(this.rojoBtn);
-            this.splitContainer1.Panel1.Controls.Add(this.toJPGBtn);
-            this.splitContainer1.Panel1.Controls.Add(this.borrarBtn);
-            this.splitContainer1.Panel1.Controls.Add(this.textoBtn);
-            this.splitContainer1.Panel1.Controls.Add(this.agrandarBtn);
-            this.splitContainer1.Panel1.Controls.Add(this.achicarBtn);
-            this.splitContainer1.Panel1.Controls.Add(this.abrirBtn);
-            this.splitContainer1.Panel1.Controls.Add(this.guardarBtn);
+            this.splitContainer1.Panel1.Controls.Add(this.btnAmarillo);
+            this.splitContainer1.Panel1.Controls.Add(this.btnNaranja);
+            this.splitContainer1.Panel1.Controls.Add(this.btnMorado);
+            this.splitContainer1.Panel1.Controls.Add(this.btnVerde);
+            this.splitContainer1.Panel1.Controls.Add(this.btnCeleste);
+            this.splitContainer1.Panel1.Controls.Add(this.btnNegro);
+            this.splitContainer1.Panel1.Controls.Add(this.btnRojo);
+            this.splitContainer1.Panel1.Controls.Add(this.iconButton2);
+            this.splitContainer1.Panel1.Controls.Add(this.iconButton1);
+            this.splitContainer1.Panel1.Controls.Add(this.btnEscribir);
+            this.splitContainer1.Panel1.Controls.Add(this.btnToJpg);
+            this.splitContainer1.Panel1.Controls.Add(this.btnBorrar);
+            this.splitContainer1.Panel1.Controls.Add(this.btnGuardar);
+            this.splitContainer1.Panel1.Controls.Add(this.btnAbrirJson);
             // 
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
             this.splitContainer1.Panel2MinSize = 40;
-            this.splitContainer1.Size = new System.Drawing.Size(921, 450);
+            this.splitContainer1.Size = new System.Drawing.Size(1051, 475);
             this.splitContainer1.SplitterDistance = 53;
             this.splitContainer1.TabIndex = 0;
             // 
-            // azulBtn
+            // btnAmarillo
             // 
-            this.azulBtn.Dock = System.Windows.Forms.DockStyle.Left;
-            this.azulBtn.Location = new System.Drawing.Point(750, 0);
-            this.azulBtn.Name = "azulBtn";
-            this.azulBtn.Size = new System.Drawing.Size(75, 53);
-            this.azulBtn.TabIndex = 10;
-            this.azulBtn.Text = "Azul";
-            this.azulBtn.UseVisualStyleBackColor = true;
-            this.azulBtn.Click += new System.EventHandler(this.azulBtn_Click);
+            this.btnAmarillo.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnAmarillo.IconChar = FontAwesome.Sharp.IconChar.Highlighter;
+            this.btnAmarillo.IconColor = System.Drawing.Color.Yellow;
+            this.btnAmarillo.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAmarillo.Location = new System.Drawing.Point(975, 0);
+            this.btnAmarillo.Name = "btnAmarillo";
+            this.btnAmarillo.Size = new System.Drawing.Size(75, 53);
+            this.btnAmarillo.TabIndex = 24;
+            this.btnAmarillo.UseVisualStyleBackColor = true;
             // 
-            // moradoBtn
+            // btnNaranja
             // 
-            this.moradoBtn.Dock = System.Windows.Forms.DockStyle.Left;
-            this.moradoBtn.Location = new System.Drawing.Point(675, 0);
-            this.moradoBtn.Name = "moradoBtn";
-            this.moradoBtn.Size = new System.Drawing.Size(75, 53);
-            this.moradoBtn.TabIndex = 9;
-            this.moradoBtn.Text = "morado";
-            this.moradoBtn.UseVisualStyleBackColor = true;
-            this.moradoBtn.Click += new System.EventHandler(this.moradoBtn_Click);
+            this.btnNaranja.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnNaranja.IconChar = FontAwesome.Sharp.IconChar.Highlighter;
+            this.btnNaranja.IconColor = System.Drawing.Color.DarkOrange;
+            this.btnNaranja.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnNaranja.Location = new System.Drawing.Point(900, 0);
+            this.btnNaranja.Name = "btnNaranja";
+            this.btnNaranja.Size = new System.Drawing.Size(75, 53);
+            this.btnNaranja.TabIndex = 23;
+            this.btnNaranja.UseVisualStyleBackColor = true;
             // 
-            // verdeBtn
+            // btnMorado
             // 
-            this.verdeBtn.Dock = System.Windows.Forms.DockStyle.Left;
-            this.verdeBtn.Location = new System.Drawing.Point(600, 0);
-            this.verdeBtn.Name = "verdeBtn";
-            this.verdeBtn.Size = new System.Drawing.Size(75, 53);
-            this.verdeBtn.TabIndex = 8;
-            this.verdeBtn.Text = "verde";
-            this.verdeBtn.UseVisualStyleBackColor = true;
-            this.verdeBtn.Click += new System.EventHandler(this.verdeBtn_Click);
+            this.btnMorado.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnMorado.IconChar = FontAwesome.Sharp.IconChar.Highlighter;
+            this.btnMorado.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnMorado.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnMorado.Location = new System.Drawing.Point(825, 0);
+            this.btnMorado.Name = "btnMorado";
+            this.btnMorado.Size = new System.Drawing.Size(75, 53);
+            this.btnMorado.TabIndex = 22;
+            this.btnMorado.UseVisualStyleBackColor = true;
             // 
-            // rojoBtn
+            // btnVerde
             // 
-            this.rojoBtn.Dock = System.Windows.Forms.DockStyle.Left;
-            this.rojoBtn.Location = new System.Drawing.Point(525, 0);
-            this.rojoBtn.Name = "rojoBtn";
-            this.rojoBtn.Size = new System.Drawing.Size(75, 53);
-            this.rojoBtn.TabIndex = 7;
-            this.rojoBtn.Text = "Rojo";
-            this.rojoBtn.UseVisualStyleBackColor = true;
-            this.rojoBtn.Click += new System.EventHandler(this.rojoBtn_Click);
+            this.btnVerde.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnVerde.IconChar = FontAwesome.Sharp.IconChar.Highlighter;
+            this.btnVerde.IconColor = System.Drawing.Color.SpringGreen;
+            this.btnVerde.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnVerde.Location = new System.Drawing.Point(750, 0);
+            this.btnVerde.Name = "btnVerde";
+            this.btnVerde.Size = new System.Drawing.Size(75, 53);
+            this.btnVerde.TabIndex = 21;
+            this.btnVerde.UseVisualStyleBackColor = true;
             // 
-            // toJPGBtn
+            // btnCeleste
             // 
-            this.toJPGBtn.Dock = System.Windows.Forms.DockStyle.Left;
-            this.toJPGBtn.Location = new System.Drawing.Point(450, 0);
-            this.toJPGBtn.Name = "toJPGBtn";
-            this.toJPGBtn.Size = new System.Drawing.Size(75, 53);
-            this.toJPGBtn.TabIndex = 6;
-            this.toJPGBtn.Text = "ToJpg";
-            this.toJPGBtn.UseVisualStyleBackColor = true;
-            this.toJPGBtn.Click += new System.EventHandler(this.toJPGBtn_Click);
+            this.btnCeleste.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnCeleste.IconChar = FontAwesome.Sharp.IconChar.Highlighter;
+            this.btnCeleste.IconColor = System.Drawing.Color.LightSkyBlue;
+            this.btnCeleste.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCeleste.Location = new System.Drawing.Point(675, 0);
+            this.btnCeleste.Name = "btnCeleste";
+            this.btnCeleste.Size = new System.Drawing.Size(75, 53);
+            this.btnCeleste.TabIndex = 20;
+            this.btnCeleste.UseVisualStyleBackColor = true;
             // 
-            // borrarBtn
+            // btnNegro
             // 
-            this.borrarBtn.Dock = System.Windows.Forms.DockStyle.Left;
-            this.borrarBtn.Location = new System.Drawing.Point(375, 0);
-            this.borrarBtn.Name = "borrarBtn";
-            this.borrarBtn.Size = new System.Drawing.Size(75, 53);
-            this.borrarBtn.TabIndex = 5;
-            this.borrarBtn.Text = "Borrar";
-            this.borrarBtn.UseVisualStyleBackColor = true;
-            this.borrarBtn.Click += new System.EventHandler(this.borrar);
+            this.btnNegro.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnNegro.IconChar = FontAwesome.Sharp.IconChar.Highlighter;
+            this.btnNegro.IconColor = System.Drawing.Color.Black;
+            this.btnNegro.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnNegro.Location = new System.Drawing.Point(600, 0);
+            this.btnNegro.Name = "btnNegro";
+            this.btnNegro.Size = new System.Drawing.Size(75, 53);
+            this.btnNegro.TabIndex = 19;
+            this.btnNegro.UseVisualStyleBackColor = true;
             // 
-            // textoBtn
+            // btnRojo
             // 
-            this.textoBtn.Dock = System.Windows.Forms.DockStyle.Left;
-            this.textoBtn.Location = new System.Drawing.Point(300, 0);
-            this.textoBtn.Name = "textoBtn";
-            this.textoBtn.Size = new System.Drawing.Size(75, 53);
-            this.textoBtn.TabIndex = 4;
-            this.textoBtn.Text = "Texto(experimental)";
-            this.textoBtn.UseVisualStyleBackColor = true;
-            this.textoBtn.MouseClick += new System.Windows.Forms.MouseEventHandler(this.crearTexto);
+            this.btnRojo.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnRojo.IconChar = FontAwesome.Sharp.IconChar.Highlighter;
+            this.btnRojo.IconColor = System.Drawing.Color.Red;
+            this.btnRojo.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnRojo.Location = new System.Drawing.Point(525, 0);
+            this.btnRojo.Name = "btnRojo";
+            this.btnRojo.Size = new System.Drawing.Size(75, 53);
+            this.btnRojo.TabIndex = 18;
+            this.btnRojo.UseVisualStyleBackColor = true;
             // 
-            // agrandarBtn
+            // iconButton2
             // 
-            this.agrandarBtn.Dock = System.Windows.Forms.DockStyle.Left;
-            this.agrandarBtn.Location = new System.Drawing.Point(225, 0);
-            this.agrandarBtn.Name = "agrandarBtn";
-            this.agrandarBtn.Size = new System.Drawing.Size(75, 53);
-            this.agrandarBtn.TabIndex = 3;
-            this.agrandarBtn.Text = "+";
-            this.agrandarBtn.UseVisualStyleBackColor = true;
-            this.agrandarBtn.Click += new System.EventHandler(this.borrarBtn_Click);
+            this.iconButton2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.Plus;
+            this.iconButton2.IconColor = System.Drawing.Color.BlueViolet;
+            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton2.Location = new System.Drawing.Point(450, 0);
+            this.iconButton2.Name = "iconButton2";
+            this.iconButton2.Size = new System.Drawing.Size(75, 53);
+            this.iconButton2.TabIndex = 17;
+            this.iconButton2.UseVisualStyleBackColor = true;
             // 
-            // achicarBtn
+            // iconButton1
             // 
-            this.achicarBtn.Dock = System.Windows.Forms.DockStyle.Left;
-            this.achicarBtn.Location = new System.Drawing.Point(150, 0);
-            this.achicarBtn.Name = "achicarBtn";
-            this.achicarBtn.Size = new System.Drawing.Size(75, 53);
-            this.achicarBtn.TabIndex = 2;
-            this.achicarBtn.Text = "-";
-            this.achicarBtn.UseVisualStyleBackColor = true;
-            this.achicarBtn.Click += new System.EventHandler(this.achicarBtn_Click);
+            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Minus;
+            this.iconButton1.IconColor = System.Drawing.Color.BlueViolet;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.IconSize = 40;
+            this.iconButton1.Location = new System.Drawing.Point(375, 0);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(75, 53);
+            this.iconButton1.TabIndex = 16;
+            this.iconButton1.UseVisualStyleBackColor = true;
             // 
-            // abrirBtn
+            // btnEscribir
             // 
-            this.abrirBtn.Dock = System.Windows.Forms.DockStyle.Left;
-            this.abrirBtn.Location = new System.Drawing.Point(75, 0);
-            this.abrirBtn.Name = "abrirBtn";
-            this.abrirBtn.Size = new System.Drawing.Size(75, 53);
-            this.abrirBtn.TabIndex = 1;
-            this.abrirBtn.Text = "Abrir";
-            this.abrirBtn.UseVisualStyleBackColor = true;
-            this.abrirBtn.Click += new System.EventHandler(this.cargarBtn_Click);
+            this.btnEscribir.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnEscribir.IconChar = FontAwesome.Sharp.IconChar.Edit;
+            this.btnEscribir.IconColor = System.Drawing.Color.BlueViolet;
+            this.btnEscribir.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnEscribir.Location = new System.Drawing.Point(300, 0);
+            this.btnEscribir.Name = "btnEscribir";
+            this.btnEscribir.Size = new System.Drawing.Size(75, 53);
+            this.btnEscribir.TabIndex = 14;
+            this.btnEscribir.UseVisualStyleBackColor = true;
+            this.btnEscribir.MouseClick += new System.Windows.Forms.MouseEventHandler(this.crearTexto);
             // 
-            // guardarBtn
+            // btnToJpg
             // 
-            this.guardarBtn.Dock = System.Windows.Forms.DockStyle.Left;
-            this.guardarBtn.Location = new System.Drawing.Point(0, 0);
-            this.guardarBtn.Name = "guardarBtn";
-            this.guardarBtn.Size = new System.Drawing.Size(75, 53);
-            this.guardarBtn.TabIndex = 0;
-            this.guardarBtn.Text = "Guardar";
-            this.guardarBtn.UseVisualStyleBackColor = true;
-            this.guardarBtn.Click += new System.EventHandler(this.guardarBtn_Click);
+            this.btnToJpg.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnToJpg.IconChar = FontAwesome.Sharp.IconChar.Image;
+            this.btnToJpg.IconColor = System.Drawing.Color.BlueViolet;
+            this.btnToJpg.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnToJpg.Location = new System.Drawing.Point(225, 0);
+            this.btnToJpg.Name = "btnToJpg";
+            this.btnToJpg.Size = new System.Drawing.Size(75, 53);
+            this.btnToJpg.TabIndex = 15;
+            this.btnToJpg.UseVisualStyleBackColor = true;
+            this.btnToJpg.Click += new System.EventHandler(this.toJPGBtn_Click);
+            // 
+            // btnBorrar
+            // 
+            this.btnBorrar.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnBorrar.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
+            this.btnBorrar.IconColor = System.Drawing.Color.BlueViolet;
+            this.btnBorrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnBorrar.Location = new System.Drawing.Point(150, 0);
+            this.btnBorrar.Name = "btnBorrar";
+            this.btnBorrar.Size = new System.Drawing.Size(75, 53);
+            this.btnBorrar.TabIndex = 13;
+            this.btnBorrar.UseVisualStyleBackColor = true;
+            this.btnBorrar.Click += new System.EventHandler(this.Borrar);
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnGuardar.IconChar = FontAwesome.Sharp.IconChar.Save;
+            this.btnGuardar.IconColor = System.Drawing.Color.BlueViolet;
+            this.btnGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnGuardar.IconSize = 50;
+            this.btnGuardar.Location = new System.Drawing.Point(75, 0);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(75, 53);
+            this.btnGuardar.TabIndex = 11;
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.guardarBtn_Click);
+            // 
+            // btnAbrirJson
+            // 
+            this.btnAbrirJson.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnAbrirJson.IconChar = FontAwesome.Sharp.IconChar.FileImport;
+            this.btnAbrirJson.IconColor = System.Drawing.Color.BlueViolet;
+            this.btnAbrirJson.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAbrirJson.Location = new System.Drawing.Point(0, 0);
+            this.btnAbrirJson.Name = "btnAbrirJson";
+            this.btnAbrirJson.Size = new System.Drawing.Size(75, 53);
+            this.btnAbrirJson.TabIndex = 12;
+            this.btnAbrirJson.UseVisualStyleBackColor = true;
+            this.btnAbrirJson.Click += new System.EventHandler(this.cargarBtn_Click);
             // 
             // splitContainer2
             // 
@@ -252,8 +312,8 @@
             this.splitContainer2.Panel2.BackColor = System.Drawing.SystemColors.Control;
             this.splitContainer2.Panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MouseDown);
             this.splitContainer2.Panel2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.MouseUp);
-            this.splitContainer2.Size = new System.Drawing.Size(921, 393);
-            this.splitContainer2.SplitterDistance = 176;
+            this.splitContainer2.Size = new System.Drawing.Size(1051, 418);
+            this.splitContainer2.SplitterDistance = 200;
             this.splitContainer2.TabIndex = 0;
             // 
             // flowLayoutPanel1
@@ -462,7 +522,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(921, 450);
+            this.ClientSize = new System.Drawing.Size(1051, 475);
             this.Controls.Add(this.splitContainer1);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -493,18 +553,7 @@
         #endregion
 
         private SplitContainer splitContainer1;
-        private Button rojoBtn;
-        private Button toJPGBtn;
-        private Button borrarBtn;
-        private Button textoBtn;
-        private Button agrandarBtn;
-        private Button achicarBtn;
-        private Button abrirBtn;
-        private Button guardarBtn;
         private SplitContainer splitContainer2;
-        private Button azulBtn;
-        private Button moradoBtn;
-        private Button verdeBtn;
         private PictureBox flecha_derecha;
         private PictureBox flechaD_abajo_izquierda;
         private PictureBox flechaD_abajo_derecha;
@@ -523,5 +572,19 @@
         private Panel panelDropDownFiguras;
         private Button figurasBtn;
         private System.Windows.Forms.Timer timer1;
+        private FontAwesome.Sharp.IconButton btnGuardar;
+        private FontAwesome.Sharp.IconButton btnRojo;
+        private FontAwesome.Sharp.IconButton iconButton2;
+        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton btnEscribir;
+        private FontAwesome.Sharp.IconButton btnToJpg;
+        private FontAwesome.Sharp.IconButton btnBorrar;
+        private FontAwesome.Sharp.IconButton btnAbrirJson;
+        private FontAwesome.Sharp.IconButton btnAmarillo;
+        private FontAwesome.Sharp.IconButton btnNaranja;
+        private FontAwesome.Sharp.IconButton btnMorado;
+        private FontAwesome.Sharp.IconButton btnVerde;
+        private FontAwesome.Sharp.IconButton btnCeleste;
+        private FontAwesome.Sharp.IconButton btnNegro;
     }
 }

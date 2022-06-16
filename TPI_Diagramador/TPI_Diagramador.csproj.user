@@ -10,7 +10,7 @@
     <Compile Update="InputBox.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="menuFigura.cs">
+    <Compile Update="MenuItem.cs">
       <SubType>Component</SubType>
     </Compile>
   </ItemGroup>

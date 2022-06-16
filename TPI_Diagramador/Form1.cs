@@ -370,8 +370,12 @@ namespace TPI_Diagramador
             if (sfd.ShowDialog() == DialogResult.OK)
             {
                 Bitmap bmp = new Bitmap(this.splitContainer2.Panel2.Width, this.splitContainer2.Panel2.Height);
+                this.splitContainer2.Panel2.AutoScroll = false;
                 this.splitContainer2.Panel2.DrawToBitmap(bmp, new Rectangle(0, 0, bmp.Width, bmp.Height));
+
                 bmp.Save(sfd.FileName, ImageFormat.Jpeg);
+                this.splitContainer2.Panel2.AutoScroll = true;
+
                 //MessageBox.Show("La imagen se ha guardado correctamente");
             }
         }
@@ -509,6 +513,16 @@ namespace TPI_Diagramador
         {
             timer1.Start();
             this.collapsedPanel = 2;
+        }
+
+        private void iconButton10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iconButton9_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

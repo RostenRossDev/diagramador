@@ -40,3 +40,4 @@ C:\Users\Cristina\source\repos\diagramador\TPI_Diagramador\obj\Debug\net6.0-wind
 C:\Users\Cristina\source\repos\diagramador\TPI_Diagramador\obj\Debug\net6.0-windows\TPI_Diagramador.pdb
 C:\Users\Cristina\source\repos\diagramador\TPI_Diagramador\obj\Debug\net6.0-windows\TPI_Diagramador.genruntimeconfig.cache
 C:\Users\Cristina\source\repos\diagramador\TPI_Diagramador\obj\Debug\net6.0-windows\ref\TPI_Diagramador.dll
+C:\Users\nesto\source\repos\TPI_Diagramador\TPI_Diagramador\bin\Debug\net6.0-windows\FontAwesome.Sharp.dll

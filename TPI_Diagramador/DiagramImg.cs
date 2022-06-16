@@ -247,11 +247,13 @@ namespace TPI_Diagramador
             //menu.BackColor = Color.LawnGreen;
             menu.MouseEnter += new System.EventHandler(onMouseHoverButonvoid);
             menu.MouseLeave += new System.EventHandler(onMouseLeaveButonvoid);
-            menu.Padding = new Padding(5,5,5,0);            
-            Button botonAgrandar = new Button();
-            Button botonAchicar = new Button();
-            botonAgrandar.Text = "+";
-            botonAchicar.Text = "-";
+            menu.Padding = new Padding(5,5,5,0);
+            FontAwesome.Sharp.IconButton botonAgrandar = new FontAwesome.Sharp.IconButton();
+            FontAwesome.Sharp.IconButton botonAchicar = new FontAwesome.Sharp.IconButton();
+            botonAgrandar.IconChar = FontAwesome.Sharp.IconChar.Plus;
+            botonAchicar.IconChar = FontAwesome.Sharp.IconChar.Minus;
+            botonAchicar.IconSize = 15;
+            botonAgrandar.IconSize = 15;
 
             if (this.textoImagen != null )
             {         
@@ -259,7 +261,19 @@ namespace TPI_Diagramador
                 botonAgrandar.Click += new System.EventHandler(onClickAgrandarFontSize);
 
                 botonAchicar.Dock = DockStyle.Right;
-                botonAchicar.Click += new System.EventHandler(onClickAchicarFontSize);    
+                botonAchicar.Click += new System.EventHandler(onClickAchicarFontSize);
+
+                FontAwesome.Sharp.IconButton btnEditar =   new FontAwesome.Sharp.IconButton();
+                btnEditar.IconChar = FontAwesome.Sharp.IconChar.Edit;
+                btnEditar.BackColor = Color.SkyBlue;
+                btnEditar.IconSize = 20;
+                //botonAgrandar.Click += new System.EventHandler(onClickAgrandarFontSize);
+                btnEditar.Height = 20;
+                btnEditar.Width = 20;
+                btnEditar.Dock = DockStyle.Right;
+
+                menu.Controls.Add(btnEditar);
+
 
             }
             else
@@ -342,8 +356,9 @@ namespace TPI_Diagramador
             menu.Controls.Add(colorMorado);
             colorMorado.Click += new System.EventHandler(onClickColorMorado);
 
-            Button cobtnCerrar = new Button();
-            cobtnCerrar.Text = "X";
+            FontAwesome.Sharp.IconButton cobtnCerrar = new FontAwesome.Sharp.IconButton();
+            cobtnCerrar.IconChar = FontAwesome.Sharp.IconChar.Times;
+            cobtnCerrar.IconSize = 15;
             cobtnCerrar.Height = 20;
             cobtnCerrar.Width = 20;
             cobtnCerrar.Dock = DockStyle.Right;
