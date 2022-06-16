@@ -535,23 +535,6 @@ namespace TPI_Diagramador
             this.collapsedPanel = 2;
         }
 
-<<<<<<< HEAD
-      
-=======
-        private void iconButton10_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void iconButton9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
->>>>>>> 3eff965eb70ac49eac3b5d76aa9a401788d96fb8
     }
 }

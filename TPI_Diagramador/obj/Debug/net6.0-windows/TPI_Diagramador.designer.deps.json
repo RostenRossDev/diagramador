@@ -6,8 +6,22 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v6.0": {
-      "FontAwesome.Sharp/5.15.4": {},
-      "Newtonsoft.Json/13.0.1": {}
+      "FontAwesome.Sharp/5.15.4": {
+        "runtime": {
+          "lib/net5.0-windows7.0/FontAwesome.Sharp.dll": {
+            "assemblyVersion": "5.15.4.0",
+            "fileVersion": "5.15.4.0"
+          }
+        }
+      },
+      "Newtonsoft.Json/13.0.1": {
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "13.0.0.0",
+            "fileVersion": "13.0.1.25517"
+          }
+        }
+      }
     }
   },
   "libraries": {
