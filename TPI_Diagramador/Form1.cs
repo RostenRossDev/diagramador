@@ -433,6 +433,11 @@ namespace TPI_Diagramador
             
         }
 
+        private void lineas_button_Click(object sender, EventArgs e)
+        {
+            timer1.Start();
+            this.collapsedPanel = 3;
+        }
         private void flechas_button_Click(object sender, EventArgs e)
         {
             timer1.Start();
@@ -449,6 +454,9 @@ namespace TPI_Diagramador
                     break;
                 case 2:
                     expandCollapse(this.panelDropDownFiguras, isCollpased);
+                    break;
+                case 3:
+                    expandCollapse(this.panelDropDownLineas, isCollpased);
                     break;
                 default:
                     break;
@@ -477,13 +485,17 @@ namespace TPI_Diagramador
                 case "panelDropDownFiguras":
                     this.figurasBtn.Text ="Figuras "+ texto;
                     break;
+                case "panelDropDownLineas":
+                    this.btnLineas.Text = "Lineas " + texto;
+                    break;
                 default:
                     break;
             }
         }
         private void expand(Panel panel)
-        {       
-            
+        {
+            System.Diagnostics.Debug.WriteLine("panel: " + panel.Name);
+
             changeBtnText(panel, "▲");
             panel.Height += 10;
             if (panel.Size==panel.MaximumSize)
@@ -517,6 +529,11 @@ namespace TPI_Diagramador
         }
 
         private void iconButton9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
