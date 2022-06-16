@@ -19,6 +19,7 @@ namespace TPI_Diagramador
         private Panel menu;
         private bool isButonsFocus;
         private Color colorTexto;
+        public float FontSize { get { return this.fontSize; } set { this.fontSize = value; } }
         public string FontFam { get { return this.fontFam; } set { this.fontFam = value; } }
         public Color ColorTexto { get { return this.colorTexto; } set { this.colorTexto = value; } }
         public string TextoImagen { get { return this.textoImagen; } set { this.textoImagen = value; } }

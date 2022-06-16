@@ -80,44 +80,39 @@ namespace TPI_Diagramador
             }
             else if (name == "flecha_arriba")
             {
-                System.Diagnostics.Debug.WriteLine("flecha negra arriba");
                 newPicture.Image = Properties.Resources.flecha_arriba_negra;
                 newPicture.NombreFigura = "flecha_arriba";
                 newPicture.ColorFigura = "negro";
             }
             else if (name == "flecha_abajo")
             {
-                System.Diagnostics.Debug.WriteLine("flecha negra abajo");
                 newPicture.Image = Properties.Resources.flecha_abajo_negra;
                 newPicture.NombreFigura = "flecha_abajo";
                 newPicture.ColorFigura = "negro";
             }
             else if (name == "flechaD_arriba_izquierda")
             {
-                System.Diagnostics.Debug.WriteLine("flecha negra abajo");
                 newPicture.Image = Properties.Resources.flechaD_arriba_izquierda_negra;
-                newPicture.NombreFigura = "flecha_abajo";
+                newPicture.NombreFigura = "flechaD_arriba_izquierda";
                 newPicture.ColorFigura = "negro";
             }
             else if (name == "flechaD_arriba_derecha")
             {
-                System.Diagnostics.Debug.WriteLine("flecha negra abajo");
                 newPicture.Image = Properties.Resources.flechaD_arriba_derecha_negra;
-                newPicture.NombreFigura = "flecha_abajo";
+                newPicture.NombreFigura = "flechaD_arriba_derecha";
                 newPicture.ColorFigura = "negro";
             }
             else if (name == "flechaD_abajo_derecha")
             {
-                System.Diagnostics.Debug.WriteLine("flecha negra abajo");
                 newPicture.Image = Properties.Resources.flechaD_abajo_derecha_negra;
-                newPicture.NombreFigura = "flecha_abajo";
+                newPicture.NombreFigura = "flechaD_abajo_derecha";
                 newPicture.ColorFigura = "negro";
             }
             else if (name == "flechaD_abajo_izquierda")
             {
                 System.Diagnostics.Debug.WriteLine("flecha negra abajo");
                 newPicture.Image = Properties.Resources.flechaD_abajo_izquierda_negra;
-                newPicture.NombreFigura = "flecha_abajo";
+                newPicture.NombreFigura = "flechaD_abajo_izquierda";
                 newPicture.ColorFigura = "negro";
             }
             else if (name == "circulo_negro")
@@ -259,34 +254,47 @@ namespace TPI_Diagramador
         {
             string pathFile = "";
             string json = "";
-            this.openFileDialog1.ShowDialog();
+            DialogResult dialogResult = this.openFileDialog1.ShowDialog();
+
             pathFile = this.openFileDialog1.FileName;
-            using (StreamReader sr = new StreamReader(pathFile))
+            if (dialogResult != DialogResult.Cancel)
             {
-                json = sr.ReadToEnd();
-                sr.Close();
-            }
             
-            //var diagramas= JsonConvert.DeserializeObject<List<DiagramDTO>>(json);
-            var diagramas = JsonSerializer.Deserialize< List<DiagramDTO>>(json);
-
-            foreach (var item in diagramas)
-            {
-                DiagramImg newPic = selectFigura(item.TipoFigura);
-                newPic.ColorFigura = item.ColorFigura;
-                newPic.Location = item.Point;
-                newPic.ColorTexto = item.ColorTexto;
-                System.Diagnostics.Debug.WriteLine("item color texto: " + item.ColorTexto);
-
-                if (item.Texto != null)
+                using (StreamReader sr = new StreamReader(pathFile))
                 {
-                    newPic.writeImage(item.Texto, null);
+                    json = sr.ReadToEnd();
+                    sr.Close();
                 }
-                System.Diagnostics.Debug.WriteLine("item: " + newPic.ToString());
+            
+                //var diagramas= JsonConvert.DeserializeObject<List<DiagramDTO>>(json);
+                var diagramas = JsonSerializer.Deserialize< List<DiagramDTO>>(json);
 
-                this.splitContainer2.Panel2.Controls.Add(newPic);
+                foreach (var item in diagramas)
+                {
+                    DiagramImg newPic = selectFigura(item.TipoFigura);
+                    newPic.ColorFigura = item.ColorFigura;
+                    newPic.Location = item.Point;
+                    Color newColor = Color.FromArgb(item.R, item.G, item.B);
+                    newPic.FontFam = item.FontFam;
+                    newPic.ColorTexto = newColor;
+                    System.Diagnostics.Debug.WriteLine("item color texto: " + newColor);
+
+                    if (item.Texto != null)
+                    {
+                        System.Diagnostics.Debug.WriteLine("color : " + newColor);
+                        System.Diagnostics.Debug.WriteLine("color a: " + newColor.A);
+                        System.Diagnostics.Debug.WriteLine("color g: " + newColor.G);
+                        System.Diagnostics.Debug.WriteLine("color b: " + newColor.B);
+
+                        Brush br = new SolidBrush(newColor);
+                        newPic.writeImage(item.Texto, br);
+                    }
+                    System.Diagnostics.Debug.WriteLine("item: " + newPic.ToString());
+
+                    this.splitContainer2.Panel2.Controls.Add(newPic);
+                }
+                this.splitContainer2.Panel2.Refresh();
             }
-            this.splitContainer2.Panel2.Refresh();
         }
         private void guardarBtn_Click(object sender, EventArgs e)
         {
@@ -314,9 +322,13 @@ namespace TPI_Diagramador
                 newDiagramDTO.Point = diagram.Location;
                 newDiagramDTO.TipoFigura = diagram.NombreFigura;
                 newDiagramDTO.Texto= diagram.TextoImagen;
-                newDiagramDTO.ColorTexto = diagram.ColorTexto;
-                System.Diagnostics.Debug.WriteLine("ColorTexto: " + newDiagramDTO.ColorTexto);
-                System.Diagnostics.Debug.WriteLine("textoDiagram: " + diagram.TextoImagen);
+                newDiagramDTO.R = diagram.ColorTexto.R;
+                newDiagramDTO.B = diagram.ColorTexto.B;
+                newDiagramDTO.G = diagram.ColorTexto.G;
+
+                newDiagramDTO.FontFam = diagram.FontFam;
+                newDiagramDTO.FontSize = diagram.FontSize;
+                System.Diagnostics.Debug.WriteLine("textoDiagram: " + newDiagramDTO.toString());
                 diagramasDTO.Add(newDiagramDTO);
             }
 
@@ -511,14 +523,6 @@ namespace TPI_Diagramador
             this.collapsedPanel = 2;
         }
 
-        private void iconButton10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void iconButton9_Click(object sender, EventArgs e)
-        {
-
-        }
+      
     }
 }
