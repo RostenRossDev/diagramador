@@ -13,6 +13,7 @@ namespace TPI_Diagramador
         private bool dragging;
         private int collapsedPanel;
         private bool isCollpased;
+
         public Form1()
         {
             InitializeComponent();
@@ -292,11 +293,30 @@ namespace TPI_Diagramador
         private void MasChico(object sender, EventArgs e)
         {
             
+            for (int i = 0; i < figurasSeleccionadas.Count; i++)
+            {
+                DiagramImg picture = figurasSeleccionadas[i];
+
+                picture.Size = new System.Drawing.Size(picture.Width - picture.PorcentajeMas, picture.Height - picture.PorcentajeMenos);
+                picture.SizeMode = PictureBoxSizeMode.StretchImage;
+
+
+                this.Refresh();
+            }
+
         }
         private void MasGrande(object sender, EventArgs e)
         {
-                        
+            for (int i = 0; i < figurasSeleccionadas.Count; i++)
+            {
+                DiagramImg picture = figurasSeleccionadas[i];
 
+                picture.Size = new System.Drawing.Size(picture.Width + picture.PorcentajeMas, picture.Height + picture.PorcentajeMenos);
+                picture.SizeMode = PictureBoxSizeMode.StretchImage;
+
+
+                this.Refresh();
+            }
         }
 
         private void cargarBtn_Click(object sender, EventArgs e)
@@ -587,6 +607,17 @@ namespace TPI_Diagramador
         private void mouseDownDrag(object sender, EventArgs e)
         {
 
+        }
+
+        //+
+        private void iconButton2_Click(object sender, EventArgs e)
+        {
+            MasGrande(sender,e);
+        }
+        //-
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            MasChico(sender,e);
         }
     }
 }

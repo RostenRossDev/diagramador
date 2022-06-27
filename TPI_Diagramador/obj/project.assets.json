@@ -78,24 +78,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Cristina\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\irina\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Cristina\\source\\repos\\diagramador\\TPI_Diagramador\\TPI_Diagramador.csproj",
+      "projectUniqueName": "C:\\Users\\irina\\source\\repos\\diagramador\\TPI_Diagramador\\TPI_Diagramador.csproj",
       "projectName": "TPI_Diagramador",
-      "projectPath": "C:\\Users\\Cristina\\source\\repos\\diagramador\\TPI_Diagramador\\TPI_Diagramador.csproj",
-      "packagesPath": "C:\\Users\\Cristina\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Cristina\\source\\repos\\diagramador\\TPI_Diagramador\\obj\\",
+      "projectPath": "C:\\Users\\irina\\source\\repos\\diagramador\\TPI_Diagramador\\TPI_Diagramador.csproj",
+      "packagesPath": "C:\\Users\\irina\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\irina\\source\\repos\\diagramador\\TPI_Diagramador\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Cristina\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\irina\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
