@@ -231,6 +231,7 @@
             this.iconButton2.Size = new System.Drawing.Size(75, 64);
             this.iconButton2.TabIndex = 17;
             this.iconButton2.UseVisualStyleBackColor = true;
+            this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
             // 
             // iconButton1
             // 
@@ -244,6 +245,7 @@
             this.iconButton1.Size = new System.Drawing.Size(75, 64);
             this.iconButton1.TabIndex = 16;
             this.iconButton1.UseVisualStyleBackColor = true;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // btnEscribir
             // 
