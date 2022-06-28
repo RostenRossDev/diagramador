@@ -357,7 +357,7 @@
             this.panelDropDownLineas.MaximumSize = new System.Drawing.Size(147, 243);
             this.panelDropDownLineas.MinimumSize = new System.Drawing.Size(147, 35);
             this.panelDropDownLineas.Name = "panelDropDownLineas";
-            this.panelDropDownLineas.Size = new System.Drawing.Size(147, 36);
+            this.panelDropDownLineas.Size = new System.Drawing.Size(147, 35);
             this.panelDropDownLineas.TabIndex = 1;
             // 
             // btnLineas
@@ -376,48 +376,53 @@
             this.linea_abajo_izquierda_negro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.linea_abajo_izquierda_negro.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.linea_abajo_izquierda_negro.Image = global::TPI_Diagramador.Properties.Resources.lineaD_abajo_izquierda_negro;
-            this.linea_abajo_izquierda_negro.Location = new System.Drawing.Point(0, -164);
+            this.linea_abajo_izquierda_negro.Location = new System.Drawing.Point(0, -165);
             this.linea_abajo_izquierda_negro.Name = "linea_abajo_izquierda_negro";
             this.linea_abajo_izquierda_negro.Size = new System.Drawing.Size(147, 50);
             this.linea_abajo_izquierda_negro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.linea_abajo_izquierda_negro.TabIndex = 34;
             this.linea_abajo_izquierda_negro.TabStop = false;
+            this.linea_abajo_izquierda_negro.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mouseDownDrag);
             // 
             // linea_arriba_izquierda_negro
             // 
             this.linea_arriba_izquierda_negro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.linea_arriba_izquierda_negro.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.linea_arriba_izquierda_negro.Image = global::TPI_Diagramador.Properties.Resources.lineaD_arriba_izquierda_negro;
-            this.linea_arriba_izquierda_negro.Location = new System.Drawing.Point(0, -114);
+            this.linea_arriba_izquierda_negro.Location = new System.Drawing.Point(0, -115);
             this.linea_arriba_izquierda_negro.Name = "linea_arriba_izquierda_negro";
             this.linea_arriba_izquierda_negro.Size = new System.Drawing.Size(147, 50);
             this.linea_arriba_izquierda_negro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.linea_arriba_izquierda_negro.TabIndex = 31;
             this.linea_arriba_izquierda_negro.TabStop = false;
+            this.linea_arriba_izquierda_negro.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mouseDownDrag);
             // 
             // linea_horizontal_negra
             // 
             this.linea_horizontal_negra.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.linea_horizontal_negra.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.linea_horizontal_negra.Image = global::TPI_Diagramador.Properties.Resources.linea_horizontal_negra;
-            this.linea_horizontal_negra.Location = new System.Drawing.Point(0, -64);
+            this.linea_horizontal_negra.Location = new System.Drawing.Point(0, -65);
             this.linea_horizontal_negra.Name = "linea_horizontal_negra";
             this.linea_horizontal_negra.Size = new System.Drawing.Size(147, 50);
             this.linea_horizontal_negra.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.linea_horizontal_negra.TabIndex = 27;
             this.linea_horizontal_negra.TabStop = false;
+            this.linea_horizontal_negra.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mouseDownDrag);
             // 
             // linea_vertical_negra
             // 
             this.linea_vertical_negra.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.linea_vertical_negra.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.linea_vertical_negra.Image = global::TPI_Diagramador.Properties.Resources.linea_vertical_negra;
-            this.linea_vertical_negra.Location = new System.Drawing.Point(0, -14);
+            this.linea_vertical_negra.Location = new System.Drawing.Point(0, -15);
             this.linea_vertical_negra.Name = "linea_vertical_negra";
             this.linea_vertical_negra.Size = new System.Drawing.Size(147, 50);
             this.linea_vertical_negra.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.linea_vertical_negra.TabIndex = 28;
             this.linea_vertical_negra.TabStop = false;
+            this.linea_vertical_negra.Click += new System.EventHandler(this.mouseDownDrag);
+            this.linea_vertical_negra.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mouseDownDrag);
             // 
             // panelDropDownFlechas
             // 
@@ -431,7 +436,7 @@
             this.panelDropDownFlechas.Controls.Add(this.flecha_derecha);
             this.panelDropDownFlechas.Controls.Add(this.flecha_arriba);
             this.panelDropDownFlechas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelDropDownFlechas.Location = new System.Drawing.Point(3, 45);
+            this.panelDropDownFlechas.Location = new System.Drawing.Point(3, 44);
             this.panelDropDownFlechas.MaximumSize = new System.Drawing.Size(147, 434);
             this.panelDropDownFlechas.MinimumSize = new System.Drawing.Size(147, 35);
             this.panelDropDownFlechas.Name = "panelDropDownFlechas";
@@ -562,7 +567,7 @@
             this.panelDropDownFiguras.Controls.Add(this.paralelogramo_negro);
             this.panelDropDownFiguras.Controls.Add(this.rectangulo_negro);
             this.panelDropDownFiguras.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelDropDownFiguras.Location = new System.Drawing.Point(3, 86);
+            this.panelDropDownFiguras.Location = new System.Drawing.Point(3, 85);
             this.panelDropDownFiguras.MaximumSize = new System.Drawing.Size(147, 290);
             this.panelDropDownFiguras.MinimumSize = new System.Drawing.Size(147, 35);
             this.panelDropDownFiguras.Name = "panelDropDownFiguras";
@@ -574,7 +579,7 @@
             this.figurasBtn.Dock = System.Windows.Forms.DockStyle.Top;
             this.figurasBtn.Location = new System.Drawing.Point(0, 0);
             this.figurasBtn.Name = "figurasBtn";
-            this.figurasBtn.Size = new System.Drawing.Size(147, 34);
+            this.figurasBtn.Size = new System.Drawing.Size(147, 35);
             this.figurasBtn.TabIndex = 1;
             this.figurasBtn.Text = "Figuras ▼";
             this.figurasBtn.UseVisualStyleBackColor = true;
@@ -617,6 +622,7 @@
             this.rombo_negro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.rombo_negro.TabIndex = 39;
             this.rombo_negro.TabStop = false;
+            this.rombo_negro.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mouseDownDrag);
             // 
             // paralelogramo_negro
             // 
@@ -629,6 +635,7 @@
             this.paralelogramo_negro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.paralelogramo_negro.TabIndex = 38;
             this.paralelogramo_negro.TabStop = false;
+            this.paralelogramo_negro.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mouseDownDrag);
             // 
             // rectangulo_negro
             // 
@@ -641,6 +648,7 @@
             this.rectangulo_negro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.rectangulo_negro.TabIndex = 37;
             this.rectangulo_negro.TabStop = false;
+            this.rectangulo_negro.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mouseDownDrag);
             // 
             // openFileDialog1
             // 
