@@ -8,7 +8,6 @@ namespace TPI_Diagramador
     public partial class Form1 : Form
     {
         private List<DiagramImg> figurasSeleccionadas;
-        //private List<Point> points;
         private bool isAltPressed;
         private bool dragging;
         private int collapsedPanel;
@@ -17,14 +16,18 @@ namespace TPI_Diagramador
         public Form1()
         {
             InitializeComponent();
+            
+            this.splitContainer2.Panel1MinSize = 160;
+            this.splitContainer2.Panel2MinSize = 889;
             figurasSeleccionadas = new List<DiagramImg>();
-            //points = new List<Point>();
             isAltPressed = false;
             this.splitContainer2.Panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(OnMouseMove);
             dragging = false;
             collapsedPanel = 0;
         }
 
+
+        
         private void mouseDownDrag(object sender, MouseEventArgs e)
         {
 
@@ -54,15 +57,7 @@ namespace TPI_Diagramador
         {
 
             DiagramImg newPicture = generarDiagramImg();
-            //newPicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            //newPicture.BackColor = Color.Transparent;
-            //newPicture.Dock = System.Windows.Forms.DockStyle.None;
-            //newPicture.Size = new System.Drawing.Size(116, 89);
-            //newPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            //newPicture.TabIndex = 2;
-            //newPicture.TabStop = false;
-            //newPicture.MouseDown += new System.Windows.Forms.MouseEventHandler(OnMouseDown);
-            //newPicture.Cursor = System.Windows.Forms.Cursors.Hand;
+           
             if (name == "flecha_derecha")
             {
                 System.Diagnostics.Debug.WriteLine("flecha negra derecha");
@@ -196,7 +191,6 @@ namespace TPI_Diagramador
             DiagramImg img = sender as DiagramImg;
 
             KeyPress(img);
-            //base.OnMouseDown(e);
         }
 
         protected void OnMouseMove(object sender, MouseEventArgs e)
@@ -213,18 +207,9 @@ namespace TPI_Diagramador
                     int Y= e.Y - picture.Top;
                     System.Diagnostics.Debug.WriteLine("Figura location: " + X+", "+Y);
 
-                    //if (X < 0 || Y < 0)
-                    //{
-                    //    System.Diagnostics.Debug.WriteLine("Figura location: " + X+", "+Y);
-
-                    //    return;
-                    //}
                     MouseEventArgs evento = new MouseEventArgs(e.Button, e.Clicks, X, Y, e.Delta);
                     picture.moverFigura(evento);
-                    //picture.Left = X;
-                    //picture.Top = Y;
                     
-                    //picture.Refresh();
                     System.Diagnostics.Debug.WriteLine("Figura numero: " + i);
                     System.Diagnostics.Debug.WriteLine("x: " + location.X + ", y: " + location.Y);
                     System.Diagnostics.Debug.WriteLine("X: " + picture.Left + ", Y: " + picture.Top);
@@ -398,13 +383,7 @@ namespace TPI_Diagramador
                 System.Diagnostics.Debug.WriteLine("textoDiagram: " + newDiagramDTO.toString());
                 diagramasDTO.Add(newDiagramDTO);
             }
-
-            //var json = JsonConvert.SerializeObject(diagramasDTO,
-            //    new JsonSerializerSettings()
-            //    {
-            //        ReferenceLoopHandling = ReferenceLoopHandling.Ignore
-            //    }
-            //);
+          
             JsonSerializerOptions options = new()
             {
                 DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingDefault
@@ -608,22 +587,29 @@ namespace TPI_Diagramador
 
             this.splitContainer2.Panel2.Controls.Add(newPic);
 
-        }
-
-        //+
-        private void iconButton2_Click(object sender, EventArgs e)
-        {
-            MasGrande(sender,e);
-        }
-        //-
-        private void iconButton1_Click(object sender, EventArgs e)
-        {
-            MasChico(sender,e);
-        }
+        }      
 
         private void btnRojo_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void onResize(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Maximized)
+            {
+                this.splitContainer2.Panel1MinSize = 160;
+                this.splitContainer2.Panel2MinSize = 1440;
+                this.splitContainer1.Panel1MinSize = 80;
+                this.splitContainer1.Panel2MinSize = 1000;
+            }
+            else
+            {
+                this.splitContainer2.Panel1MinSize = 160;
+                this.splitContainer2.Panel2MinSize = 1440;
+                this.splitContainer1.Panel1MinSize = 80;
+                this.splitContainer1.Panel2MinSize = 618;
+            }
         }
     }
 }

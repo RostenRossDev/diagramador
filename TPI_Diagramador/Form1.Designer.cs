@@ -325,6 +325,7 @@
             this.splitContainer2.Panel1.AutoScroll = true;
             this.splitContainer2.Panel1.BackColor = System.Drawing.Color.CornflowerBlue;
             this.splitContainer2.Panel1.Controls.Add(this.flowLayoutPanel1);
+            this.splitContainer2.Panel1MinSize = 160;
             // 
             // splitContainer2.Panel2
             // 
@@ -332,8 +333,9 @@
             this.splitContainer2.Panel2.BackColor = System.Drawing.SystemColors.Control;
             this.splitContainer2.Panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MouseDown);
             this.splitContainer2.Panel2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.MouseUp);
+            this.splitContainer2.Panel2MinSize = 880;
             this.splitContainer2.Size = new System.Drawing.Size(1051, 521);
-            this.splitContainer2.SplitterDistance = 159;
+            this.splitContainer2.SplitterDistance = 160;
             this.splitContainer2.TabIndex = 0;
             // 
             // flowLayoutPanel1
@@ -345,7 +347,7 @@
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.MinimumSize = new System.Drawing.Size(152, 415);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(159, 521);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(160, 521);
             this.flowLayoutPanel1.TabIndex = 37;
             // 
             // panelDropDownLineas
@@ -669,8 +671,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1051, 579);
             this.Controls.Add(this.splitContainer1);
+            this.MinimumSize = new System.Drawing.Size(1067, 618);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Resize += new System.EventHandler(this.onResize);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
