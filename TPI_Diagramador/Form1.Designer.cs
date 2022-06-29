@@ -133,7 +133,7 @@
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
             this.splitContainer1.Panel2MinSize = 40;
             this.splitContainer1.Size = new System.Drawing.Size(1051, 579);
-            this.splitContainer1.SplitterDistance = 64;
+            this.splitContainer1.SplitterDistance = 54;
             this.splitContainer1.TabIndex = 0;
             // 
             // btnAmarillo
@@ -144,7 +144,7 @@
             this.btnAmarillo.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAmarillo.Location = new System.Drawing.Point(975, 0);
             this.btnAmarillo.Name = "btnAmarillo";
-            this.btnAmarillo.Size = new System.Drawing.Size(75, 64);
+            this.btnAmarillo.Size = new System.Drawing.Size(75, 54);
             this.btnAmarillo.TabIndex = 24;
             this.btnAmarillo.UseVisualStyleBackColor = true;
             // 
@@ -156,7 +156,7 @@
             this.btnNaranja.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnNaranja.Location = new System.Drawing.Point(900, 0);
             this.btnNaranja.Name = "btnNaranja";
-            this.btnNaranja.Size = new System.Drawing.Size(75, 64);
+            this.btnNaranja.Size = new System.Drawing.Size(75, 54);
             this.btnNaranja.TabIndex = 23;
             this.btnNaranja.UseVisualStyleBackColor = true;
             // 
@@ -168,7 +168,7 @@
             this.btnMorado.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMorado.Location = new System.Drawing.Point(825, 0);
             this.btnMorado.Name = "btnMorado";
-            this.btnMorado.Size = new System.Drawing.Size(75, 64);
+            this.btnMorado.Size = new System.Drawing.Size(75, 54);
             this.btnMorado.TabIndex = 22;
             this.btnMorado.UseVisualStyleBackColor = true;
             // 
@@ -180,7 +180,7 @@
             this.btnVerde.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnVerde.Location = new System.Drawing.Point(750, 0);
             this.btnVerde.Name = "btnVerde";
-            this.btnVerde.Size = new System.Drawing.Size(75, 64);
+            this.btnVerde.Size = new System.Drawing.Size(75, 54);
             this.btnVerde.TabIndex = 21;
             this.btnVerde.UseVisualStyleBackColor = true;
             // 
@@ -192,7 +192,7 @@
             this.btnCeleste.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCeleste.Location = new System.Drawing.Point(675, 0);
             this.btnCeleste.Name = "btnCeleste";
-            this.btnCeleste.Size = new System.Drawing.Size(75, 64);
+            this.btnCeleste.Size = new System.Drawing.Size(75, 54);
             this.btnCeleste.TabIndex = 20;
             this.btnCeleste.UseVisualStyleBackColor = true;
             // 
@@ -204,7 +204,7 @@
             this.btnNegro.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnNegro.Location = new System.Drawing.Point(600, 0);
             this.btnNegro.Name = "btnNegro";
-            this.btnNegro.Size = new System.Drawing.Size(75, 64);
+            this.btnNegro.Size = new System.Drawing.Size(75, 54);
             this.btnNegro.TabIndex = 19;
             this.btnNegro.UseVisualStyleBackColor = true;
             // 
@@ -216,9 +216,10 @@
             this.btnRojo.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnRojo.Location = new System.Drawing.Point(525, 0);
             this.btnRojo.Name = "btnRojo";
-            this.btnRojo.Size = new System.Drawing.Size(75, 64);
+            this.btnRojo.Size = new System.Drawing.Size(75, 54);
             this.btnRojo.TabIndex = 18;
             this.btnRojo.UseVisualStyleBackColor = true;
+            this.btnRojo.Click += new System.EventHandler(this.btnRojo_Click);
             // 
             // iconButton2
             // 
@@ -228,9 +229,10 @@
             this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton2.Location = new System.Drawing.Point(450, 0);
             this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(75, 64);
+            this.iconButton2.Size = new System.Drawing.Size(75, 54);
             this.iconButton2.TabIndex = 17;
             this.iconButton2.UseVisualStyleBackColor = true;
+            this.iconButton2.Click += new System.EventHandler(this.MasGrande);
             // 
             // iconButton1
             // 
@@ -241,9 +243,10 @@
             this.iconButton1.IconSize = 40;
             this.iconButton1.Location = new System.Drawing.Point(375, 0);
             this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(75, 64);
+            this.iconButton1.Size = new System.Drawing.Size(75, 54);
             this.iconButton1.TabIndex = 16;
             this.iconButton1.UseVisualStyleBackColor = true;
+            this.iconButton1.Click += new System.EventHandler(this.MasChico);
             // 
             // btnEscribir
             // 
@@ -253,7 +256,7 @@
             this.btnEscribir.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEscribir.Location = new System.Drawing.Point(300, 0);
             this.btnEscribir.Name = "btnEscribir";
-            this.btnEscribir.Size = new System.Drawing.Size(75, 64);
+            this.btnEscribir.Size = new System.Drawing.Size(75, 54);
             this.btnEscribir.TabIndex = 14;
             this.btnEscribir.UseVisualStyleBackColor = true;
             this.btnEscribir.MouseClick += new System.Windows.Forms.MouseEventHandler(this.crearTexto);
@@ -266,7 +269,7 @@
             this.btnToJpg.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnToJpg.Location = new System.Drawing.Point(225, 0);
             this.btnToJpg.Name = "btnToJpg";
-            this.btnToJpg.Size = new System.Drawing.Size(75, 64);
+            this.btnToJpg.Size = new System.Drawing.Size(75, 54);
             this.btnToJpg.TabIndex = 15;
             this.btnToJpg.UseVisualStyleBackColor = true;
             this.btnToJpg.Click += new System.EventHandler(this.toJPGBtn_Click);
@@ -279,7 +282,7 @@
             this.btnBorrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnBorrar.Location = new System.Drawing.Point(150, 0);
             this.btnBorrar.Name = "btnBorrar";
-            this.btnBorrar.Size = new System.Drawing.Size(75, 64);
+            this.btnBorrar.Size = new System.Drawing.Size(75, 54);
             this.btnBorrar.TabIndex = 13;
             this.btnBorrar.UseVisualStyleBackColor = true;
             this.btnBorrar.Click += new System.EventHandler(this.borrar);
@@ -293,7 +296,7 @@
             this.btnGuardar.IconSize = 50;
             this.btnGuardar.Location = new System.Drawing.Point(75, 0);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(75, 64);
+            this.btnGuardar.Size = new System.Drawing.Size(75, 54);
             this.btnGuardar.TabIndex = 11;
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.guardarBtn_Click);
@@ -306,7 +309,7 @@
             this.btnAbrirJson.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAbrirJson.Location = new System.Drawing.Point(0, 0);
             this.btnAbrirJson.Name = "btnAbrirJson";
-            this.btnAbrirJson.Size = new System.Drawing.Size(75, 64);
+            this.btnAbrirJson.Size = new System.Drawing.Size(75, 54);
             this.btnAbrirJson.TabIndex = 12;
             this.btnAbrirJson.UseVisualStyleBackColor = true;
             this.btnAbrirJson.Click += new System.EventHandler(this.cargarBtn_Click);
@@ -329,8 +332,8 @@
             this.splitContainer2.Panel2.BackColor = System.Drawing.SystemColors.Control;
             this.splitContainer2.Panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MouseDown);
             this.splitContainer2.Panel2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.MouseUp);
-            this.splitContainer2.Size = new System.Drawing.Size(1051, 511);
-            this.splitContainer2.SplitterDistance = 200;
+            this.splitContainer2.Size = new System.Drawing.Size(1051, 521);
+            this.splitContainer2.SplitterDistance = 159;
             this.splitContainer2.TabIndex = 0;
             // 
             // flowLayoutPanel1
@@ -342,7 +345,7 @@
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.MinimumSize = new System.Drawing.Size(152, 415);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(200, 511);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(159, 521);
             this.flowLayoutPanel1.TabIndex = 37;
             // 
             // panelDropDownLineas

@@ -13,6 +13,7 @@ namespace TPI_Diagramador
         private bool dragging;
         private int collapsedPanel;
         private bool isCollpased;
+
         public Form1()
         {
             InitializeComponent();
@@ -32,7 +33,6 @@ namespace TPI_Diagramador
             DiagramImg newPic = selectFigura(pictureBox.Name);
 
             this.splitContainer2.Panel2.Controls.Add(newPic);
-
         }
 
         private DiagramImg generarDiagramImg()
@@ -292,11 +292,29 @@ namespace TPI_Diagramador
         private void MasChico(object sender, EventArgs e)
         {
             
+            for (int i = 0; i < figurasSeleccionadas.Count; i++)
+            {
+                DiagramImg picture = figurasSeleccionadas[i];
+
+                picture.Size = new System.Drawing.Size(picture.Width - picture.PorcentajeMas, picture.Height - picture.PorcentajeMenos);
+                picture.SizeMode = PictureBoxSizeMode.StretchImage;
+
+
+                this.Refresh();
+            }
+
         }
         private void MasGrande(object sender, EventArgs e)
         {
-                        
+            for (int i = 0; i < figurasSeleccionadas.Count; i++)
+            {
+                DiagramImg picture = figurasSeleccionadas[i];
 
+                picture.Size = new System.Drawing.Size(picture.Width + picture.PorcentajeMas, picture.Height + picture.PorcentajeMenos);
+                picture.SizeMode = PictureBoxSizeMode.StretchImage;
+
+                this.Refresh();
+            }
         }
 
         private void cargarBtn_Click(object sender, EventArgs e)
@@ -490,8 +508,7 @@ namespace TPI_Diagramador
                 textoImagen.TextoImagen = texto;
                 textoImagen.writeImage(texto, null);
                 this.splitContainer2.Panel2.Controls.Add(textoImagen);
-            }
-            
+            }            
         }
 
         private void lineas_button_Click(object sender, EventArgs e)
@@ -534,7 +551,6 @@ namespace TPI_Diagramador
             {
                 collapse(panel);
             }
-
         }
         private void changeBtnText(Panel panel, string texto)
         {
@@ -591,6 +607,22 @@ namespace TPI_Diagramador
             DiagramImg newPic = selectFigura(pictureBox.Name);
 
             this.splitContainer2.Panel2.Controls.Add(newPic);
+
+        }
+
+        //+
+        private void iconButton2_Click(object sender, EventArgs e)
+        {
+            MasGrande(sender,e);
+        }
+        //-
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            MasChico(sender,e);
+        }
+
+        private void btnRojo_Click(object sender, EventArgs e)
+        {
 
         }
     }

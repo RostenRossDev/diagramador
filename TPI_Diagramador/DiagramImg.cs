@@ -8,6 +8,8 @@ namespace TPI_Diagramador
 {
     internal class DiagramImg : PictureBox
     {
+        
+
         private Point point; //Para obtener el centro del elemento
         private bool focus; //Para saber si esta seleccionado el elemento
         private Color colorRecuadro;
@@ -19,6 +21,11 @@ namespace TPI_Diagramador
         private Panel menu;
         private bool isButonsFocus;
         private Color colorTexto;
+        
+        //para agrandar ya chicar elementos
+        private int porcentajeMas = 10;
+        private int porcentajeMenos = 5;
+
         public float FontSize { get { return this.fontSize; } set { this.fontSize = value; } }
         public string FontFam { get { return this.fontFam; } set { this.fontFam = value; } }
         public Color ColorTexto { get { return this.colorTexto; } set { this.colorTexto = value; } }
@@ -27,6 +34,9 @@ namespace TPI_Diagramador
         public string ColorFigura { get { return this.colorFigura; } set { this.colorFigura = value; } }
         public bool Focus { get { return this.focus; } set { this.focus = value; } }
         public bool ColorRecuadro { get; set; } // para modificar el color del recuadro cuando esta seleccionado
+
+        public int PorcentajeMas { get { return this.porcentajeMas; }}
+        public int PorcentajeMenos { get { return this.porcentajeMenos; } }
         public DiagramImg()
         {
             focus = false;
@@ -317,9 +327,11 @@ namespace TPI_Diagramador
             else
             {                
                 botonAgrandar.Dock = DockStyle.Right;
+                botonAgrandar.Click += new System.EventHandler(agrandarImg);
                 //botonAgrandar.MouseLeave += new System.EventHandler(onMouseLeaveButonvoid);
 
                 botonAchicar.Dock = DockStyle.Right;
+                botonAchicar.Click += new System.EventHandler(achicarImg);
                 // botonAchicar.MouseLeave += new System.EventHandler(onMouseLeaveButonvoid);                
             }
             botonAchicar.Height = 20;
@@ -330,6 +342,7 @@ namespace TPI_Diagramador
             menu.Height = 20;
             menu.Controls.Add(botonAgrandar);
             menu.Controls.Add(botonAchicar);
+
             Button colorRojo = new Button();
             colorRojo.BackColor = Color.Red;
             colorRojo.Height = 20;
@@ -407,6 +420,22 @@ namespace TPI_Diagramador
             menu.Location = new Point( (this.Location.X-(menu.Width/3)), this.Location.Y - 25);
             this.Parent.Controls.Add(menu);
             menu.BringToFront();
-        }       
+        }
+        
+        public void agrandarImg(object sender, System.EventArgs e)
+        {
+
+            this.Size = new Size(this.Size.Width + porcentajeMas, this.Size.Height + porcentajeMenos);
+            this.SizeMode = PictureBoxSizeMode.StretchImage;
+
+        }
+        public void achicarImg(object sender, System.EventArgs e)
+        {
+
+            this.Size = new Size(this.Size.Width - porcentajeMas, this.Size.Height - porcentajeMenos);
+            this.SizeMode = PictureBoxSizeMode.StretchImage;
+        }
     }
+
+
 }
