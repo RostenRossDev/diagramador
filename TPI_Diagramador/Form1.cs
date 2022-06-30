@@ -57,7 +57,7 @@ namespace TPI_Diagramador
         {
 
             DiagramImg newPicture = generarDiagramImg();
-           
+
             if (name == "flecha_derecha")
             {
                 System.Diagnostics.Debug.WriteLine("flecha negra derecha");
@@ -110,67 +110,102 @@ namespace TPI_Diagramador
                 newPicture.NombreFigura = "flechaD_abajo_izquierda";
                 newPicture.ColorFigura = "negro";
             }
-            else if (name == "linea_abajo_izquierda_negro")
+            else if (name == "linea_abajo_izquierda")
             {
                 System.Diagnostics.Debug.WriteLine("linea abajo izquierda negro");
                 newPicture.Image = Properties.Resources.lineaD_abajo_izquierda_negro;
                 newPicture.NombreFigura = "linea_abajo_izquierda";
                 newPicture.ColorFigura = "negro";
             }
-            else if (name == "linea_arriba_izquierda_negro")
+            else if (name == "linea_arriba_izquierda")
             {
                 System.Diagnostics.Debug.WriteLine("linea arriba izquierda negro");
                 newPicture.Image = Properties.Resources.lineaD_arriba_izquierda_negro;
                 newPicture.NombreFigura = "linea_arriba_izquierda";
                 newPicture.ColorFigura = "negro";
             }
-            else if (name == "linea_horizontal_negra")
+            else if (name == "linea_horizontal")
             {
                 System.Diagnostics.Debug.WriteLine("linea horizontal negra");
                 newPicture.Image = Properties.Resources.linea_horizontal_negra;
                 newPicture.NombreFigura = "linea_horizontal";
                 newPicture.ColorFigura = "negro";
             }
-            else if (name == "linea_vertical_negra")
+            else if (name == "linea_vertical")
             {
                 System.Diagnostics.Debug.WriteLine("linea vertical negra");
                 newPicture.Image = Properties.Resources.linea_vertical_negra;
                 newPicture.NombreFigura = "linea_vertical";
                 newPicture.ColorFigura = "negro";
             }
-            else if (name == "circulo_negro")
+            else if (name == "circulo_vacio")
             {
                 System.Diagnostics.Debug.WriteLine("circulo_negro");
                 newPicture.Image = Properties.Resources.circulo_vacio_negro;
                 newPicture.NombreFigura = "circulo_vacio";
                 newPicture.ColorFigura = "negro";
             }
-            else if (name == "cuadrado_negro")
+            else if (name == "circulo_relleno")
+            {
+                System.Diagnostics.Debug.WriteLine("circulo_negro");
+                newPicture.Image = Properties.Resources.circulo_vacio_negro;
+                newPicture.NombreFigura = "circulo_relleno";
+                newPicture.ColorFigura = "negro";
+            }
+            else if (name == "cuadrado_vacio")
             {
                 System.Diagnostics.Debug.WriteLine("cuadrado_negro");
                 newPicture.Image = Properties.Resources.cuadrado_vacio_negro;
                 newPicture.NombreFigura = "cuadrado_vacio";
                 newPicture.ColorFigura = "negro";
             }
-            else if (name == "paralelogramo_negro")
+            else if (name == "cuadrado_relleno")
+            {
+                System.Diagnostics.Debug.WriteLine("cuadrado_negro");
+                newPicture.Image = Properties.Resources.cuadrado_vacio_negro;
+                newPicture.NombreFigura = "cuadrado_relleno";
+                newPicture.ColorFigura = "negro";
+            }
+            else if (name == "paralelogramo_vacio")
             {
                 System.Diagnostics.Debug.WriteLine("paralelogramo_negro");
                 newPicture.Image = Properties.Resources.paralelogramo_vacio_negro;
                 newPicture.NombreFigura = "paralelogramo_vacio";
                 newPicture.ColorFigura = "negro";
             }
-            else if (name == "rectangulo_negro")
+            else if (name == "paralelogramo_relleno")
+            {
+                System.Diagnostics.Debug.WriteLine("paralelogramo_negro");
+                newPicture.Image = Properties.Resources.paralelogramo_vacio_negro;
+                newPicture.NombreFigura = "paralelogramo_relleno";
+                newPicture.ColorFigura = "negro";
+            }
+            else if (name == "rectangulo_vacio")
             {
                 System.Diagnostics.Debug.WriteLine("rectangulo_negro");
                 newPicture.Image = Properties.Resources.rectaungulo_vacio_negro;
                 newPicture.NombreFigura = "rectangulo_vacio";
                 newPicture.ColorFigura = "negro";
             }
-            else if (name == "rombo_negro")
+            else if (name == "rectangulo_relleno")
+            {
+                System.Diagnostics.Debug.WriteLine("rectangulo_negro");
+                newPicture.Image = Properties.Resources.rectaungulo_vacio_negro;
+                newPicture.NombreFigura = "rectangulo_relleno";
+                newPicture.ColorFigura = "negro";
+            }
+            else if (name == "rombo_vacio")
             {
                 System.Diagnostics.Debug.WriteLine("rombo_negro");
                 newPicture.Image = Properties.Resources.rombo_vacio_negro;
                 newPicture.NombreFigura = "rombo_vacio";
+                newPicture.ColorFigura = "negro";
+            }
+            else if (name == "rombo_relleno")
+            { 
+                System.Diagnostics.Debug.WriteLine("rombo_negro");
+                newPicture.Image = Properties.Resources.rombo_vacio_negro;
+                newPicture.NombreFigura = "rombo_relleno";
                 newPicture.ColorFigura = "negro";
             }//agregar mas else if segun imagenes se agreguen
             else
@@ -318,26 +353,23 @@ namespace TPI_Diagramador
                     sr.Close();
                 }
             
-                //var diagramas= JsonConvert.DeserializeObject<List<DiagramDTO>>(json);
                 var diagramas = JsonSerializer.Deserialize< List<DiagramDTO>>(json);
+                System.Diagnostics.Debug.WriteLine("figura tipo: " + diagramas[0].TipoFigura);
 
                 foreach (var item in diagramas)
                 {
+
                     DiagramImg newPic = selectFigura(item.TipoFigura);
+
                     newPic.ColorFigura = item.ColorFigura;
                     newPic.Location = item.Point;
                     Color newColor = Color.FromArgb(item.R, item.G, item.B);
                     newPic.FontFam = item.FontFam;
                     newPic.ColorTexto = newColor;
-                    System.Diagnostics.Debug.WriteLine("item color texto: " + newColor);
+                    System.Diagnostics.Debug.WriteLine("figura tipo: " + item.TipoFigura);
 
                     if (item.Texto != null)
-                    {
-                        System.Diagnostics.Debug.WriteLine("color : " + newColor);
-                        System.Diagnostics.Debug.WriteLine("color a: " + newColor.A);
-                        System.Diagnostics.Debug.WriteLine("color g: " + newColor.G);
-                        System.Diagnostics.Debug.WriteLine("color b: " + newColor.B);
-
+                    {                       
                         Brush br = new SolidBrush(newColor);
                         newPic.writeImage(item.Texto, br);
                     }
@@ -405,12 +437,7 @@ namespace TPI_Diagramador
 
             fs.Close();
         }
-
-        private void achicarBtn_Click(object sender, EventArgs e)
-        {
-
-        }      
-        
+       
 
         private void toJPGBtn_Click(object sender, EventArgs e)
         {
@@ -897,11 +924,11 @@ namespace TPI_Diagramador
                     }
                     else if (figurasSeleccionadas[i].NombreFigura == "rectangulo_vacio")
                     {
-                        figurasSeleccionadas[i].Image = Properties.Resources.rombo_vacio_celeste;
+                        figurasSeleccionadas[i].Image = Properties.Resources.rectaungulo_vacio_celeste;
                     }
                     else if (figurasSeleccionadas[i].NombreFigura == "rectangulo_relleno")
                     {
-                        figurasSeleccionadas[i].Image = Properties.Resources.rombo_relleno_celeste;
+                        figurasSeleccionadas[i].Image = Properties.Resources.rectaungulo_relleno_celeste;
                     }
                     else if (figurasSeleccionadas[i].NombreFigura == "linea_arriba_izquierda")
                     {
