@@ -8,18 +8,18 @@
     ".NETCoreApp,Version=v6.0": {
       "TPI_Diagramador/1.0.0": {
         "dependencies": {
-          "FontAwesome.Sharp": "5.15.4",
+          "FontAwesome.Sharp": "6.1.1",
           "Newtonsoft.Json": "13.0.1"
         },
         "runtime": {
           "TPI_Diagramador.dll": {}
         }
       },
-      "FontAwesome.Sharp/5.15.4": {
+      "FontAwesome.Sharp/6.1.1": {
         "runtime": {
-          "lib/net5.0-windows7.0/FontAwesome.Sharp.dll": {
-            "assemblyVersion": "5.15.4.0",
-            "fileVersion": "5.15.4.0"
+          "lib/net6.0-windows7.0/FontAwesome.Sharp.dll": {
+            "assemblyVersion": "6.1.1.0",
+            "fileVersion": "6.1.1.0"
           }
         }
       },
@@ -39,12 +39,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "FontAwesome.Sharp/5.15.4": {
+    "FontAwesome.Sharp/6.1.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-IqJe1IQas6tSVXMNHTWA/NJeP7azyxDTk6DCB+NMXOOED2F07IYI9nvfB1HP83r4yh5cntZoTdwSpIraA5XoXw==",
-      "path": "fontawesome.sharp/5.15.4",
-      "hashPath": "fontawesome.sharp.5.15.4.nupkg.sha512"
+      "sha512": "sha512-p6dnSMcKQg790vGSJgvFk6S8gXQnEcCugfaJ21WFxZz9h+9KyxL+sX6kbGv8p4iVoX/e5BAMnTV4QJFJvx8QxQ==",
+      "path": "fontawesome.sharp/6.1.1",
+      "hashPath": "fontawesome.sharp.6.1.1.nupkg.sha512"
     },
     "Newtonsoft.Json/13.0.1": {
       "type": "package",

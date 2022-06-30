@@ -250,7 +250,7 @@
             // btnEscribir
             // 
             this.btnEscribir.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnEscribir.IconChar = FontAwesome.Sharp.IconChar.Edit;
+            this.btnEscribir.IconChar = FontAwesome.Sharp.IconChar.PenToSquare;
             this.btnEscribir.IconColor = System.Drawing.Color.BlueViolet;
             this.btnEscribir.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEscribir.Location = new System.Drawing.Point(300, 0);
@@ -289,7 +289,7 @@
             // btnGuardar
             // 
             this.btnGuardar.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnGuardar.IconChar = FontAwesome.Sharp.IconChar.Save;
+            this.btnGuardar.IconChar = FontAwesome.Sharp.IconChar.FloppyDisk;
             this.btnGuardar.IconColor = System.Drawing.Color.BlueViolet;
             this.btnGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnGuardar.IconSize = 50;
@@ -316,7 +316,9 @@
             // splitContainer2
             // 
             this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer2.FixedPanel = System.Windows.Forms.FixedPanel.Panel2;
             this.splitContainer2.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer2.MinimumSize = new System.Drawing.Size(1051, 511);
             this.splitContainer2.Name = "splitContainer2";
             // 
             // splitContainer2.Panel1
@@ -324,6 +326,7 @@
             this.splitContainer2.Panel1.AutoScroll = true;
             this.splitContainer2.Panel1.BackColor = System.Drawing.Color.CornflowerBlue;
             this.splitContainer2.Panel1.Controls.Add(this.flowLayoutPanel1);
+            this.splitContainer2.Panel1MinSize = 0;
             // 
             // splitContainer2.Panel2
             // 
@@ -331,8 +334,9 @@
             this.splitContainer2.Panel2.BackColor = System.Drawing.SystemColors.Control;
             this.splitContainer2.Panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MouseDown);
             this.splitContainer2.Panel2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.MouseUp);
+            this.splitContainer2.Panel2MinSize = 0;
             this.splitContainer2.Size = new System.Drawing.Size(1051, 511);
-            this.splitContainer2.SplitterDistance = 200;
+            this.splitContainer2.SplitterDistance = 160;
             this.splitContainer2.TabIndex = 0;
             // 
             // flowLayoutPanel1
@@ -344,7 +348,7 @@
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.MinimumSize = new System.Drawing.Size(152, 415);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(200, 511);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(160, 511);
             this.flowLayoutPanel1.TabIndex = 37;
             // 
             // panelDropDownLineas
@@ -448,6 +452,7 @@
             // flechasBtn
             // 
             this.flechasBtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.flechasBtn.Enabled = false;
             this.flechasBtn.Location = new System.Drawing.Point(0, 0);
             this.flechasBtn.Name = "flechasBtn";
             this.flechasBtn.Size = new System.Drawing.Size(147, 40);
@@ -668,6 +673,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1051, 579);
             this.Controls.Add(this.splitContainer1);
+            this.MinimumSize = new System.Drawing.Size(1067, 618);
             this.Name = "Form1";
             this.Text = "Form1";
             this.splitContainer1.Panel1.ResumeLayout(false);

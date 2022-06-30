@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "RHir7sslhqx8yKNH6/VVlvMOcfQbHuN48EoAKMp5AXaJBSp4F2Ijair7ZSMqr6ehtaAhKEDeiEVgkQYU7Fkj1w==",
+  "dgSpecHash": "KPfO0NXVf4AAixZGTYuK689Xawf/FlXzvq8ilzfiV6urNL7znHOEsDS9Becjov1/sEpOjhLR1hqtoJKkvnSt0g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Pascuet-Elias\\source\\repos\\diagramador\\TPI_Diagramador\\TPI_Diagramador.csproj",
+  "projectFilePath": "C:\\Users\\Cristina\\source\\repos\\diagramador\\TPI_Diagramador\\TPI_Diagramador.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Pascuet-Elias\\.nuget\\packages\\fontawesome.sharp\\5.15.4\\fontawesome.sharp.5.15.4.nupkg.sha512",
-    "C:\\Users\\Pascuet-Elias\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+    "C:\\Users\\Cristina\\.nuget\\packages\\fontawesome.sharp\\6.1.1\\fontawesome.sharp.6.1.1.nupkg.sha512",
+    "C:\\Users\\Cristina\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
   ],
   "logs": []
 }
