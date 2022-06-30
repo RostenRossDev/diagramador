@@ -210,46 +210,745 @@ namespace TPI_Diagramador
         }
         private void onClickColorRojo(object sender, System.EventArgs e)
         {
-            this.colorTexto = Color.FromArgb(255,28,0);
-            Brush br = new SolidBrush(colorTexto);
-            writeImage(this.textoImagen, br);
+            
+            if (this.TextoImagen != null)
+            {
+                this.colorTexto = Color.FromArgb(255, 28, 0);
+                Brush br = new SolidBrush(colorTexto);
+                writeImage(this.textoImagen, br);
+            }
+            else
+            {
+                this.ColorFigura = "rojo";
+
+                if (this.NombreFigura == "flecha_derecha")
+                {
+                    System.Diagnostics.Debug.WriteLine("flecha negra derecha");
+
+                    this.Image = Properties.Resources.flecha_derecha_roja;
+                }
+                else if (this.NombreFigura == "flecha_izquierda")
+                {
+                    this.Image = Properties.Resources.flecha_izquierda_roja;
+                }
+                else if (this.NombreFigura == "flecha_arriba")
+                {
+                    this.Image = Properties.Resources.flecha_arriba_rojo;
+                }
+                else if (this.NombreFigura == "flecha_abajo")
+                {
+                    this.Image = Properties.Resources.flecha_abajo_rojo;
+                }
+                else if (this.NombreFigura == "flechaD_arriba_izquierda")
+                {
+                    this.Image = Properties.Resources.flechaD_arriba_izquierda_rojo;
+                }
+                else if (this.NombreFigura == "flechaD_arriba_derecha")
+                {
+                    this.Image = Properties.Resources.flechaD_arriba_derecha_rojo;
+                }
+                else if (this.NombreFigura == "flechaD_abajo_derecha")
+                {
+                    this.Image = Properties.Resources.flechaD_abajo_derecha_rojo;
+                }
+                else if (this.NombreFigura == "flechaD_abajo_izquierda")
+                {
+                    this.Image = Properties.Resources.flechaD_abajo_izquierda_rojo;
+                }
+                else if (this.NombreFigura == "cuadrado_vacio")
+                {
+                    this.Image = Properties.Resources.cuadrado_vacio_rojo;
+                }
+                else if (this.NombreFigura == "cuadrado_relleno")
+                {
+                    this.Image = Properties.Resources.cuadrado_relleno_rojo;
+                }
+                else if (this.NombreFigura == "circulo_vacio")
+                {
+                    this.Image = Properties.Resources.circulo_vacio_rojo;
+                }
+                else if (this.NombreFigura == "circulo_relleno")
+                {
+                    this.Image = Properties.Resources.circulo_relleno_rojo;
+                }
+                else if (this.NombreFigura == "paralelogramo_vacio")
+                {
+                    this.Image = Properties.Resources.paralelogramo_vacio_rojo;
+                }
+                else if (this.NombreFigura == "paralelogramo_relleno")
+                {
+                    this.Image = Properties.Resources.paralelogramo_relleno_rojo;
+                }
+                else if (this.NombreFigura == "rombo_vacio")
+                {
+                    this.Image = Properties.Resources.rombo_vacio_rojo;
+                }
+                else if (this.NombreFigura == "rombo_relleno")
+                {
+                    this.Image = Properties.Resources.rombo_relleno_rojo;
+                }
+                else if (this.NombreFigura == "rectangulo_vacio")
+                {
+                    this.Image = Properties.Resources.rectaungulo_vacio_rojo;
+                }
+                else if (this.NombreFigura == "rectangulo_relleno")
+                {
+                    this.Image = Properties.Resources.rectaungulo_relleno_rojo;
+                }
+                else if (this.NombreFigura == "linea_arriba_izquierda")
+                {
+                    this.Image = Properties.Resources.lineaD_arriba_izquierda_rojo;
+                }
+                else if (this.NombreFigura == "linea_abajo_izquierda")
+                {
+                    this.Image = Properties.Resources.lineaD_abajo_izquierda_rojo;
+                }
+                else if (this.NombreFigura == "linea_horizontal")
+                {
+                    this.Image = Properties.Resources.linea_horizontal_roja;
+                }
+                else if (this.NombreFigura == "linea_vertical")
+                {
+                    this.Image = Properties.Resources.linea_vertical_rojo;
+                }
+            }
         }
 
         private void onClickColorVerde(object sender, System.EventArgs e)
         {
-            this.colorTexto = Color.FromArgb(0, 242, 0);
-            Brush br = new SolidBrush(colorTexto);
-            writeImage(this.textoImagen, br);
+           
+            if (this.TextoImagen != null)
+            {
+                this.colorTexto = Color.FromArgb(0, 242, 0);
+                Brush br = new SolidBrush(colorTexto);
+                writeImage(this.textoImagen, br);
+            }
+            else
+            {
+                this.ColorFigura = "verde";
+
+                if (this.NombreFigura == "flecha_derecha")
+                {
+                    System.Diagnostics.Debug.WriteLine("flecha negra derecha");
+
+                    this.Image = Properties.Resources.flecha_derecha_verde;
+                }
+                else if (this.NombreFigura == "flecha_izquierda")
+                {
+                    this.Image = Properties.Resources.flecha_izquierda_verde;
+                }
+                else if (this.NombreFigura == "flecha_arriba")
+                {
+                    this.Image = Properties.Resources.flecha_arriba_verde;
+                }
+                else if (this.NombreFigura == "flecha_abajo")
+                {
+                    this.Image = Properties.Resources.flecha_abajo_verde;
+                }
+                else if (this.NombreFigura == "flechaD_arriba_izquierda")
+                {
+                    this.Image = Properties.Resources.flechaD_arriba_izquierda_verde;
+                }
+                else if (this.NombreFigura == "flechaD_arriba_derecha")
+                {
+                    this.Image = Properties.Resources.flechaD_arriba_derecha_verde;
+                }
+                else if (this.NombreFigura == "flechaD_abajo_derecha")
+                {
+                    this.Image = Properties.Resources.flechaD_abajo_derecha_verde;
+                }
+                else if (this.NombreFigura == "flechaD_abajo_izquierda")
+                {
+                    this.Image = Properties.Resources.flechaD_abajo_izquierda_verde;
+                }
+                else if (this.NombreFigura == "cuadrado_vacio")
+                {
+                    this.Image = Properties.Resources.cuadrado_vacio_verde;
+                }
+                else if (this.NombreFigura == "cuadrado_relleno")
+                {
+                    this.Image = Properties.Resources.cuadrado_relleno_verde;
+                }
+                else if (this.NombreFigura == "circulo_vacio")
+                {
+                    this.Image = Properties.Resources.circulo_vacio_verde;
+                }
+                else if (this.NombreFigura == "circulo_relleno")
+                {
+                    this.Image = Properties.Resources.circulo_relleno_verde;
+                }
+                else if (this.NombreFigura == "paralelogramo_vacio")
+                {
+                    this.Image = Properties.Resources.paralelogramo_vacio_verde;
+                }
+                else if (this.NombreFigura == "paralelogramo_relleno")
+                {
+                    this.Image = Properties.Resources.paralelogramo_relleno_verde;
+                }
+                else if (this.NombreFigura == "rombo_vacio")
+                {
+                    this.Image = Properties.Resources.rombo_vacio_verde;
+                }
+                else if (this.NombreFigura == "rombo_relleno")
+                {
+                    this.Image = Properties.Resources.rombo_relleno_verde;
+
+                }
+                else if (this.NombreFigura == "rectangulo_vacio")
+                {
+                    this.Image = Properties.Resources.rectaungulo_vacio_verde;
+                }
+                else if (this.NombreFigura == "rectangulo_relleno")
+                {
+                    this.Image = Properties.Resources.rectaungulo_relleno_verde;
+                }
+                else if (this.NombreFigura == "linea_arriba_izquierda")
+                {
+                    this.Image = Properties.Resources.lineaD_arriba_izquierda_verde;
+                }
+                else if (this.NombreFigura == "linea_abajo_izquierda")
+                {
+                    this.Image = Properties.Resources.lineaD_abajo_izquierda_verde;
+                }
+                else if (this.NombreFigura == "linea_horizontal")
+                {
+                    this.Image = Properties.Resources.linea_horizontal_verde;
+                }
+                else if (this.NombreFigura == "linea_vertical")
+                {
+                    this.Image = Properties.Resources.linea_vertical_verde;
+                }
+            }
         }
         private void onClickColorNaranja(object sender, System.EventArgs e)
         {
-            this.colorTexto = Color.FromArgb(255, 146, 0);
-            Brush br = new SolidBrush(colorTexto);
-            writeImage(this.textoImagen, br);
+            
+            if (this.TextoImagen != null)
+            {
+                this.colorTexto = Color.FromArgb(255, 146, 0);
+                Brush br = new SolidBrush(colorTexto);
+                writeImage(this.textoImagen, br);
+            }
+            else
+            {
+                this.ColorFigura = "naranja";
+
+                if (this.NombreFigura == "flecha_derecha")
+                {
+                    System.Diagnostics.Debug.WriteLine("flecha negra derecha");
+
+                    this.Image = Properties.Resources.flecha_derecha_naranja;
+                }
+                else if (this.NombreFigura == "flecha_izquierda")
+                {
+                    this.Image = Properties.Resources.flecha_izquierda_naranja;
+                }
+                else if (this.NombreFigura == "flecha_arriba")
+                {
+                    this.Image = Properties.Resources.flecha_arriba_naranja;
+                }
+                else if (this.NombreFigura == "flecha_abajo")
+                {
+                    this.Image = Properties.Resources.flecha_abajo_naranja;
+                }
+                else if (this.NombreFigura == "flechaD_arriba_izquierda")
+                {
+                    this.Image = Properties.Resources.flechaD_arriba_izquierda_naranja;
+                }
+                else if (this.NombreFigura == "flechaD_arriba_derecha")
+                {
+                    this.Image = Properties.Resources.flechaD_arriba_derecha_naranja;
+                }
+                else if (this.NombreFigura == "flechaD_abajo_derecha")
+                {
+                    this.Image = Properties.Resources.flechaD_abajo_derecha_naranja;
+                }
+                else if (this.NombreFigura == "flechaD_abajo_izquierda")
+                {
+                    this.Image = Properties.Resources.flechaD_abajo_izquierda_naranja;
+                }
+                else if (this.NombreFigura == "cuadrado_vacio")
+                {
+                    this.Image = Properties.Resources.cuadrado_vacio_naranja;
+                }
+                else if (this.NombreFigura == "cuadrado_relleno")
+                {
+                    this.Image = Properties.Resources.cuadrado_relleno_naranja;
+                }
+                else if (this.NombreFigura == "circulo_vacio")
+                {
+                    this.Image = Properties.Resources.circulo_vacio_naranja;
+                }
+                else if (this.NombreFigura == "circulo_relleno")
+                {
+                    this.Image = Properties.Resources.circulo_relleno_naranja;
+                }
+                else if (this.NombreFigura == "paralelogramo_vacio")
+                {
+                    this.Image = Properties.Resources.paralelogramo_vacio_naranja;
+                }
+                else if (this.NombreFigura == "paralelogramo_relleno")
+                {
+                    this.Image = Properties.Resources.paralelogramo_relleno_naranja;
+                }
+                else if (this.NombreFigura == "rombo_vacio")
+                {
+                    this.Image = Properties.Resources.rombo_vacio_naranja;
+                }
+                else if (this.NombreFigura == "rombo_relleno")
+                {
+                    this.Image = Properties.Resources.rombo_relleno_naranja;
+                }
+                else if (this.NombreFigura == "rectangulo_vacio")
+                {
+                    this.Image = Properties.Resources.rectaungulo_vacio_naranja;
+                }
+                else if (this.NombreFigura == "rectangulo_relleno")
+                {
+                    this.Image = Properties.Resources.rectaungulo_relleno_naranja;
+                }
+                else if (this.NombreFigura == "linea_arriba_izquierda")
+                {
+                    this.Image = Properties.Resources.lineaD_arriba_izquierda_naranja;
+                }
+                else if (this.NombreFigura == "linea_abajo_izquierda")
+                {
+                    this.Image = Properties.Resources.lineaD_abajo_izquierda_naranja;
+                }
+                else if (this.NombreFigura == "linea_horizontal")
+                {
+                    this.Image = Properties.Resources.linea_horizontal_naranja;
+                }
+                else if (this.NombreFigura == "linea_vertical")
+                {
+                    this.Image = Properties.Resources.linea_vertical_naranja;
+                }
+            }
         }
         private void onClickColorCeleste(object sender, System.EventArgs e)
         {
-            this.colorTexto = Color.FromArgb(0, 178, 250);
-            Brush br = new SolidBrush(colorTexto);
-            writeImage(this.textoImagen, br);
+            
+            if (this.TextoImagen != null)
+            {
+                this.colorTexto = Color.FromArgb(0, 178, 250);
+                Brush br = new SolidBrush(colorTexto);
+                writeImage(this.textoImagen, br);
+            }
+            else
+            {
+                this.ColorFigura = "celeste";
+
+                if (this.NombreFigura == "flecha_derecha")
+                {
+                    System.Diagnostics.Debug.WriteLine("flecha negra derecha");
+
+                    this.Image = Properties.Resources.flecha_derecha_celeste;
+                }
+                else if (this.NombreFigura == "flecha_izquierda")
+                {
+                    this.Image = Properties.Resources.flecha_izquierda_celeste;
+                }
+                else if (this.NombreFigura == "flecha_arriba")
+                {
+                    this.Image = Properties.Resources.flecha_arriba_celeste;
+                }
+                else if (this.NombreFigura == "flecha_abajo")
+                {
+                    this.Image = Properties.Resources.flecha_abajo_celeste;
+
+                }
+                else if (this.NombreFigura == "flechaD_arriba_izquierda")
+                {
+                    this.Image = Properties.Resources.flechaD_arriba_izquierda_celeste;
+                }
+                else if (this.NombreFigura == "flechaD_arriba_derecha")
+                {
+                    this.Image = Properties.Resources.flechaD_arriba_derecha_celeste;
+                }
+                else if (this.NombreFigura == "flechaD_abajo_derecha")
+                {
+                    this.Image = Properties.Resources.flechaD_abajo_derecha_celeste;
+                }
+                else if (this.NombreFigura == "flechaD_abajo_izquierda")
+                {
+                    this.Image = Properties.Resources.flechaD_abajo_izquierda_celeste;
+                }
+                else if (this.NombreFigura == "cuadrado_vacio")
+                {
+                    this.Image = Properties.Resources.cuadrado_vacio_celeste;
+
+                }
+                else if (this.NombreFigura == "cuadrado_relleno")
+                {
+                    this.Image = Properties.Resources.cuadrado_relleno_celeste;
+                }
+                else if (this.NombreFigura == "circulo_vacio")
+                {
+                    this.Image = Properties.Resources.circulo_vacio_celeste;
+                }
+                else if (this.NombreFigura == "circulo_relleno")
+                {
+                    this.Image = Properties.Resources.circulo_relleno_celeste;
+                }
+                else if (this.NombreFigura == "paralelogramo_vacio")
+                {
+                    this.Image = Properties.Resources.paralelogramo_vacio_celeste;
+                }
+                else if (this.NombreFigura == "paralelogramo_relleno")
+                {
+                    this.Image = Properties.Resources.paralelogramo_relleno_celeste;
+                }
+                else if (this.NombreFigura == "rombo_vacio")
+                {
+                    this.Image = Properties.Resources.rombo_vacio_celeste;
+                }
+                else if (this.NombreFigura == "rombo_relleno")
+                {
+                    this.Image = Properties.Resources.rombo_relleno_celeste;
+                }
+                else if (this.NombreFigura == "rectangulo_vacio")
+                {
+                    this.Image = Properties.Resources.rombo_vacio_celeste;
+                }
+                else if (this.NombreFigura == "rectangulo_relleno")
+                {
+                    this.Image = Properties.Resources.rombo_relleno_celeste;
+                }
+                else if (this.NombreFigura == "linea_arriba_izquierda")
+                {
+                    this.Image = Properties.Resources.lineaD_arriba_izquierda_celeste;
+                }
+                else if (this.NombreFigura == "linea_abajo_izquierda")
+                {
+                    this.Image = Properties.Resources.lineaD_abajo_izquierda_celeste;
+                }
+                else if (this.NombreFigura == "linea_horizontal")
+                {
+                    this.Image = Properties.Resources.linea_horizontal_celeste;
+                }
+                else if (this.NombreFigura == "linea_vertical")
+                {
+                    this.Image = Properties.Resources.linea_vertical_celeste;
+                }
+            }
         }
         private void onClickColorAmarillo(object sender, System.EventArgs e)
         {
-            this.colorTexto = Color.FromArgb(246, 231, 250);
-            Brush br = new SolidBrush(colorTexto);
-            writeImage(this.textoImagen, br);
+           
+
+            if (this.TextoImagen != null)
+            {
+                this.colorTexto = Color.FromArgb(246, 231, 250);
+                Brush br = new SolidBrush(colorTexto);
+                writeImage(this.textoImagen, br);
+            }
+            else
+            {
+                this.ColorFigura = "amarillo";
+
+                if (this.NombreFigura == "flecha_derecha")
+                {
+                    System.Diagnostics.Debug.WriteLine("flecha negra derecha");
+
+                    this.Image = Properties.Resources.flecha_derecha_amarilla;
+                }
+                else if (this.NombreFigura == "flecha_izquierda")
+                {
+                    this.Image = Properties.Resources.flecha_izquierda_amarilla;
+                }
+                else if (this.NombreFigura == "flecha_arriba")
+                {
+                    this.Image = Properties.Resources.flecha_arriba_amarillo;
+                }
+                else if (this.NombreFigura == "flecha_abajo")
+                {
+                    this.Image = Properties.Resources.flecha_abajo_amarillo;
+                }
+                else if (this.NombreFigura == "flechaD_arriba_izquierda")
+                {
+                    this.Image = Properties.Resources.flechaD_arriba_izquierda_amarillo;
+                }
+                else if (this.NombreFigura == "flechaD_arriba_derecha")
+                {
+                    this.Image = Properties.Resources.flechaD_arriba_derecha_amarilla;
+                }
+                else if (this.NombreFigura == "flechaD_abajo_derecha")
+                {
+                    this.Image = Properties.Resources.flechaD_abajo_derecha_amarillo;
+                }
+                else if (this.NombreFigura == "flechaD_abajo_izquierda")
+                {
+                    this.Image = Properties.Resources.flechaD_abajo_izquierda_amarillo;
+                }
+                else if (this.NombreFigura == "cuadrado_vacio")
+                {
+                    this.Image = Properties.Resources.cuadrado_vacio_amarillo;
+                }
+                else if (this.NombreFigura == "cuadrado_relleno")
+                {
+                    this.Image = Properties.Resources.cuadrado_relleno_amarillo;
+                }
+                else if (this.NombreFigura == "circulo_vacio")
+                {
+                    this.Image = Properties.Resources.circulo_vacio_amarillo;
+                }
+                else if (this.NombreFigura == "circulo_relleno")
+                {
+                    this.Image = Properties.Resources.circulo_relleno_amarillo;
+                }
+                else if (this.NombreFigura == "paralelogramo_vacio")
+                {
+                    this.Image = Properties.Resources.paralelogramo_vacio_amarillo;
+                }
+                else if (this.NombreFigura == "paralelogramo_relleno")
+                {
+                    this.Image = Properties.Resources.paralelogramo_relleno_amarillo;
+                }
+                else if (this.NombreFigura == "rombo_vacio")
+                {
+                    this.Image = Properties.Resources.rombo_vacio_amarillo;
+                }
+                else if (this.NombreFigura == "rombo_relleno")
+                {
+                    this.Image = Properties.Resources.rombo_relleno_amarillo;
+                }
+                else if (this.NombreFigura == "rectangulo_vacio")
+                {
+                    this.Image = Properties.Resources.rectaungulo_vacio_amarillo;
+                }
+                else if (this.NombreFigura == "rectangulo_relleno")
+                {
+                    this.Image = Properties.Resources.rectaungulo_relleno_amarillo;
+                }
+                else if (this.NombreFigura == "linea_arriba_izquierda")
+                {
+                    this.Image = Properties.Resources.lineaD_arriba_izquierda_amarilla;
+                }
+                else if (this.NombreFigura == "linea_abajo_izquierda")
+                {
+                    this.Image = Properties.Resources.lineaD_abajo_izquierda_amarilla;
+                }
+                else if (this.NombreFigura == "linea_horizontal")
+                {
+                    this.Image = Properties.Resources.linea_horizontal_amarillo;
+                }
+                else if (this.NombreFigura == "linea_vertical")
+                {
+                    this.Image = Properties.Resources.linea_vertical_amarillo;
+                }
+            }
         }
         private void onClickColorMorado(object sender, System.EventArgs e)
         {
-            this.colorTexto = Color.FromArgb(120, 0, 255);
-            Brush br = new SolidBrush(colorTexto);
-            writeImage(this.textoImagen, br);
+            
+
+            if (this.TextoImagen != null)
+            {
+                this.colorTexto = Color.FromArgb(120, 0, 255);
+                Brush br = new SolidBrush(colorTexto);
+                writeImage(this.textoImagen, br);
+            }
+            else
+            {
+                this.ColorFigura = "morado";
+
+                if (this.NombreFigura == "flecha_derecha")
+                {
+                    System.Diagnostics.Debug.WriteLine("flecha negra derecha");
+
+                    this.Image = Properties.Resources.flecha_derecha_morada;
+                }
+                else if (this.NombreFigura == "flecha_izquierda")
+                {
+                    this.Image = Properties.Resources.flecha_izquierda_morada;
+                }
+                else if (this.NombreFigura == "flecha_arriba")
+                {
+                    this.Image = Properties.Resources.flecha_arriba_morado;
+                }
+                else if (this.NombreFigura == "flecha_abajo")
+                {
+                    this.Image = Properties.Resources.flecha_abajo_morado;
+                }
+                else if (this.NombreFigura == "flechaD_arriba_izquierda")
+                {
+                    this.Image = Properties.Resources.flechaD_arriba_izquierda_morado;
+                }
+                else if (this.NombreFigura == "flechaD_arriba_derecha")
+                {
+                    this.Image = Properties.Resources.flechaD_arriba_derecha_morado;
+                }
+                else if (this.NombreFigura == "flechaD_abajo_derecha")
+                {
+                    this.Image = Properties.Resources.flechaD_abajo_derecha_morado;
+                }
+                else if (this.NombreFigura == "flechaD_abajo_izquierda")
+                {
+                    this.Image = Properties.Resources.flechaD_abajo_izquierda_morado;
+                }
+                else if (this.NombreFigura == "cuadrado_vacio")
+                {
+                    this.Image = Properties.Resources.cuadrado_vacio_morado;
+                }
+                else if (this.NombreFigura == "cuadrado_relleno")
+                {
+                    this.Image = Properties.Resources.cuadrado_relleno_morado;
+                }
+                else if (this.NombreFigura == "circulo_vacio")
+                {
+                    this.Image = Properties.Resources.circulo_vacio_morado;
+                }
+                else if (this.NombreFigura == "circulo_relleno")
+                {
+                    this.Image = Properties.Resources.circulo_relleno_morado;
+                }
+                else if (this.NombreFigura == "paralelogramo_vacio")
+                {
+                    this.Image = Properties.Resources.paralelogramo_vacio_morado;
+                }
+                else if (this.NombreFigura == "paralelogramo_relleno")
+                {
+                    this.Image = Properties.Resources.paralelogramo_relleno_morado;
+                }
+                else if (this.NombreFigura == "rombo_vacio")
+                {
+                    this.Image = Properties.Resources.rombo_vacio_morado;
+                }
+                else if (this.NombreFigura == "rombo_relleno")
+                {
+                    this.Image = Properties.Resources.rombo_relleno_morado;
+
+                }
+                else if (this.NombreFigura == "rectangulo_vacio")
+                {
+                    this.Image = Properties.Resources.rectaungulo_vacio_morado;
+                }
+                else if (this.NombreFigura == "rectangulo_relleno")
+                {
+                    this.Image = Properties.Resources.rectaungulo_relleno_morado;
+                }
+                else if (this.NombreFigura == "linea_arriba_izquierda")
+                {
+                    this.Image = Properties.Resources.lineaD_arriba_izquierda_morado;
+                }
+                else if (this.NombreFigura == "linea_abajo_izquierda")
+                {
+                    this.Image = Properties.Resources.lineaD_abajo_izquierda_morado;
+                }
+                else if (this.NombreFigura == "linea_horizontal")
+                {
+                    this.Image = Properties.Resources.linea_horizontal_morado;
+                }
+                else if (this.NombreFigura == "linea_vertical")
+                {
+                    this.Image = Properties.Resources.linea_vertical_morado;
+                }
+            }
         }
         private void onClickColorNegro(object sender, System.EventArgs e)
         {
-            this.colorTexto = Color.Black;
-            Brush br = new SolidBrush(colorTexto);
-            writeImage(this.textoImagen, br);
+            
+            if (this.TextoImagen != null)
+            {
+                this.colorTexto = Color.Black;
+                Brush br = new SolidBrush(colorTexto);
+                writeImage(this.textoImagen, br);
+            }
+            else
+            {
+                this.ColorFigura = "negro";
+
+                if (this.NombreFigura == "flecha_derecha")
+                {
+                    System.Diagnostics.Debug.WriteLine("flecha negra derecha");
+                    this.Image = Properties.Resources.flecha_derecha_negra;
+                }
+                else if (this.NombreFigura == "flecha_izquierda")
+                {
+                    this.Image = Properties.Resources.flecha_izquierda_negra;
+                }
+                else if (this.NombreFigura == "flecha_arriba")
+                {
+                    this.Image = Properties.Resources.flecha_arriba_negra;
+                }
+                else if (this.NombreFigura == "flecha_abajo")
+                {
+                    this.Image = Properties.Resources.flecha_abajo_negra;
+                }
+                else if (this.NombreFigura == "flechaD_arriba_izquierda")
+                {
+                    this.Image = Properties.Resources.flechaD_arriba_izquierda_negra;
+                }
+                else if (this.NombreFigura == "flechaD_arriba_derecha")
+                {
+                    this.Image = Properties.Resources.flechaD_arriba_derecha_negra;
+                }
+                else if (this.NombreFigura == "flechaD_abajo_derecha")
+                {
+                    this.Image = Properties.Resources.flechaD_abajo_derecha_negra;
+                }
+                else if (this.NombreFigura == "flechaD_abajo_izquierda")
+                {
+                    this.Image = Properties.Resources.flechaD_abajo_izquierda_negra;
+                }
+                else if (this.NombreFigura == "cuadrado_vacio")
+                {
+                    this.Image = Properties.Resources.cuadrado_vacio_negro;
+
+                }
+                else if (this.NombreFigura == "cuadrado_relleno")
+                {
+                    this.Image = Properties.Resources.cuadrado_relleno_negro;
+                }
+                else if (this.NombreFigura == "circulo_vacio")
+                {
+                    this.Image = Properties.Resources.circulo_vacio_negro;
+                }
+                else if (this.NombreFigura == "circulo_relleno")
+                {
+                    this.Image = Properties.Resources.circulo_relleno_negro;
+                }
+                else if (this.NombreFigura == "paralelogramo_vacio")
+                {
+                    this.Image = Properties.Resources.paralelogramo_vacio_negro;
+                }
+                else if (this.NombreFigura == "paralelogramo_relleno")
+                {
+                    this.Image = Properties.Resources.paralelogramo_relleno_negro;
+                }
+                else if (this.NombreFigura == "rombo_vacio")
+                {
+                    this.Image = Properties.Resources.rombo_vacio_negro;
+                }
+                else if (this.NombreFigura == "rombo_relleno")
+                {
+                    this.Image = Properties.Resources.rombo_relleno_negro;
+                }
+                else if (this.NombreFigura == "rectangulo_vacio")
+                {
+                    this.Image = Properties.Resources.rectaungulo_vacio_negro;
+                }
+                else if (this.NombreFigura == "rectangulo_relleno")
+                {
+                    this.Image = Properties.Resources.rectaungulo_vacio_negro;
+                }
+                else if (this.NombreFigura == "linea_arriba_izquierda")
+                {
+                    this.Image = Properties.Resources.lineaD_arriba_izquierda_negro;
+                }
+                else if (this.NombreFigura == "linea_abajo_izquierda")
+                {
+                    this.Image = Properties.Resources.lineaD_abajo_izquierda_negro;
+                }
+                else if (this.NombreFigura == "linea_horizontal")
+                {
+                    this.Image = Properties.Resources.linea_horizontal_negra;
+                }
+                else if (this.NombreFigura == "linea_vertical")
+                {
+                    this.Image = Properties.Resources.linea_vertical_negra;
+                }
+            }
         }
 
         private void comboBoxSelectedChange(object sender, System.EventArgs e)
@@ -435,6 +1134,7 @@ namespace TPI_Diagramador
             this.Size = new Size(this.Size.Width - porcentajeMas, this.Size.Height - porcentajeMenos);
             this.SizeMode = PictureBoxSizeMode.StretchImage;
         }
+
     }
 
 

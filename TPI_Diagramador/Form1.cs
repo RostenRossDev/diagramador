@@ -350,6 +350,8 @@ namespace TPI_Diagramador
         }
         private void guardarBtn_Click(object sender, EventArgs e)
         {
+            this.splitContainer2.Panel2.Controls.RemoveByKey("menu");
+
             string input = "";
 
             InputBox inputBox = new InputBox("Ingrese el nombre");
@@ -598,10 +600,13 @@ namespace TPI_Diagramador
                 System.Diagnostics.Debug.WriteLine(figurasSeleccionadas[i].ColorFigura);
                 if (figurasSeleccionadas[i].TextoImagen != null)
                 {
-                    break;
+                    Brush brushRojo = new SolidBrush(Color.FromArgb(255, 28, 0));
+                    figurasSeleccionadas[i].writeImage(figurasSeleccionadas[i].TextoImagen, brushRojo);
                 }
                 else
                 {
+                    figurasSeleccionadas[i].ColorFigura = "rojo";
+
                     if (figurasSeleccionadas[i].NombreFigura == "flecha_derecha")
                     {
                         System.Diagnostics.Debug.WriteLine("flecha negra derecha");
@@ -703,12 +708,16 @@ namespace TPI_Diagramador
         {
             for (int i = 0; i < figurasSeleccionadas.Count; i++)
             {
+
                 if (figurasSeleccionadas[i].TextoImagen != null)
                 {
-                    break;
+                    Brush brushNegro = new SolidBrush(Color.Black);
+                    figurasSeleccionadas[i].ColorTexto = Color.Black;
+                    figurasSeleccionadas[i].writeImage(figurasSeleccionadas[i].TextoImagen, brushNegro);
                 }
                 else
                 {
+                    figurasSeleccionadas[i].ColorFigura = "negro";
                     if (figurasSeleccionadas[i].NombreFigura == "flecha_derecha")
                     {
                         System.Diagnostics.Debug.WriteLine("flecha negra derecha");
@@ -809,10 +818,15 @@ namespace TPI_Diagramador
             {
                 if (figurasSeleccionadas[i].TextoImagen != null)
                 {
-                    break;
+                    Brush brushCeleste = new SolidBrush(Color.FromArgb(0, 178, 250));
+                    figurasSeleccionadas[i].ColorTexto = Color.FromArgb(0, 178, 250);
+
+                    figurasSeleccionadas[i].writeImage(figurasSeleccionadas[i].TextoImagen, brushCeleste);
                 }
                 else
                 {
+                    figurasSeleccionadas[i].ColorFigura = "celeste";
+
                     if (figurasSeleccionadas[i].NombreFigura == "flecha_derecha")
                     {
                         System.Diagnostics.Debug.WriteLine("flecha negra derecha");
@@ -916,10 +930,14 @@ namespace TPI_Diagramador
 
                 if (figurasSeleccionadas[i].TextoImagen != null)
                 {
-                    break;
+                    Brush brushVerde = new SolidBrush(Color.FromArgb(0, 242, 0));
+                    figurasSeleccionadas[i].ColorTexto = Color.FromArgb(0, 242, 0);
+                    figurasSeleccionadas[i].writeImage(figurasSeleccionadas[i].TextoImagen, brushVerde);
                 }
                 else
                 {
+                    figurasSeleccionadas[i].ColorFigura = "verde";
+
                     if (figurasSeleccionadas[i].NombreFigura == "flecha_derecha")
                     {
                         System.Diagnostics.Debug.WriteLine("flecha negra derecha");
@@ -1021,10 +1039,14 @@ namespace TPI_Diagramador
             {
                 if (figurasSeleccionadas[i].TextoImagen != null)
                 {
-                    break;
+                    Brush brushMorado = new SolidBrush(Color.FromArgb(120, 0, 255));
+                    figurasSeleccionadas[i].ColorTexto = Color.FromArgb(120, 0, 255);
+                    figurasSeleccionadas[i].writeImage(figurasSeleccionadas[i].TextoImagen, brushMorado);
                 }
                 else
                 {
+
+                    figurasSeleccionadas[i].ColorFigura = "morado";
 
                     if (figurasSeleccionadas[i].NombreFigura == "flecha_derecha")
                     {
@@ -1127,10 +1149,14 @@ namespace TPI_Diagramador
             {
                 if (figurasSeleccionadas[i].TextoImagen != null)
                 {
-                    break;
+                    Brush brushNaranja = new SolidBrush(Color.FromArgb(255, 146, 0));
+                    figurasSeleccionadas[i].ColorTexto = Color.FromArgb(255, 146, 0);
+                    figurasSeleccionadas[i].writeImage(figurasSeleccionadas[i].TextoImagen, brushNaranja);
                 }
                 else
                 {
+                    figurasSeleccionadas[i].ColorFigura = "naranja";
+
                     if (figurasSeleccionadas[i].NombreFigura == "flecha_derecha")
                     {
                         System.Diagnostics.Debug.WriteLine("flecha negra derecha");
@@ -1231,9 +1257,14 @@ namespace TPI_Diagramador
             {
                 if (figurasSeleccionadas[i].TextoImagen != null)
                 {
+                    Brush brushNAmarillo = new SolidBrush(Color.FromArgb(246, 231, 250));
+                    figurasSeleccionadas[i].ColorTexto = Color.FromArgb(246, 231, 250);
+                    figurasSeleccionadas[i].writeImage(figurasSeleccionadas[i].TextoImagen, brushNAmarillo);
+                }
+                else
+                {
+                    figurasSeleccionadas[i].ColorFigura = "amarillo";
 
-                }else
-                {              
                     if (figurasSeleccionadas[i].NombreFigura == "flecha_derecha")
                     {
                         System.Diagnostics.Debug.WriteLine("flecha negra derecha");
