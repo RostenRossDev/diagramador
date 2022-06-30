@@ -79,24 +79,37 @@
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\Cristina\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+=======
+    "C:\\Users\\nesto\\.nuget\\packages\\": {}
+>>>>>>> 3e2760fbd2cf894759ba4d59d503e6e07f82df28
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\Cristina\\source\\repos\\diagramador\\TPI_Diagramador\\TPI_Diagramador.csproj",
       "projectName": "TPI_Diagramador",
       "projectPath": "C:\\Users\\Cristina\\source\\repos\\diagramador\\TPI_Diagramador\\TPI_Diagramador.csproj",
       "packagesPath": "C:\\Users\\Cristina\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Cristina\\source\\repos\\diagramador\\TPI_Diagramador\\obj\\",
+=======
+      "projectUniqueName": "C:\\Users\\nesto\\source\\repos\\TPI_Diagramador\\TPI_Diagramador\\TPI_Diagramador.csproj",
+      "projectName": "TPI_Diagramador",
+      "projectPath": "C:\\Users\\nesto\\source\\repos\\TPI_Diagramador\\TPI_Diagramador\\TPI_Diagramador.csproj",
+      "packagesPath": "C:\\Users\\nesto\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\nesto\\source\\repos\\TPI_Diagramador\\TPI_Diagramador\\obj\\",
+>>>>>>> 3e2760fbd2cf894759ba4d59d503e6e07f82df28
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
+<<<<<<< HEAD
         "C:\\Users\\Cristina\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+=======
+        "C:\\Users\\nesto\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 3e2760fbd2cf894759ba4d59d503e6e07f82df28
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -152,5 +165,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problema al leer el archivo de caché C:\\Users\\nesto\\source\\repos\\TPI_Diagramador\\TPI_Diagramador\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

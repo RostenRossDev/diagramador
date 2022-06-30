@@ -342,6 +342,7 @@ namespace TPI_Diagramador
             menu.Height = 20;
             menu.Controls.Add(botonAgrandar);
             menu.Controls.Add(botonAchicar);
+
             Button colorRojo = new Button();
             colorRojo.BackColor = Color.Red;
             colorRojo.Height = 20;

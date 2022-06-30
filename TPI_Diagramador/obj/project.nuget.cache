@@ -1,11 +1,27 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "KPfO0NXVf4AAixZGTYuK689Xawf/FlXzvq8ilzfiV6urNL7znHOEsDS9Becjov1/sEpOjhLR1hqtoJKkvnSt0g==",
   "success": true,
   "projectFilePath": "C:\\Users\\Cristina\\source\\repos\\diagramador\\TPI_Diagramador\\TPI_Diagramador.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Cristina\\.nuget\\packages\\fontawesome.sharp\\6.1.1\\fontawesome.sharp.6.1.1.nupkg.sha512",
     "C:\\Users\\Cristina\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+=======
+  "dgSpecHash": "xeChJxAhH6CD8SG9Ur5sJVo2pA8VMiVkzGjWve4XPlnilBO6IUoT6AYh8Ju0ltpeSuR80Wc6OxQYO/DtVWsJCQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\nesto\\source\\repos\\TPI_Diagramador\\TPI_Diagramador\\TPI_Diagramador.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\nesto\\.nuget\\packages\\fontawesome.sharp\\5.15.4\\fontawesome.sharp.5.15.4.nupkg.sha512",
+    "C:\\Users\\nesto\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+>>>>>>> 3e2760fbd2cf894759ba4d59d503e6e07f82df28
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problema al leer el archivo de caché C:\\Users\\nesto\\source\\repos\\TPI_Diagramador\\TPI_Diagramador\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
