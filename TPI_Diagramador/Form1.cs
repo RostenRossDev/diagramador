@@ -19,6 +19,10 @@ namespace TPI_Diagramador
 
             this.splitContainer2.Panel1MinSize = 160;
             this.splitContainer2.Panel2MinSize = 889;
+
+            //this.splitContainer1.Panel1MinSize = 10;
+            //this.splitContainer1.Panel2MinSize = 900;
+
             figurasSeleccionadas = new List<DiagramImg>();
             isAltPressed = false;
             this.splitContainer2.Panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(OnMouseMove);
@@ -1122,15 +1126,17 @@ namespace TPI_Diagramador
             {
                 this.splitContainer2.Panel1MinSize = 160;
                 this.splitContainer2.Panel2MinSize = 1440;
-                this.splitContainer1.Panel1MinSize = 80;
-                this.splitContainer1.Panel2MinSize = 1000;
+               
+                this.splitContainer1.Panel1MinSize = 24;
+                //this.splitContainer1.Panel2MinSize = 1600;
             }
             else
             {
                 this.splitContainer2.Panel1MinSize = 160;
                 this.splitContainer2.Panel2MinSize = 1440;
-                this.splitContainer1.Panel1MinSize = 80;
-                this.splitContainer1.Panel2MinSize = 618;
+
+                this.splitContainer1.Panel1MinSize = 24;
+                //this.splitContainer1.Panel2MinSize = 718;
             }
         }
 
@@ -2244,6 +2250,10 @@ namespace TPI_Diagramador
                 }
             });
         }
-       
+
+        private void nuevoDiagrama(object sender, EventArgs e)
+        {
+            this.splitContainer2.Panel2.Controls.Clear();
+        }
     }
 }
