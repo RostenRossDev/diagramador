@@ -19,6 +19,8 @@ namespace TPI_Diagramador
         public String Texto { get; set; }
         public String FontFam { get; set; }
         public float FontSize { get; set; }
+
+        public Boolean esRelleno { get; set; }
         public DiagramDTO(){}
        
         public String toString()

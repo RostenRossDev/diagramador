@@ -21,11 +21,12 @@ namespace TPI_Diagramador
         private Panel menu;
         private bool isButonsFocus;
         private Color colorTexto;
-        
+        private Boolean relleno = false;
         //para agrandar ya chicar elementos
         private int porcentajeMas = 10;
         private int porcentajeMenos = 5;
 
+        public Boolean Relleno { get { return this.relleno; } set { this.relleno = value; } }
         public float FontSize { get { return this.fontSize; } set { this.fontSize = value; } }
         public string FontFam { get { return this.fontFam; } set { this.fontFam = value; } }
         public Color ColorTexto { get { return this.colorTexto; } set { this.colorTexto = value; } }
