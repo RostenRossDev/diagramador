@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿//using Newtonsoft.Json;
 using System.Text.Json.Serialization;
 using System.Text.Json;
@@ -1386,4 +1387,838 @@ namespace TPI_Diagramador
             }
         }
     }
+=======
+﻿//using Newtonsoft.Json;
+using System.Text.Json.Serialization;
+using System.Text.Json;
+using System.Drawing.Imaging;
+
+namespace TPI_Diagramador
+{
+    public partial class Form1 : Form
+    {
+        private List<DiagramImg> figurasSeleccionadas;
+        //private List<Point> points;
+        private bool isAltPressed;
+        private bool dragging;
+        private int collapsedPanel;
+        private bool isCollpased;
+
+        public Form1()
+        {
+            InitializeComponent();
+            figurasSeleccionadas = new List<DiagramImg>();
+            //points = new List<Point>();
+            isAltPressed = false;
+            this.splitContainer2.Panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(OnMouseMove);
+            dragging = false;
+            collapsedPanel = 0;
+        }
+
+        private void mouseDownDrag(object sender, MouseEventArgs e)
+        {
+
+            PictureBox pictureBox = sender as PictureBox;
+
+            DiagramImg newPic = selectFigura(pictureBox.Name);
+
+            this.splitContainer2.Panel2.Controls.Add(newPic);
+
+        }
+
+        private DiagramImg generarDiagramImg()
+        {
+            //Genera una nueva imagen y establece sus propiedades
+            DiagramImg newPicture = new DiagramImg();
+            newPicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            newPicture.BackColor = Color.Transparent;
+            newPicture.Dock = System.Windows.Forms.DockStyle.None;
+            newPicture.Size = new System.Drawing.Size(116, 89);
+            newPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            newPicture.TabIndex = 2;
+            newPicture.TabStop = false;
+            newPicture.MouseDown += new System.Windows.Forms.MouseEventHandler(OnMouseDown);
+            newPicture.Cursor = System.Windows.Forms.Cursors.Hand;
+            return newPicture;
+        }
+
+        private DiagramImg selectFigura(string name)
+        {
+
+            DiagramImg newPicture = generarDiagramImg();
+            //newPicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            //newPicture.BackColor = Color.Transparent;
+            //newPicture.Dock = System.Windows.Forms.DockStyle.None;
+            //newPicture.Size = new System.Drawing.Size(116, 89);
+            //newPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            //newPicture.TabIndex = 2;
+            //newPicture.TabStop = false;
+            //newPicture.MouseDown += new System.Windows.Forms.MouseEventHandler(OnMouseDown);
+            //newPicture.Cursor = System.Windows.Forms.Cursors.Hand;
+            //El metodo busca el nombre de la figura y genera una nueva imagen con los parametros necesarios
+            if (name == "flecha_derecha")
+            {
+                System.Diagnostics.Debug.WriteLine("flecha negra derecha");
+
+                newPicture.Image = Properties.Resources.flecha_derecha_negra;
+                newPicture.NombreFigura = "flecha_derecha";
+                newPicture.ColorFigura = "negro";
+            }
+            else if (name == "flecha_izquierda")
+            {
+                System.Diagnostics.Debug.WriteLine("flecha negra izquierda");
+                newPicture.Image = Properties.Resources.flecha_izquierda_negra;
+                newPicture.NombreFigura = "flecha_izquierda";
+                newPicture.ColorFigura = "negro";
+            }
+            else if (name == "flecha_arriba")
+            {
+                newPicture.Image = Properties.Resources.flecha_arriba_negra;
+                newPicture.NombreFigura = "flecha_arriba";
+                newPicture.ColorFigura = "negro";
+            }
+            else if (name == "flecha_abajo")
+            {
+                newPicture.Image = Properties.Resources.flecha_abajo_negra;
+                newPicture.NombreFigura = "flecha_abajo";
+                newPicture.ColorFigura = "negro";
+            }
+            else if (name == "flechaD_arriba_izquierda")
+            {
+                newPicture.Image = Properties.Resources.flechaD_arriba_izquierda_negra;
+                newPicture.NombreFigura = "flechaD_arriba_izquierda";
+                newPicture.ColorFigura = "negro";
+            }
+            else if (name == "flechaD_arriba_derecha")
+            {
+                newPicture.Image = Properties.Resources.flechaD_arriba_derecha_negra;
+                newPicture.NombreFigura = "flechaD_arriba_derecha";
+                newPicture.ColorFigura = "negro";
+            }
+            else if (name == "flechaD_abajo_derecha")
+            {
+                newPicture.Image = Properties.Resources.flechaD_abajo_derecha_negra;
+                newPicture.NombreFigura = "flechaD_abajo_derecha";
+                newPicture.ColorFigura = "negro";
+            }
+            else if (name == "flechaD_abajo_izquierda")
+            {
+                System.Diagnostics.Debug.WriteLine("flecha negra abajo");
+                newPicture.Image = Properties.Resources.flechaD_abajo_izquierda_negra;
+                newPicture.NombreFigura = "flechaD_abajo_izquierda";
+                newPicture.ColorFigura = "negro";
+            }
+            else if (name == "linea_abajo_izquierda_negro")
+            {
+                System.Diagnostics.Debug.WriteLine("linea abajo izquierda negro");
+                newPicture.Image = Properties.Resources.lineaD_abajo_izquierda_negro;
+                newPicture.NombreFigura = "linea_abajo_izquierda_negro";
+                newPicture.ColorFigura = "negro";
+            }
+            else if (name == "linea_arriba_izquierda_negro")
+            {
+                System.Diagnostics.Debug.WriteLine("linea arriba izquierda negro");
+                newPicture.Image = Properties.Resources.lineaD_arriba_izquierda_negro;
+                newPicture.NombreFigura = "linea_arriba_izquierda_negro";
+                newPicture.ColorFigura = "negro";
+            }
+            else if (name == "linea_horizontal_negra")
+            {
+                System.Diagnostics.Debug.WriteLine("linea horizontal negra");
+                newPicture.Image = Properties.Resources.linea_horizontal_negra;
+                newPicture.NombreFigura = "linea_horizontal_negra";
+                newPicture.ColorFigura = "negro";
+            }
+            else if (name == "linea_vertical_negra")
+            {
+                System.Diagnostics.Debug.WriteLine("linea vertical negra");
+                newPicture.Image = Properties.Resources.linea_vertical_negra;
+                newPicture.NombreFigura = "linea_vertical_negra";
+                newPicture.ColorFigura = "negro";
+            }
+            else if (name == "circulo_negro")
+            {
+                System.Diagnostics.Debug.WriteLine("circulo_negro");
+                newPicture.Image = Properties.Resources.circulo_vacio_negro;
+                newPicture.NombreFigura = "circulo_negro";
+                newPicture.ColorFigura = "negro";
+            }
+            else if (name == "cuadrado_negro")
+            {
+                System.Diagnostics.Debug.WriteLine("cuadrado_negro");
+                newPicture.Image = Properties.Resources.cuadrado_vacio_negro;
+                newPicture.NombreFigura = "cuadrado_negro";
+                newPicture.ColorFigura = "negro";
+            }
+            else if (name == "paralelogramo_negro")
+            {
+                System.Diagnostics.Debug.WriteLine("paralelogramo_negro");
+                newPicture.Image = Properties.Resources.paralelogramo_vacio_negro;
+                newPicture.NombreFigura = "paralelogramo_negro";
+                newPicture.ColorFigura = "negro";
+            }
+            else if (name == "rectangulo_negro")
+            {
+                System.Diagnostics.Debug.WriteLine("rectangulo_negro");
+                newPicture.Image = Properties.Resources.rectaungulo_vacio_negro;
+                newPicture.NombreFigura = "rectangulo_negro";
+                newPicture.ColorFigura = "negro";
+            }
+            else if (name == "rombo_negro")
+            {
+                System.Diagnostics.Debug.WriteLine("rombo_negro");
+                newPicture.Image = Properties.Resources.rombo_vacio_negro;
+                newPicture.NombreFigura = "rombo_negro";
+                newPicture.ColorFigura = "negro";
+            }//agregar mas else if segun imagenes se agreguen
+            else
+            {
+                newPicture.ColorFigura = "negro";
+            }
+
+            return newPicture;
+        }
+        protected void OnMpuseUp(MouseEventArgs e)
+        {
+            dragging = false;
+
+        }
+        protected void OnMouseDown(object sender, MouseEventArgs e)
+        {
+
+            DiagramImg img = sender as DiagramImg;
+
+            KeyPress(img);
+            //base.OnMouseDown(e);
+        }
+
+        protected void OnMouseMove(object sender, MouseEventArgs e)
+        {
+
+            
+            if (dragging && this.figurasSeleccionadas.Count>0 && isAltPressed) {
+
+                for (int i = 0; i < figurasSeleccionadas.Count; i++)
+                {
+                    Point location = figurasSeleccionadas[i].Location;
+                    DiagramImg picture = figurasSeleccionadas[i];
+                    int X = e.X - picture.Left;
+                    int Y= e.Y - picture.Top;
+                    System.Diagnostics.Debug.WriteLine("Figura location: " + X+", "+Y);
+
+                    //if (X < 0 || Y < 0)
+                    //{
+                    //    System.Diagnostics.Debug.WriteLine("Figura location: " + X+", "+Y);
+
+                    //    return;
+                    //}
+                    MouseEventArgs evento = new MouseEventArgs(e.Button, e.Clicks, X, Y, e.Delta);
+                    picture.moverFigura(evento);
+                    //picture.Left = X;
+                    //picture.Top = Y;
+                    
+                    //picture.Refresh();
+                    System.Diagnostics.Debug.WriteLine("Figura numero: " + i);
+                    System.Diagnostics.Debug.WriteLine("x: " + location.X + ", y: " + location.Y);
+                    System.Diagnostics.Debug.WriteLine("X: " + picture.Left + ", Y: " + picture.Top);
+                }
+            }
+
+        }
+
+        protected void OnMouseEnter(object sender, MouseEventArgs e)
+        {
+            //var pic = sender as PictureBox;            
+
+            foreach (var item in figurasSeleccionadas)
+            {
+                item.Paint += (arg1, arg2) =>
+                {
+                    arg2.Graphics.DrawString(item.Tag.ToString(), item.Font, Brushes.OrangeRed, item.ClientRectangle, new StringFormat() { Alignment = StringAlignment.Center, LineAlignment = StringAlignment.Near });
+                };
+            }
+            
+        }
+
+        private void KeyPress(DiagramImg img)
+        {
+            if (Form.ModifierKeys == Keys.Alt)
+            {
+                isAltPressed = true;
+                System.Diagnostics.Debug.WriteLine("alt apretado");
+
+            }
+            else
+            {
+                isAltPressed = false;
+                System.Diagnostics.Debug.WriteLine("alt no apretado");
+
+            }
+
+            //Si mantenes presionado alt podes hacer multi seleccion
+            if (isAltPressed)
+            {
+                System.Diagnostics.Debug.WriteLine("alt apretado");
+
+                if (figurasSeleccionadas.Contains(img)) 
+                {
+                    figurasSeleccionadas.Remove(img);
+                    img.eliminarContorno(this.BackColor);
+                    System.Diagnostics.Debug.WriteLine("removido");
+
+                }
+                else
+                {
+                    figurasSeleccionadas.Add(img);
+                    img.dibujarContorno();
+                    System.Diagnostics.Debug.WriteLine("agregado");
+                }
+            }
+            else
+            {
+                System.Diagnostics.Debug.WriteLine("alt no apretado");
+
+            }
+
+        }
+
+        private void MasChico(object sender, EventArgs e)
+        {
+            
+            for (int i = 0; i < figurasSeleccionadas.Count; i++)
+            {
+                DiagramImg picture = figurasSeleccionadas[i];
+
+                picture.Size = new System.Drawing.Size(picture.Width - picture.PorcentajeMas, picture.Height - picture.PorcentajeMenos);
+                picture.SizeMode = PictureBoxSizeMode.StretchImage;
+
+
+                this.Refresh();
+            }
+
+        }
+        private void MasGrande(object sender, EventArgs e)
+        {
+            for (int i = 0; i < figurasSeleccionadas.Count; i++)
+            {
+                DiagramImg picture = figurasSeleccionadas[i];
+
+                picture.Size = new System.Drawing.Size(picture.Width + picture.PorcentajeMas, picture.Height + picture.PorcentajeMenos);
+                picture.SizeMode = PictureBoxSizeMode.StretchImage;
+
+
+                this.Refresh();
+            }
+        }
+
+        private void cargarBtn_Click(object sender, EventArgs e)
+        {
+            //Evento para cargar un diagrama ya establecido
+            string pathFile = "";
+            string json = "";
+            DialogResult dialogResult = this.openFileDialog1.ShowDialog();
+
+            pathFile = this.openFileDialog1.FileName;
+            if (dialogResult != DialogResult.Cancel)
+            {
+            
+                using (StreamReader sr = new StreamReader(pathFile))
+                {
+                    json = sr.ReadToEnd();
+                    sr.Close();
+                }
+            
+                //var diagramas= JsonConvert.DeserializeObject<List<DiagramDTO>>(json);
+                var diagramas = JsonSerializer.Deserialize< List<DiagramDTO>>(json);
+
+                foreach (var item in diagramas)
+                {
+                    DiagramImg newPic = selectFigura(item.TipoFigura);
+                    newPic.ColorFigura = item.ColorFigura;
+                    newPic.Location = item.Point;
+                    Color newColor = Color.FromArgb(item.R, item.G, item.B);
+                    newPic.FontFam = item.FontFam;
+                    newPic.ColorTexto = newColor;
+                    System.Diagnostics.Debug.WriteLine("item color texto: " + newColor);
+
+                    if (item.Texto != null)
+                    {
+                        System.Diagnostics.Debug.WriteLine("color : " + newColor);
+                        System.Diagnostics.Debug.WriteLine("color a: " + newColor.A);
+                        System.Diagnostics.Debug.WriteLine("color g: " + newColor.G);
+                        System.Diagnostics.Debug.WriteLine("color b: " + newColor.B);
+
+                        Brush br = new SolidBrush(newColor);
+                        newPic.writeImage(item.Texto, br);
+                    }
+                    System.Diagnostics.Debug.WriteLine("item: " + newPic.ToString());
+
+                    this.splitContainer2.Panel2.Controls.Add(newPic);
+                }
+                this.splitContainer2.Panel2.Refresh();
+            }
+        }
+        private void guardarBtn_Click(object sender, EventArgs e)
+        {
+            //Evento para guardar un diagrama
+            string input = "";
+
+            InputBox inputBox = new InputBox("Ingrese el nombre");
+            inputBox.ShowDialog();
+
+            input=inputBox.getTexto()+".json";
+            //Print the input provided by the user
+
+            this.folderBrowserDialog1.ShowDialog();
+            string path = folderBrowserDialog1.SelectedPath;
+
+            List<DiagramDTO> diagramasDTO = new List<DiagramDTO>();
+
+            List<DiagramImg> diagramasParaPersistir = new List<DiagramImg>();
+            foreach (Control item in this.splitContainer2.Panel2.Controls)
+            {
+
+                DiagramImg diagram = (DiagramImg)item;
+
+                DiagramDTO newDiagramDTO = new DiagramDTO();
+                newDiagramDTO.ColorFigura = diagram.ColorFigura;
+                newDiagramDTO.Point = diagram.Location;
+                newDiagramDTO.TipoFigura = diagram.NombreFigura;
+                newDiagramDTO.Texto= diagram.TextoImagen;
+                newDiagramDTO.R = diagram.ColorTexto.R;
+                newDiagramDTO.B = diagram.ColorTexto.B;
+                newDiagramDTO.G = diagram.ColorTexto.G;
+
+                newDiagramDTO.FontFam = diagram.FontFam;
+                newDiagramDTO.FontSize = diagram.FontSize;
+                System.Diagnostics.Debug.WriteLine("textoDiagram: " + newDiagramDTO.toString());
+                diagramasDTO.Add(newDiagramDTO);
+            }
+
+            //var json = JsonConvert.SerializeObject(diagramasDTO,
+            //    new JsonSerializerSettings()
+            //    {
+            //        ReferenceLoopHandling = ReferenceLoopHandling.Ignore
+            //    }
+            //);
+            JsonSerializerOptions options = new()
+            {
+                DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingDefault
+            };
+            string json = JsonSerializer.Serialize<List<DiagramDTO>>(diagramasDTO, options);
+
+            System.Diagnostics.Debug.WriteLine("json: " + json);
+
+
+            FileInfo f = new FileInfo(@path+"\\"+input);            
+            FileStream fs = f.Open(FileMode.OpenOrCreate, FileAccess.ReadWrite);            
+            using (StreamWriter writer = new StreamWriter(fs))
+            {                
+                writer.WriteLine(json);
+                writer.Close();
+            }
+
+            fs.Close();
+        }
+
+        private void achicarBtn_Click(object sender, EventArgs e)
+        {
+
+        }      
+        
+
+        private void toJPGBtn_Click(object sender, EventArgs e)
+        {
+            //Evento para convertir a jpg
+            var sfd = new SaveFileDialog();
+            sfd.Filter = "Image(*.jpg)|*.jpg|(*.*|*.*";
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                Bitmap bmp = new Bitmap(this.splitContainer2.Panel2.Width, this.splitContainer2.Panel2.Height);
+                this.splitContainer2.Panel2.AutoScroll = false;
+                this.splitContainer2.Panel2.DrawToBitmap(bmp, new Rectangle(0, 0, bmp.Width, bmp.Height));
+
+                bmp.Save(sfd.FileName, ImageFormat.Jpeg);
+                this.splitContainer2.Panel2.AutoScroll = true;
+
+                //MessageBox.Show("La imagen se ha guardado correctamente");
+            }
+        }
+
+        private void rojoBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void verdeBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void moradoBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void azulBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MouseUp(object sender, MouseEventArgs e)
+        {
+            dragging = false;
+        
+        }
+
+        private void MouseDown(object sender, MouseEventArgs e)
+        {
+            dragging = true;
+
+        }
+
+        private void borrar(object sender, EventArgs e)
+        {
+            //limpia la lista que contiene la informacion de las imagenes. 
+            foreach (var item in figurasSeleccionadas)
+            {
+                //evita que el menu queden al borrar el item lo cual proboca un erro al intenta borrar despues al menu ya que su padre
+                // no existe mas, por lo tanto borramos todos los menus primero y luego la figura.
+                foreach (var menu in this.splitContainer2.Panel2.Controls.Find("menu", false))
+                {
+                    menu.Dispose();
+                }                
+
+                item.Dispose();
+            }
+            figurasSeleccionadas.Clear();
+        }
+
+        private void crearTexto(object sender, MouseEventArgs e)
+        {
+            // Metodo para agregar texto a un diagrama
+            InputBox inBox = new InputBox("Ingrese el texto");
+            inBox.ShowDialog(); //Saca un dialog con un cuadro de texto.
+            var texto = inBox.getTexto();
+
+            //Si lo que se escribio no es vacio ni es menor a 0
+            if (texto.Length>0 || texto!= "")
+            {
+                DiagramImg textoImagen = generarDiagramImg(); //Genera una nueva imagen del diagrama
+                textoImagen.TextoImagen = texto;
+                textoImagen.writeImage(texto, null);
+                this.splitContainer2.Panel2.Controls.Add(textoImagen);
+            }
+            
+        }
+
+        private void lineas_button_Click(object sender, EventArgs e)
+        {
+            timer1.Start();
+            this.collapsedPanel = 3;
+        }
+        private void flechas_button_Click(object sender, EventArgs e)
+        {
+            timer1.Start();
+            this.collapsedPanel = 1;
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+
+            switch (collapsedPanel)
+            {
+                case 1:
+                    expandCollapse(this.panelDropDownFlechas, isCollpased);
+                    break;
+                case 2:
+                    expandCollapse(this.panelDropDownFiguras, isCollpased);
+                    break;
+                case 3:
+                    expandCollapse(this.panelDropDownLineas, isCollpased);
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        private void expandCollapse(Panel panel, bool panelIsCollapsed)
+        {
+            if (panelIsCollapsed)
+            {
+                expand(panel);
+            }
+            else
+            {
+                collapse(panel);
+            }
+
+        }
+        private void changeBtnText(Panel panel, string texto)
+        {
+            switch (panel.Name)
+            {
+                case "panelDropDownFlechas":
+                    this.flechasBtn.Text = "Flechas "+texto;
+                    break;
+                case "panelDropDownFiguras":
+                    this.figurasBtn.Text ="Figuras "+ texto;
+                    break;
+                case "panelDropDownLineas":
+                    this.btnLineas.Text = "Lineas " + texto;
+                    break;
+                default:
+                    break;
+            }
+        }
+        private void expand(Panel panel)
+        {
+            System.Diagnostics.Debug.WriteLine("panel: " + panel.Name);
+
+            changeBtnText(panel, "▲");
+            panel.Height += 10;
+            if (panel.Size==panel.MaximumSize)
+            {
+                timer1.Stop();
+                isCollpased = false;
+            }
+        }
+
+        private void collapse(Panel panel)
+        {
+            changeBtnText(panel, "▼");
+            panel.Height -= 10;
+            if (panel.Size == panel.MinimumSize)
+            {
+                timer1.Stop();
+                collapsedPanel = 0;
+                isCollpased = true;
+            }
+        }
+
+        private void figurasBtn_Click(object sender, EventArgs e)
+        {
+            timer1.Start();
+            this.collapsedPanel = 2;
+        }
+
+        private void mouseDownDrag(object sender, EventArgs e)
+        {
+
+        }
+
+        //+
+        private void iconButton2_Click(object sender, EventArgs e)
+        {
+            MasGrande(sender,e);
+        }
+        //-
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            MasChico(sender,e);
+        }
+
+        //Eventos de Menu Strip
+        private void abrirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Evento para cargar un diagrama ya establecido
+            string pathFile = "";
+            string json = "";
+            DialogResult dialogResult = this.openFileDialog1.ShowDialog();
+
+            pathFile = this.openFileDialog1.FileName;
+            if (dialogResult != DialogResult.Cancel)
+            {
+
+                using (StreamReader sr = new StreamReader(pathFile))
+                {
+                    json = sr.ReadToEnd();
+                    sr.Close();
+                }
+
+                //var diagramas= JsonConvert.DeserializeObject<List<DiagramDTO>>(json);
+                var diagramas = JsonSerializer.Deserialize<List<DiagramDTO>>(json);
+
+                foreach (var item in diagramas)
+                {
+                    DiagramImg newPic = selectFigura(item.TipoFigura);
+                    newPic.ColorFigura = item.ColorFigura;
+                    newPic.Location = item.Point;
+                    Color newColor = Color.FromArgb(item.R, item.G, item.B);
+                    newPic.FontFam = item.FontFam;
+                    newPic.ColorTexto = newColor;
+                    System.Diagnostics.Debug.WriteLine("item color texto: " + newColor);
+
+                    if (item.Texto != null)
+                    {
+                        System.Diagnostics.Debug.WriteLine("color : " + newColor);
+                        System.Diagnostics.Debug.WriteLine("color a: " + newColor.A);
+                        System.Diagnostics.Debug.WriteLine("color g: " + newColor.G);
+                        System.Diagnostics.Debug.WriteLine("color b: " + newColor.B);
+
+                        Brush br = new SolidBrush(newColor);
+                        newPic.writeImage(item.Texto, br);
+                    }
+                    System.Diagnostics.Debug.WriteLine("item: " + newPic.ToString());
+
+                    this.splitContainer2.Panel2.Controls.Add(newPic);
+                }
+                this.splitContainer2.Panel2.Refresh();
+            }
+        }
+
+        private void guardarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Evento para guardar un diagrama
+            string input = "";
+
+            InputBox inputBox = new InputBox("Ingrese el nombre");
+            inputBox.ShowDialog();
+
+            input = inputBox.getTexto() + ".json";
+            //Print the input provided by the user
+
+            this.folderBrowserDialog1.ShowDialog();
+            string path = folderBrowserDialog1.SelectedPath;
+
+            List<DiagramDTO> diagramasDTO = new List<DiagramDTO>();
+
+            List<DiagramImg> diagramasParaPersistir = new List<DiagramImg>();
+            foreach (Control item in this.splitContainer2.Panel2.Controls)
+            {
+
+                DiagramImg diagram = (DiagramImg)item;
+
+                DiagramDTO newDiagramDTO = new DiagramDTO();
+                newDiagramDTO.ColorFigura = diagram.ColorFigura;
+                newDiagramDTO.Point = diagram.Location;
+                newDiagramDTO.TipoFigura = diagram.NombreFigura;
+                newDiagramDTO.Texto = diagram.TextoImagen;
+                newDiagramDTO.R = diagram.ColorTexto.R;
+                newDiagramDTO.B = diagram.ColorTexto.B;
+                newDiagramDTO.G = diagram.ColorTexto.G;
+
+                newDiagramDTO.FontFam = diagram.FontFam;
+                newDiagramDTO.FontSize = diagram.FontSize;
+                System.Diagnostics.Debug.WriteLine("textoDiagram: " + newDiagramDTO.toString());
+                diagramasDTO.Add(newDiagramDTO);
+            }
+
+            //var json = JsonConvert.SerializeObject(diagramasDTO,
+            //    new JsonSerializerSettings()
+            //    {
+            //        ReferenceLoopHandling = ReferenceLoopHandling.Ignore
+            //    }
+            //);
+            JsonSerializerOptions options = new()
+            {
+                DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingDefault
+            };
+            string json = JsonSerializer.Serialize<List<DiagramDTO>>(diagramasDTO, options);
+
+            System.Diagnostics.Debug.WriteLine("json: " + json);
+
+
+            FileInfo f = new FileInfo(@path + "\\" + input);
+            FileStream fs = f.Open(FileMode.OpenOrCreate, FileAccess.ReadWrite);
+            using (StreamWriter writer = new StreamWriter(fs))
+            {
+                writer.WriteLine(json);
+                writer.Close();
+            }
+
+            fs.Close();
+        }
+
+        private void nuevoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Evento que limpia la lista que contiene la informacion de las imagenes. 
+            foreach (var item in figurasSeleccionadas)
+            {
+                //evita que el menu queden al borrar el item lo cual proboca un erro al intenta borrar despues al menu ya que su padre
+                // no existe mas, por lo tanto borramos todos los menus primero y luego la figura.
+                foreach (var menu in this.splitContainer2.Panel2.Controls.Find("menu", false))
+                {
+                    menu.Dispose();
+                }
+
+                item.Dispose();
+            }
+            figurasSeleccionadas.Clear();
+        }
+
+        private void exportarAImagenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Evento para convertir a jpg
+            var sfd = new SaveFileDialog();
+            sfd.Filter = "Image(*.jpg)|*.jpg|(*.*|*.*";
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                Bitmap bmp = new Bitmap(this.splitContainer2.Panel2.Width, this.splitContainer2.Panel2.Height);
+                this.splitContainer2.Panel2.AutoScroll = false;
+                this.splitContainer2.Panel2.DrawToBitmap(bmp, new Rectangle(0, 0, bmp.Width, bmp.Height));
+
+                bmp.Save(sfd.FileName, ImageFormat.Jpeg);
+                this.splitContainer2.Panel2.AutoScroll = true;
+
+                //MessageBox.Show("La imagen se ha guardado correctamente");
+            }
+        }
+
+        private void escribirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Metodo para agregar texto a un diagrama
+            InputBox inBox = new InputBox("Ingrese el texto");
+            inBox.ShowDialog(); //Saca un dialog con un cuadro de texto.
+            var texto = inBox.getTexto();
+
+            //Si lo que se escribio no es vacio ni es menor a 0
+            if (texto.Length > 0 || texto != "")
+            {
+                DiagramImg textoImagen = generarDiagramImg(); //Genera una nueva imagen del diagrama
+                textoImagen.TextoImagen = texto;
+                textoImagen.writeImage(texto, null);
+                this.splitContainer2.Panel2.Controls.Add(textoImagen);
+            }
+        }
+
+        private void btnEscribir_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void agrandarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < figurasSeleccionadas.Count; i++)
+            {
+                DiagramImg picture = figurasSeleccionadas[i];
+
+                picture.Size = new System.Drawing.Size(picture.Width + picture.PorcentajeMas, picture.Height + picture.PorcentajeMenos);
+                picture.SizeMode = PictureBoxSizeMode.StretchImage;
+
+
+                this.Refresh();
+            }
+        }
+
+        private void achicarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < figurasSeleccionadas.Count; i++)
+            {
+                DiagramImg picture = figurasSeleccionadas[i];
+
+                picture.Size = new System.Drawing.Size(picture.Width - picture.PorcentajeMas, picture.Height - picture.PorcentajeMenos);
+                picture.SizeMode = PictureBoxSizeMode.StretchImage;
+
+
+                this.Refresh();
+            }
+        }
+
+        private void rellenarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
+>>>>>>> 84c63f484b5881bf99fb2ca42a47070487341aaf
 }
