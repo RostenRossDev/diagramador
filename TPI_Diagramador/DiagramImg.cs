@@ -639,7 +639,7 @@ namespace TPI_Diagramador
 
             if (this.TextoImagen != null)
             {
-                this.colorTexto = Color.FromArgb(246, 231, 250);
+                this.colorTexto = Color.FromArgb(254, 254, 0);
                 Brush br = new SolidBrush(colorTexto);
                 writeImage(this.textoImagen, br);
             }
