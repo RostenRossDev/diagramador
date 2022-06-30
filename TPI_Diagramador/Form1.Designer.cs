@@ -44,6 +44,26 @@
             this.btnBorrar = new FontAwesome.Sharp.IconButton();
             this.btnGuardar = new FontAwesome.Sharp.IconButton();
             this.btnAbrirJson = new FontAwesome.Sharp.IconButton();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.abrirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.guardarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nuevoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exportarAImagenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.edicionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.escribirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tamañoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.agrandarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.achicarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.coloresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rojoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.verdeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.moradoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.negroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.naranjaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.celesteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rellenarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panelDropDownLineas = new System.Windows.Forms.Panel();
@@ -76,6 +96,7 @@
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.SuspendLayout();
@@ -127,13 +148,14 @@
             this.splitContainer1.Panel1.Controls.Add(this.btnBorrar);
             this.splitContainer1.Panel1.Controls.Add(this.btnGuardar);
             this.splitContainer1.Panel1.Controls.Add(this.btnAbrirJson);
+            this.splitContainer1.Panel1.Controls.Add(this.menuStrip1);
             // 
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
             this.splitContainer1.Panel2MinSize = 40;
             this.splitContainer1.Size = new System.Drawing.Size(1051, 579);
-            this.splitContainer1.SplitterDistance = 54;
+            this.splitContainer1.SplitterDistance = 64;
             this.splitContainer1.TabIndex = 0;
             // 
             // btnAmarillo
@@ -142,12 +164,11 @@
             this.btnAmarillo.IconChar = FontAwesome.Sharp.IconChar.Highlighter;
             this.btnAmarillo.IconColor = System.Drawing.Color.Yellow;
             this.btnAmarillo.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAmarillo.Location = new System.Drawing.Point(975, 0);
+            this.btnAmarillo.Location = new System.Drawing.Point(975, 24);
             this.btnAmarillo.Name = "btnAmarillo";
-            this.btnAmarillo.Size = new System.Drawing.Size(75, 54);
+            this.btnAmarillo.Size = new System.Drawing.Size(75, 40);
             this.btnAmarillo.TabIndex = 24;
             this.btnAmarillo.UseVisualStyleBackColor = true;
-            this.btnAmarillo.Click += new System.EventHandler(this.btnAmarillo_Click);
             // 
             // btnNaranja
             // 
@@ -155,12 +176,11 @@
             this.btnNaranja.IconChar = FontAwesome.Sharp.IconChar.Highlighter;
             this.btnNaranja.IconColor = System.Drawing.Color.DarkOrange;
             this.btnNaranja.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnNaranja.Location = new System.Drawing.Point(900, 0);
+            this.btnNaranja.Location = new System.Drawing.Point(900, 24);
             this.btnNaranja.Name = "btnNaranja";
-            this.btnNaranja.Size = new System.Drawing.Size(75, 54);
+            this.btnNaranja.Size = new System.Drawing.Size(75, 40);
             this.btnNaranja.TabIndex = 23;
             this.btnNaranja.UseVisualStyleBackColor = true;
-            this.btnNaranja.Click += new System.EventHandler(this.btnNaranja_Click);
             // 
             // btnMorado
             // 
@@ -168,12 +188,11 @@
             this.btnMorado.IconChar = FontAwesome.Sharp.IconChar.Highlighter;
             this.btnMorado.IconColor = System.Drawing.Color.MediumSlateBlue;
             this.btnMorado.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnMorado.Location = new System.Drawing.Point(825, 0);
+            this.btnMorado.Location = new System.Drawing.Point(825, 24);
             this.btnMorado.Name = "btnMorado";
-            this.btnMorado.Size = new System.Drawing.Size(75, 54);
+            this.btnMorado.Size = new System.Drawing.Size(75, 40);
             this.btnMorado.TabIndex = 22;
             this.btnMorado.UseVisualStyleBackColor = true;
-            this.btnMorado.Click += new System.EventHandler(this.btnMorado_Click);
             // 
             // btnVerde
             // 
@@ -181,12 +200,11 @@
             this.btnVerde.IconChar = FontAwesome.Sharp.IconChar.Highlighter;
             this.btnVerde.IconColor = System.Drawing.Color.SpringGreen;
             this.btnVerde.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnVerde.Location = new System.Drawing.Point(750, 0);
+            this.btnVerde.Location = new System.Drawing.Point(750, 24);
             this.btnVerde.Name = "btnVerde";
-            this.btnVerde.Size = new System.Drawing.Size(75, 54);
+            this.btnVerde.Size = new System.Drawing.Size(75, 40);
             this.btnVerde.TabIndex = 21;
             this.btnVerde.UseVisualStyleBackColor = true;
-            this.btnVerde.Click += new System.EventHandler(this.btnVerde_Click);
             // 
             // btnCeleste
             // 
@@ -194,12 +212,11 @@
             this.btnCeleste.IconChar = FontAwesome.Sharp.IconChar.Highlighter;
             this.btnCeleste.IconColor = System.Drawing.Color.LightSkyBlue;
             this.btnCeleste.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnCeleste.Location = new System.Drawing.Point(675, 0);
+            this.btnCeleste.Location = new System.Drawing.Point(675, 24);
             this.btnCeleste.Name = "btnCeleste";
-            this.btnCeleste.Size = new System.Drawing.Size(75, 54);
+            this.btnCeleste.Size = new System.Drawing.Size(75, 40);
             this.btnCeleste.TabIndex = 20;
             this.btnCeleste.UseVisualStyleBackColor = true;
-            this.btnCeleste.Click += new System.EventHandler(this.btnCeleste_Click);
             // 
             // btnNegro
             // 
@@ -207,12 +224,11 @@
             this.btnNegro.IconChar = FontAwesome.Sharp.IconChar.Highlighter;
             this.btnNegro.IconColor = System.Drawing.Color.Black;
             this.btnNegro.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnNegro.Location = new System.Drawing.Point(600, 0);
+            this.btnNegro.Location = new System.Drawing.Point(600, 24);
             this.btnNegro.Name = "btnNegro";
-            this.btnNegro.Size = new System.Drawing.Size(75, 54);
+            this.btnNegro.Size = new System.Drawing.Size(75, 40);
             this.btnNegro.TabIndex = 19;
             this.btnNegro.UseVisualStyleBackColor = true;
-            this.btnNegro.Click += new System.EventHandler(this.btnNegro_Click);
             // 
             // btnRojo
             // 
@@ -220,12 +236,11 @@
             this.btnRojo.IconChar = FontAwesome.Sharp.IconChar.Highlighter;
             this.btnRojo.IconColor = System.Drawing.Color.Red;
             this.btnRojo.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnRojo.Location = new System.Drawing.Point(525, 0);
+            this.btnRojo.Location = new System.Drawing.Point(525, 24);
             this.btnRojo.Name = "btnRojo";
-            this.btnRojo.Size = new System.Drawing.Size(75, 54);
+            this.btnRojo.Size = new System.Drawing.Size(75, 40);
             this.btnRojo.TabIndex = 18;
             this.btnRojo.UseVisualStyleBackColor = true;
-            this.btnRojo.Click += new System.EventHandler(this.btnRojo_Click);
             // 
             // iconButton2
             // 
@@ -233,12 +248,12 @@
             this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.Plus;
             this.iconButton2.IconColor = System.Drawing.Color.BlueViolet;
             this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.Location = new System.Drawing.Point(450, 0);
+            this.iconButton2.Location = new System.Drawing.Point(450, 24);
             this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(75, 54);
+            this.iconButton2.Size = new System.Drawing.Size(75, 40);
             this.iconButton2.TabIndex = 17;
             this.iconButton2.UseVisualStyleBackColor = true;
-            this.iconButton2.Click += new System.EventHandler(this.MasGrande);
+            this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
             // 
             // iconButton1
             // 
@@ -247,24 +262,25 @@
             this.iconButton1.IconColor = System.Drawing.Color.BlueViolet;
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton1.IconSize = 40;
-            this.iconButton1.Location = new System.Drawing.Point(375, 0);
+            this.iconButton1.Location = new System.Drawing.Point(375, 24);
             this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(75, 54);
+            this.iconButton1.Size = new System.Drawing.Size(75, 40);
             this.iconButton1.TabIndex = 16;
             this.iconButton1.UseVisualStyleBackColor = true;
-            this.iconButton1.Click += new System.EventHandler(this.MasChico);
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // btnEscribir
             // 
             this.btnEscribir.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnEscribir.IconChar = FontAwesome.Sharp.IconChar.PenToSquare;
+            this.btnEscribir.IconChar = FontAwesome.Sharp.IconChar.Edit;
             this.btnEscribir.IconColor = System.Drawing.Color.BlueViolet;
             this.btnEscribir.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnEscribir.Location = new System.Drawing.Point(300, 0);
+            this.btnEscribir.Location = new System.Drawing.Point(300, 24);
             this.btnEscribir.Name = "btnEscribir";
-            this.btnEscribir.Size = new System.Drawing.Size(75, 54);
+            this.btnEscribir.Size = new System.Drawing.Size(75, 40);
             this.btnEscribir.TabIndex = 14;
             this.btnEscribir.UseVisualStyleBackColor = true;
+            this.btnEscribir.Click += new System.EventHandler(this.btnEscribir_Click);
             this.btnEscribir.MouseClick += new System.Windows.Forms.MouseEventHandler(this.crearTexto);
             // 
             // btnToJpg
@@ -273,9 +289,9 @@
             this.btnToJpg.IconChar = FontAwesome.Sharp.IconChar.Image;
             this.btnToJpg.IconColor = System.Drawing.Color.BlueViolet;
             this.btnToJpg.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnToJpg.Location = new System.Drawing.Point(225, 0);
+            this.btnToJpg.Location = new System.Drawing.Point(225, 24);
             this.btnToJpg.Name = "btnToJpg";
-            this.btnToJpg.Size = new System.Drawing.Size(75, 54);
+            this.btnToJpg.Size = new System.Drawing.Size(75, 40);
             this.btnToJpg.TabIndex = 15;
             this.btnToJpg.UseVisualStyleBackColor = true;
             this.btnToJpg.Click += new System.EventHandler(this.toJPGBtn_Click);
@@ -286,9 +302,9 @@
             this.btnBorrar.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
             this.btnBorrar.IconColor = System.Drawing.Color.BlueViolet;
             this.btnBorrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnBorrar.Location = new System.Drawing.Point(150, 0);
+            this.btnBorrar.Location = new System.Drawing.Point(150, 24);
             this.btnBorrar.Name = "btnBorrar";
-            this.btnBorrar.Size = new System.Drawing.Size(75, 54);
+            this.btnBorrar.Size = new System.Drawing.Size(75, 40);
             this.btnBorrar.TabIndex = 13;
             this.btnBorrar.UseVisualStyleBackColor = true;
             this.btnBorrar.Click += new System.EventHandler(this.borrar);
@@ -296,13 +312,13 @@
             // btnGuardar
             // 
             this.btnGuardar.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnGuardar.IconChar = FontAwesome.Sharp.IconChar.FloppyDisk;
+            this.btnGuardar.IconChar = FontAwesome.Sharp.IconChar.Save;
             this.btnGuardar.IconColor = System.Drawing.Color.BlueViolet;
             this.btnGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnGuardar.IconSize = 50;
-            this.btnGuardar.Location = new System.Drawing.Point(75, 0);
+            this.btnGuardar.Location = new System.Drawing.Point(75, 24);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(75, 54);
+            this.btnGuardar.Size = new System.Drawing.Size(75, 40);
             this.btnGuardar.TabIndex = 11;
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.guardarBtn_Click);
@@ -313,19 +329,170 @@
             this.btnAbrirJson.IconChar = FontAwesome.Sharp.IconChar.FileImport;
             this.btnAbrirJson.IconColor = System.Drawing.Color.BlueViolet;
             this.btnAbrirJson.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAbrirJson.Location = new System.Drawing.Point(0, 0);
+            this.btnAbrirJson.Location = new System.Drawing.Point(0, 24);
             this.btnAbrirJson.Name = "btnAbrirJson";
-            this.btnAbrirJson.Size = new System.Drawing.Size(75, 54);
+            this.btnAbrirJson.Size = new System.Drawing.Size(75, 40);
             this.btnAbrirJson.TabIndex = 12;
             this.btnAbrirJson.UseVisualStyleBackColor = true;
             this.btnAbrirJson.Click += new System.EventHandler(this.cargarBtn_Click);
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.archivoToolStripMenuItem,
+            this.edicionToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1051, 24);
+            this.menuStrip1.TabIndex = 25;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // archivoToolStripMenuItem
+            // 
+            this.archivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.abrirToolStripMenuItem,
+            this.guardarToolStripMenuItem,
+            this.nuevoToolStripMenuItem,
+            this.exportarAImagenToolStripMenuItem});
+            this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
+            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.archivoToolStripMenuItem.Text = "Archivo";
+            // 
+            // abrirToolStripMenuItem
+            // 
+            this.abrirToolStripMenuItem.Name = "abrirToolStripMenuItem";
+            this.abrirToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.abrirToolStripMenuItem.Text = "Abrir Diagrama";
+            this.abrirToolStripMenuItem.Click += new System.EventHandler(this.abrirToolStripMenuItem_Click);
+            // 
+            // guardarToolStripMenuItem
+            // 
+            this.guardarToolStripMenuItem.Name = "guardarToolStripMenuItem";
+            this.guardarToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.guardarToolStripMenuItem.Text = "Guardar Diagrama";
+            this.guardarToolStripMenuItem.Click += new System.EventHandler(this.guardarToolStripMenuItem_Click);
+            // 
+            // nuevoToolStripMenuItem
+            // 
+            this.nuevoToolStripMenuItem.Name = "nuevoToolStripMenuItem";
+            this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.nuevoToolStripMenuItem.Text = "Nuevo Diagrama";
+            this.nuevoToolStripMenuItem.Click += new System.EventHandler(this.nuevoToolStripMenuItem_Click);
+            // 
+            // exportarAImagenToolStripMenuItem
+            // 
+            this.exportarAImagenToolStripMenuItem.Name = "exportarAImagenToolStripMenuItem";
+            this.exportarAImagenToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.exportarAImagenToolStripMenuItem.Text = "Exportar a Imagen";
+            this.exportarAImagenToolStripMenuItem.Click += new System.EventHandler(this.exportarAImagenToolStripMenuItem_Click);
+            // 
+            // edicionToolStripMenuItem
+            // 
+            this.edicionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.escribirToolStripMenuItem,
+            this.tamañoToolStripMenuItem,
+            this.toolStripSeparator1,
+            this.coloresToolStripMenuItem,
+            this.rellenarToolStripMenuItem});
+            this.edicionToolStripMenuItem.Name = "edicionToolStripMenuItem";
+            this.edicionToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
+            this.edicionToolStripMenuItem.Text = "Edicion";
+            // 
+            // escribirToolStripMenuItem
+            // 
+            this.escribirToolStripMenuItem.Name = "escribirToolStripMenuItem";
+            this.escribirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.escribirToolStripMenuItem.Text = "Escribir";
+            this.escribirToolStripMenuItem.Click += new System.EventHandler(this.escribirToolStripMenuItem_Click);
+            // 
+            // tamañoToolStripMenuItem
+            // 
+            this.tamañoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.agrandarToolStripMenuItem,
+            this.achicarToolStripMenuItem});
+            this.tamañoToolStripMenuItem.Name = "tamañoToolStripMenuItem";
+            this.tamañoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.tamañoToolStripMenuItem.Text = "Tamaño";
+            // 
+            // agrandarToolStripMenuItem
+            // 
+            this.agrandarToolStripMenuItem.Name = "agrandarToolStripMenuItem";
+            this.agrandarToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.agrandarToolStripMenuItem.Text = "Agrandar";
+            this.agrandarToolStripMenuItem.Click += new System.EventHandler(this.agrandarToolStripMenuItem_Click);
+            // 
+            // achicarToolStripMenuItem
+            // 
+            this.achicarToolStripMenuItem.Name = "achicarToolStripMenuItem";
+            this.achicarToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.achicarToolStripMenuItem.Text = "Achicar";
+            this.achicarToolStripMenuItem.Click += new System.EventHandler(this.achicarToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            // 
+            // coloresToolStripMenuItem
+            // 
+            this.coloresToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.rojoToolStripMenuItem,
+            this.verdeToolStripMenuItem,
+            this.moradoToolStripMenuItem,
+            this.negroToolStripMenuItem,
+            this.naranjaToolStripMenuItem,
+            this.celesteToolStripMenuItem});
+            this.coloresToolStripMenuItem.Name = "coloresToolStripMenuItem";
+            this.coloresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.coloresToolStripMenuItem.Text = "Colores";
+            // 
+            // rojoToolStripMenuItem
+            // 
+            this.rojoToolStripMenuItem.Name = "rojoToolStripMenuItem";
+            this.rojoToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.rojoToolStripMenuItem.Text = "Rojo";
+            // 
+            // verdeToolStripMenuItem
+            // 
+            this.verdeToolStripMenuItem.Name = "verdeToolStripMenuItem";
+            this.verdeToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.verdeToolStripMenuItem.Text = "Verde";
+            // 
+            // moradoToolStripMenuItem
+            // 
+            this.moradoToolStripMenuItem.Name = "moradoToolStripMenuItem";
+            this.moradoToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.moradoToolStripMenuItem.Text = "Morado";
+            // 
+            // negroToolStripMenuItem
+            // 
+            this.negroToolStripMenuItem.Name = "negroToolStripMenuItem";
+            this.negroToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.negroToolStripMenuItem.Text = "Negro";
+            // 
+            // naranjaToolStripMenuItem
+            // 
+            this.naranjaToolStripMenuItem.Name = "naranjaToolStripMenuItem";
+            this.naranjaToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.naranjaToolStripMenuItem.Text = "Naranja";
+            // 
+            // celesteToolStripMenuItem
+            // 
+            this.celesteToolStripMenuItem.Name = "celesteToolStripMenuItem";
+            this.celesteToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.celesteToolStripMenuItem.Text = "Celeste";
+            // 
+            // rellenarToolStripMenuItem
+            // 
+            this.rellenarToolStripMenuItem.Name = "rellenarToolStripMenuItem";
+            this.rellenarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.rellenarToolStripMenuItem.Text = "Rellenar";
+            this.rellenarToolStripMenuItem.Click += new System.EventHandler(this.rellenarToolStripMenuItem_Click);
+            // 
             // splitContainer2
             // 
             this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer2.FixedPanel = System.Windows.Forms.FixedPanel.Panel2;
             this.splitContainer2.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer2.MinimumSize = new System.Drawing.Size(1051, 511);
             this.splitContainer2.Name = "splitContainer2";
             // 
             // splitContainer2.Panel1
@@ -333,11 +500,6 @@
             this.splitContainer2.Panel1.AutoScroll = true;
             this.splitContainer2.Panel1.BackColor = System.Drawing.Color.CornflowerBlue;
             this.splitContainer2.Panel1.Controls.Add(this.flowLayoutPanel1);
-<<<<<<< HEAD
-            this.splitContainer2.Panel1MinSize = 0;
-=======
-            this.splitContainer2.Panel1MinSize = 160;
->>>>>>> 3e2760fbd2cf894759ba4d59d503e6e07f82df28
             // 
             // splitContainer2.Panel2
             // 
@@ -345,14 +507,8 @@
             this.splitContainer2.Panel2.BackColor = System.Drawing.SystemColors.Control;
             this.splitContainer2.Panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MouseDown);
             this.splitContainer2.Panel2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.MouseUp);
-<<<<<<< HEAD
-            this.splitContainer2.Panel2MinSize = 0;
             this.splitContainer2.Size = new System.Drawing.Size(1051, 511);
-=======
-            this.splitContainer2.Panel2MinSize = 880;
-            this.splitContainer2.Size = new System.Drawing.Size(1051, 521);
->>>>>>> 3e2760fbd2cf894759ba4d59d503e6e07f82df28
-            this.splitContainer2.SplitterDistance = 160;
+            this.splitContainer2.SplitterDistance = 200;
             this.splitContainer2.TabIndex = 0;
             // 
             // flowLayoutPanel1
@@ -364,11 +520,7 @@
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.MinimumSize = new System.Drawing.Size(152, 415);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-<<<<<<< HEAD
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(160, 511);
-=======
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(160, 521);
->>>>>>> 3e2760fbd2cf894759ba4d59d503e6e07f82df28
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(200, 511);
             this.flowLayoutPanel1.TabIndex = 37;
             // 
             // panelDropDownLineas
@@ -472,7 +624,6 @@
             // flechasBtn
             // 
             this.flechasBtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.flechasBtn.Enabled = false;
             this.flechasBtn.Location = new System.Drawing.Point(0, 0);
             this.flechasBtn.Name = "flechasBtn";
             this.flechasBtn.Size = new System.Drawing.Size(147, 40);
@@ -693,14 +844,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1051, 579);
             this.Controls.Add(this.splitContainer1);
-            this.MinimumSize = new System.Drawing.Size(1067, 618);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Resize += new System.EventHandler(this.onResize);
             this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.splitContainer2.Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
@@ -774,5 +927,25 @@
         private PictureBox linea_arriba_izquierda_negro;
         private PictureBox linea_horizontal_negra;
         private PictureBox linea_vertical_negra;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem archivoToolStripMenuItem;
+        private ToolStripMenuItem abrirToolStripMenuItem;
+        private ToolStripMenuItem guardarToolStripMenuItem;
+        private ToolStripMenuItem nuevoToolStripMenuItem;
+        private ToolStripMenuItem exportarAImagenToolStripMenuItem;
+        private ToolStripMenuItem edicionToolStripMenuItem;
+        private ToolStripMenuItem escribirToolStripMenuItem;
+        private ToolStripMenuItem tamañoToolStripMenuItem;
+        private ToolStripMenuItem agrandarToolStripMenuItem;
+        private ToolStripMenuItem achicarToolStripMenuItem;
+        private ToolStripSeparator toolStripSeparator1;
+        private ToolStripMenuItem coloresToolStripMenuItem;
+        private ToolStripMenuItem rojoToolStripMenuItem;
+        private ToolStripMenuItem verdeToolStripMenuItem;
+        private ToolStripMenuItem moradoToolStripMenuItem;
+        private ToolStripMenuItem negroToolStripMenuItem;
+        private ToolStripMenuItem naranjaToolStripMenuItem;
+        private ToolStripMenuItem celesteToolStripMenuItem;
+        private ToolStripMenuItem rellenarToolStripMenuItem;
     }
 }
