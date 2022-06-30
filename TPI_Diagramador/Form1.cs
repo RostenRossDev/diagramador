@@ -1806,8 +1806,8 @@ namespace TPI_Diagramador
             {
                 if (figurasSeleccionadas[i].TextoImagen != null)
                 {
-                    Brush brushNAmarillo = new SolidBrush(Color.FromArgb(246, 231, 250));
-                    figurasSeleccionadas[i].ColorTexto = Color.FromArgb(246, 231, 250);
+                    Brush brushNAmarillo = new SolidBrush(Color.FromArgb(254, 254, 0));
+                    figurasSeleccionadas[i].ColorTexto = Color.FromArgb(254, 254, 0);
                     figurasSeleccionadas[i].writeImage(figurasSeleccionadas[i].TextoImagen, brushNAmarillo);
                 }
                 else
