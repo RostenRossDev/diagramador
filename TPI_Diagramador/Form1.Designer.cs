@@ -147,6 +147,7 @@
             this.btnAmarillo.Size = new System.Drawing.Size(75, 54);
             this.btnAmarillo.TabIndex = 24;
             this.btnAmarillo.UseVisualStyleBackColor = true;
+            this.btnAmarillo.Click += new System.EventHandler(this.btnAmarillo_Click);
             // 
             // btnNaranja
             // 
@@ -159,6 +160,7 @@
             this.btnNaranja.Size = new System.Drawing.Size(75, 54);
             this.btnNaranja.TabIndex = 23;
             this.btnNaranja.UseVisualStyleBackColor = true;
+            this.btnNaranja.Click += new System.EventHandler(this.btnNaranja_Click);
             // 
             // btnMorado
             // 
@@ -171,6 +173,7 @@
             this.btnMorado.Size = new System.Drawing.Size(75, 54);
             this.btnMorado.TabIndex = 22;
             this.btnMorado.UseVisualStyleBackColor = true;
+            this.btnMorado.Click += new System.EventHandler(this.btnMorado_Click);
             // 
             // btnVerde
             // 
@@ -183,6 +186,7 @@
             this.btnVerde.Size = new System.Drawing.Size(75, 54);
             this.btnVerde.TabIndex = 21;
             this.btnVerde.UseVisualStyleBackColor = true;
+            this.btnVerde.Click += new System.EventHandler(this.btnVerde_Click);
             // 
             // btnCeleste
             // 
@@ -195,6 +199,7 @@
             this.btnCeleste.Size = new System.Drawing.Size(75, 54);
             this.btnCeleste.TabIndex = 20;
             this.btnCeleste.UseVisualStyleBackColor = true;
+            this.btnCeleste.Click += new System.EventHandler(this.btnCeleste_Click);
             // 
             // btnNegro
             // 
@@ -207,6 +212,7 @@
             this.btnNegro.Size = new System.Drawing.Size(75, 54);
             this.btnNegro.TabIndex = 19;
             this.btnNegro.UseVisualStyleBackColor = true;
+            this.btnNegro.Click += new System.EventHandler(this.btnNegro_Click);
             // 
             // btnRojo
             // 

@@ -114,63 +114,63 @@ namespace TPI_Diagramador
             {
                 System.Diagnostics.Debug.WriteLine("linea abajo izquierda negro");
                 newPicture.Image = Properties.Resources.lineaD_abajo_izquierda_negro;
-                newPicture.NombreFigura = "linea_abajo_izquierda_negro";
+                newPicture.NombreFigura = "linea_abajo_izquierda";
                 newPicture.ColorFigura = "negro";
             }
             else if (name == "linea_arriba_izquierda_negro")
             {
                 System.Diagnostics.Debug.WriteLine("linea arriba izquierda negro");
                 newPicture.Image = Properties.Resources.lineaD_arriba_izquierda_negro;
-                newPicture.NombreFigura = "linea_arriba_izquierda_negro";
+                newPicture.NombreFigura = "linea_arriba_izquierda";
                 newPicture.ColorFigura = "negro";
             }
             else if (name == "linea_horizontal_negra")
             {
                 System.Diagnostics.Debug.WriteLine("linea horizontal negra");
                 newPicture.Image = Properties.Resources.linea_horizontal_negra;
-                newPicture.NombreFigura = "linea_horizontal_negra";
+                newPicture.NombreFigura = "linea_horizontal";
                 newPicture.ColorFigura = "negro";
             }
             else if (name == "linea_vertical_negra")
             {
                 System.Diagnostics.Debug.WriteLine("linea vertical negra");
                 newPicture.Image = Properties.Resources.linea_vertical_negra;
-                newPicture.NombreFigura = "linea_vertical_negra";
+                newPicture.NombreFigura = "linea_vertical";
                 newPicture.ColorFigura = "negro";
             }
             else if (name == "circulo_negro")
             {
                 System.Diagnostics.Debug.WriteLine("circulo_negro");
                 newPicture.Image = Properties.Resources.circulo_vacio_negro;
-                newPicture.NombreFigura = "circulo_negro";
+                newPicture.NombreFigura = "circulo_vacio";
                 newPicture.ColorFigura = "negro";
             }
             else if (name == "cuadrado_negro")
             {
                 System.Diagnostics.Debug.WriteLine("cuadrado_negro");
                 newPicture.Image = Properties.Resources.cuadrado_vacio_negro;
-                newPicture.NombreFigura = "cuadrado_negro";
+                newPicture.NombreFigura = "cuadrado_vacio";
                 newPicture.ColorFigura = "negro";
             }
             else if (name == "paralelogramo_negro")
             {
                 System.Diagnostics.Debug.WriteLine("paralelogramo_negro");
                 newPicture.Image = Properties.Resources.paralelogramo_vacio_negro;
-                newPicture.NombreFigura = "paralelogramo_negro";
+                newPicture.NombreFigura = "paralelogramo_vacio";
                 newPicture.ColorFigura = "negro";
             }
             else if (name == "rectangulo_negro")
             {
                 System.Diagnostics.Debug.WriteLine("rectangulo_negro");
                 newPicture.Image = Properties.Resources.rectaungulo_vacio_negro;
-                newPicture.NombreFigura = "rectangulo_negro";
+                newPicture.NombreFigura = "rectangulo_vacio";
                 newPicture.ColorFigura = "negro";
             }
             else if (name == "rombo_negro")
             {
                 System.Diagnostics.Debug.WriteLine("rombo_negro");
                 newPicture.Image = Properties.Resources.rombo_vacio_negro;
-                newPicture.NombreFigura = "rombo_negro";
+                newPicture.NombreFigura = "rombo_vacio";
                 newPicture.ColorFigura = "negro";
             }//agregar mas else if segun imagenes se agreguen
             else
@@ -427,25 +427,7 @@ namespace TPI_Diagramador
             }
         }
 
-        private void rojoBtn_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void verdeBtn_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void moradoBtn_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void azulBtn_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void MouseUp(object sender, MouseEventArgs e)
         {
@@ -587,12 +569,7 @@ namespace TPI_Diagramador
 
             this.splitContainer2.Panel2.Controls.Add(newPic);
 
-        }      
-
-        private void btnRojo_Click(object sender, EventArgs e)
-        {
-
-        }
+        }    
 
         private void onResize(object sender, EventArgs e)
         {
@@ -609,6 +586,745 @@ namespace TPI_Diagramador
                 this.splitContainer2.Panel2MinSize = 1440;
                 this.splitContainer1.Panel1MinSize = 80;
                 this.splitContainer1.Panel2MinSize = 618;
+            }
+        }
+
+        private void btnRojo_Click(object sender, EventArgs e)
+        {
+
+            for (int i = 0; i < figurasSeleccionadas.Count; i++)
+            {
+                System.Diagnostics.Debug.WriteLine(figurasSeleccionadas[i].NombreFigura);
+                System.Diagnostics.Debug.WriteLine(figurasSeleccionadas[i].ColorFigura);
+                if (figurasSeleccionadas[i].TextoImagen != null)
+                {
+                    break;
+                }
+                else
+                {
+                    if (figurasSeleccionadas[i].NombreFigura == "flecha_derecha")
+                    {
+                        System.Diagnostics.Debug.WriteLine("flecha negra derecha");
+
+                        figurasSeleccionadas[i].Image = Properties.Resources.flecha_derecha_roja;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "flecha_izquierda")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.flecha_izquierda_roja;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "flecha_arriba")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.flecha_arriba_rojo;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "flecha_abajo")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.flecha_abajo_rojo;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "flechaD_arriba_izquierda")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.flechaD_arriba_izquierda_rojo;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "flechaD_arriba_derecha")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.flechaD_arriba_derecha_rojo;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "flechaD_abajo_derecha")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.flechaD_abajo_derecha_rojo;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "flechaD_abajo_izquierda")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.flechaD_abajo_izquierda_rojo;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "cuadrado_vacio")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.cuadrado_vacio_rojo;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "cuadrado_relleno")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.cuadrado_relleno_rojo;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "circulo_vacio")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.circulo_vacio_rojo;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "circulo_relleno")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.circulo_relleno_rojo;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "paralelogramo_vacio")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.paralelogramo_vacio_rojo;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "paralelogramo_relleno")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.paralelogramo_relleno_rojo;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "rombo_vacio")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.rombo_vacio_rojo;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "rombo_relleno")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.rombo_relleno_rojo;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "rectangulo_vacio")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.rectaungulo_vacio_rojo;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "rectangulo_relleno")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.rectaungulo_relleno_rojo;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "linea_arriba_izquierda")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.lineaD_arriba_izquierda_rojo;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "linea_abajo_izquierda")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.lineaD_abajo_izquierda_rojo;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "linea_horizontal")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.linea_horizontal_roja;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "linea_vertical")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.linea_vertical_rojo;
+                    }
+                }
+
+            }
+
+
+        }
+
+        private void btnNegro_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < figurasSeleccionadas.Count; i++)
+            {
+                if (figurasSeleccionadas[i].TextoImagen != null)
+                {
+                    break;
+                }
+                else
+                {
+                    if (figurasSeleccionadas[i].NombreFigura == "flecha_derecha")
+                    {
+                        System.Diagnostics.Debug.WriteLine("flecha negra derecha");
+                        figurasSeleccionadas[i].Image = Properties.Resources.flecha_derecha_negra;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "flecha_izquierda")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.flecha_izquierda_negra;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "flecha_arriba")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.flecha_arriba_negra;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "flecha_abajo")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.flecha_abajo_negra;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "flechaD_arriba_izquierda")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.flechaD_arriba_izquierda_negra;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "flechaD_arriba_derecha")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.flechaD_arriba_derecha_negra;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "flechaD_abajo_derecha")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.flechaD_abajo_derecha_negra;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "flechaD_abajo_izquierda")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.flechaD_abajo_izquierda_negra;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "cuadrado_vacio")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.cuadrado_vacio_negro;
+
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "cuadrado_relleno")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.cuadrado_relleno_negro;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "circulo_vacio")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.circulo_vacio_negro;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "circulo_relleno")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.circulo_relleno_negro;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "paralelogramo_vacio")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.paralelogramo_vacio_negro;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "paralelogramo_relleno")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.paralelogramo_relleno_negro;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "rombo_vacio")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.rombo_vacio_negro;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "rombo_relleno")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.rombo_relleno_negro;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "rectangulo_vacio")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.rectaungulo_vacio_negro;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "rectangulo_relleno")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.rectaungulo_vacio_negro;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "linea_arriba_izquierda")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.lineaD_arriba_izquierda_negro;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "linea_abajo_izquierda")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.lineaD_abajo_izquierda_negro;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "linea_horizontal")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.linea_horizontal_negra;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "linea_vertical")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.linea_vertical_negra;
+                    }
+                }
+            }
+        }
+
+        private void btnCeleste_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < figurasSeleccionadas.Count; i++)
+            {
+                if (figurasSeleccionadas[i].TextoImagen != null)
+                {
+                    break;
+                }
+                else
+                {
+                    if (figurasSeleccionadas[i].NombreFigura == "flecha_derecha")
+                    {
+                        System.Diagnostics.Debug.WriteLine("flecha negra derecha");
+
+                        figurasSeleccionadas[i].Image = Properties.Resources.flecha_derecha_celeste;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "flecha_izquierda")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.flecha_izquierda_celeste;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "flecha_arriba")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.flecha_arriba_celeste;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "flecha_abajo")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.flecha_abajo_celeste;
+
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "flechaD_arriba_izquierda")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.flechaD_arriba_izquierda_celeste;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "flechaD_arriba_derecha")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.flechaD_arriba_derecha_celeste;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "flechaD_abajo_derecha")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.flechaD_abajo_derecha_celeste;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "flechaD_abajo_izquierda")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.flechaD_abajo_izquierda_celeste;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "cuadrado_vacio")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.cuadrado_vacio_celeste;
+
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "cuadrado_relleno")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.cuadrado_relleno_celeste;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "circulo_vacio")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.circulo_vacio_celeste;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "circulo_relleno")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.circulo_relleno_celeste;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "paralelogramo_vacio")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.paralelogramo_vacio_celeste;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "paralelogramo_relleno")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.paralelogramo_relleno_celeste;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "rombo_vacio")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.rombo_vacio_celeste;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "rombo_relleno")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.rombo_relleno_celeste;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "rectangulo_vacio")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.rombo_vacio_celeste;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "rectangulo_relleno")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.rombo_relleno_celeste;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "linea_arriba_izquierda")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.lineaD_arriba_izquierda_celeste;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "linea_abajo_izquierda")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.lineaD_abajo_izquierda_celeste;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "linea_horizontal")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.linea_horizontal_celeste;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "linea_vertical")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.linea_vertical_celeste;
+                    }
+                }
+            }
+        }
+
+        private void btnVerde_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < figurasSeleccionadas.Count; i++)
+            {
+
+                if (figurasSeleccionadas[i].TextoImagen != null)
+                {
+                    break;
+                }
+                else
+                {
+                    if (figurasSeleccionadas[i].NombreFigura == "flecha_derecha")
+                    {
+                        System.Diagnostics.Debug.WriteLine("flecha negra derecha");
+
+                        figurasSeleccionadas[i].Image = Properties.Resources.flecha_derecha_verde;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "flecha_izquierda")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.flecha_izquierda_verde;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "flecha_arriba")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.flecha_arriba_verde;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "flecha_abajo")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.flecha_abajo_verde;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "flechaD_arriba_izquierda")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.flechaD_arriba_izquierda_verde;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "flechaD_arriba_derecha")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.flechaD_arriba_derecha_verde;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "flechaD_abajo_derecha")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.flechaD_abajo_derecha_verde;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "flechaD_abajo_izquierda")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.flechaD_abajo_izquierda_verde;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "cuadrado_vacio")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.cuadrado_vacio_verde;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "cuadrado_relleno")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.cuadrado_relleno_verde;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "circulo_vacio")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.circulo_vacio_verde;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "circulo_relleno")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.circulo_relleno_verde;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "paralelogramo_vacio")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.paralelogramo_vacio_verde;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "paralelogramo_relleno")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.paralelogramo_relleno_verde;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "rombo_vacio")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.rombo_vacio_verde;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "rombo_relleno")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.rombo_relleno_verde;
+
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "rectangulo_vacio")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.rectaungulo_vacio_verde;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "rectangulo_relleno")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.rectaungulo_relleno_verde;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "linea_arriba_izquierda")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.lineaD_arriba_izquierda_verde;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "linea_abajo_izquierda")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.lineaD_abajo_izquierda_verde;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "linea_horizontal")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.linea_horizontal_verde;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "linea_vertical")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.linea_vertical_verde;
+                    }
+                }
+            }
+        }
+
+        private void btnMorado_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < figurasSeleccionadas.Count; i++)
+            {
+                if (figurasSeleccionadas[i].TextoImagen != null)
+                {
+                    break;
+                }
+                else
+                {
+
+                    if (figurasSeleccionadas[i].NombreFigura == "flecha_derecha")
+                    {
+                        System.Diagnostics.Debug.WriteLine("flecha negra derecha");
+
+                        figurasSeleccionadas[i].Image = Properties.Resources.flecha_derecha_morada;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "flecha_izquierda")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.flecha_izquierda_morada;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "flecha_arriba")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.flecha_arriba_morado;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "flecha_abajo")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.flecha_abajo_morado;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "flechaD_arriba_izquierda")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.flechaD_arriba_izquierda_morado;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "flechaD_arriba_derecha")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.flechaD_arriba_derecha_morado;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "flechaD_abajo_derecha")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.flechaD_abajo_derecha_morado;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "flechaD_abajo_izquierda")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.flechaD_abajo_izquierda_morado;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "cuadrado_vacio")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.cuadrado_vacio_morado;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "cuadrado_relleno")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.cuadrado_relleno_morado;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "circulo_vacio")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.circulo_vacio_morado;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "circulo_relleno")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.circulo_relleno_morado;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "paralelogramo_vacio")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.paralelogramo_vacio_morado;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "paralelogramo_relleno")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.paralelogramo_relleno_morado;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "rombo_vacio")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.rombo_vacio_morado;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "rombo_relleno")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.rombo_relleno_morado;
+
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "rectangulo_vacio")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.rectaungulo_vacio_morado;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "rectangulo_relleno")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.rectaungulo_relleno_morado;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "linea_arriba_izquierda")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.lineaD_arriba_izquierda_morado;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "linea_abajo_izquierda")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.lineaD_abajo_izquierda_morado;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "linea_horizontal")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.linea_horizontal_morado;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "linea_vertical")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.linea_vertical_morado;
+                    }
+                }
+            }
+        }
+
+        private void btnNaranja_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < figurasSeleccionadas.Count; i++)
+            {
+                if (figurasSeleccionadas[i].TextoImagen != null)
+                {
+                    break;
+                }
+                else
+                {
+                    if (figurasSeleccionadas[i].NombreFigura == "flecha_derecha")
+                    {
+                        System.Diagnostics.Debug.WriteLine("flecha negra derecha");
+
+                        figurasSeleccionadas[i].Image = Properties.Resources.flecha_derecha_naranja;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "flecha_izquierda")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.flecha_izquierda_naranja;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "flecha_arriba")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.flecha_arriba_naranja;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "flecha_abajo")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.flecha_abajo_naranja;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "flechaD_arriba_izquierda")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.flechaD_arriba_izquierda_naranja;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "flechaD_arriba_derecha")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.flechaD_arriba_derecha_naranja;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "flechaD_abajo_derecha")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.flechaD_abajo_derecha_naranja;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "flechaD_abajo_izquierda")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.flechaD_abajo_izquierda_naranja;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "cuadrado_vacio")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.cuadrado_vacio_naranja;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "cuadrado_relleno")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.cuadrado_relleno_naranja;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "circulo_vacio")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.circulo_vacio_naranja;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "circulo_relleno")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.circulo_relleno_naranja;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "paralelogramo_vacio")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.paralelogramo_vacio_naranja;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "paralelogramo_relleno")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.paralelogramo_relleno_naranja;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "rombo_vacio")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.rombo_vacio_naranja;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "rombo_relleno")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.rombo_relleno_naranja;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "rectangulo_vacio")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.rectaungulo_vacio_naranja;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "rectangulo_relleno")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.rectaungulo_relleno_naranja;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "linea_arriba_izquierda")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.lineaD_arriba_izquierda_naranja;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "linea_abajo_izquierda")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.lineaD_abajo_izquierda_naranja;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "linea_horizontal")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.linea_horizontal_naranja;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "linea_vertical")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.linea_vertical_naranja;
+                    }
+                }
+            }
+        }
+
+        private void btnAmarillo_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < figurasSeleccionadas.Count; i++)
+            {
+                if (figurasSeleccionadas[i].TextoImagen != null)
+                {
+
+                }else
+                {              
+                    if (figurasSeleccionadas[i].NombreFigura == "flecha_derecha")
+                    {
+                        System.Diagnostics.Debug.WriteLine("flecha negra derecha");
+
+                        figurasSeleccionadas[i].Image = Properties.Resources.flecha_derecha_amarilla;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "flecha_izquierda")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.flecha_izquierda_amarilla;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "flecha_arriba")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.flecha_arriba_amarillo;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "flecha_abajo")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.flecha_abajo_amarillo;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "flechaD_arriba_izquierda")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.flechaD_arriba_izquierda_amarillo;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "flechaD_arriba_derecha")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.flechaD_arriba_derecha_amarilla;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "flechaD_abajo_derecha")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.flechaD_abajo_derecha_amarillo;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "flechaD_abajo_izquierda")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.flechaD_abajo_izquierda_amarillo;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "cuadrado_vacio")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.cuadrado_vacio_amarillo;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "cuadrado_relleno")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.cuadrado_relleno_amarillo;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "circulo_vacio")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.circulo_vacio_amarillo;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "circulo_relleno")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.circulo_relleno_amarillo;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "paralelogramo_vacio")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.paralelogramo_vacio_amarillo;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "paralelogramo_relleno")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.paralelogramo_relleno_amarillo;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "rombo_vacio")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.rombo_vacio_amarillo;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "rombo_relleno")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.rombo_relleno_amarillo;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "rectangulo_vacio")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.rectaungulo_vacio_amarillo;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "rectangulo_relleno")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.rectaungulo_relleno_amarillo;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "linea_arriba_izquierda")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.lineaD_arriba_izquierda_amarilla;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "linea_abajo_izquierda")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.lineaD_abajo_izquierda_amarilla;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "linea_horizontal")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.linea_horizontal_amarillo;
+                    }
+                    else if (figurasSeleccionadas[i].NombreFigura == "linea_vertical")
+                    {
+                        figurasSeleccionadas[i].Image = Properties.Resources.linea_vertical_amarillo;
+                    }
+                }
             }
         }
     }

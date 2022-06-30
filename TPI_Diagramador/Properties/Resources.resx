@@ -118,169 +118,634 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="cuadrado_vacio_negro" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>cuadrado_vacio_negro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="flechaD_arriba_derecha_rojo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>flechaD_arriba_derecha_rojo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="flecha_izquierda_negra1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>flecha_izquierda_negra.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="flecha_izquierda_amarilla" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>flecha_izquierda_amarilla.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="flechaD_abajo_derecha_amarillo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>flechaD_abajo_derecha_amarillo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="paralelogramo_vacio_negro" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>paralelogramo_vacio_negro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="flechaD_arriba_derecha_verde" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>flechaD_arriba_derecha_verde.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="flechaD_abajo_derecha_celeste" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>flechaD_abajo_derecha_celeste.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="flechaD_arriba_izquierda_verde" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>flechaD_arriba_izquierda_verde.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="flechaD_abajo_izquierda_amarillo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>flechaD_abajo_izquierda_amarillo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="rectaungulo_vacio_negro" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>rectaungulo_vacio_negro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="flecha_derecha_amarilla" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>flecha_derecha_amarilla.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="flecha_derecha_celeste" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>flecha_derecha_celeste.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="flecha_izquierda_naranja" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>flecha_izquierda_naranja.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="flecha_derecha_verde" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>flecha_derecha_verde.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="flecha_izquierda_celeste" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>flecha_izquierda_celeste.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="flecha_derecha_roja" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>flecha_derecha_roja.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="lineaD_abajo_izquierda_negro" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>lineaD_abajo_izquierda_negro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="rombo_vacio_negro" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>rombo_vacio_negro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="flechaD_arriba_derecha_celeste" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>flechaD_arriba_derecha_celeste.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="flecha_izquierda_celeste - copia (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>flecha_izquierda_celeste - copia (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="flechaD_arriba_izquierda_rojo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>flechaD_arriba_izquierda_rojo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="flechaD_arriba_izquierda_amarillo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>flechaD_arriba_izquierda_amarillo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="flecha_derecha_morada" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>flecha_derecha_morada.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="flechaD_abajo_derecha_morado" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>flechaD_abajo_derecha_morado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="flechaD_abajo_izquierda_verde" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>flechaD_abajo_izquierda_verde.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="flechaD_abajo_derecha_rojo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>flechaD_abajo_derecha_rojo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="lineaD_arriba_izquierda_negro" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>lineaD_arriba_izquierda_negro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="flechaD_abajo_derecha_verde" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>flechaD_abajo_derecha_verde.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="flechaD_arriba_derecha_morado" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>flechaD_arriba_derecha_morado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="flechaD_abajo_izquierda_negra" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>flechaD_abajo_izquierda_negra.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="flechaD_arriba_izquierda_celeste" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>flechaD_arriba_izquierda_celeste.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="flecha_derecha_naranja" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>flecha_derecha_naranja.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="flechaD_arriba_derecha_negra" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>flechaD_arriba_derecha_negra.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="flecha_izquierda_roja" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>flecha_izquierda_roja.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="flecha_izquierda_verde" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>flecha_izquierda_verde.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="flecha_arriba_negra" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>flecha_arriba_negra.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="flechaD_arriba_izquierda_naranja" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>flechaD_arriba_izquierda_naranja.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="flechaD_abajo_izquierda_morado" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>flechaD_abajo_izquierda_morado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="flechaD_abajo_izquierda_naranja" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>flechaD_abajo_izquierda_naranja.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="flecha_izquierda_negra" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\flecha_izquierda_negra.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="flechaD_abajo_izquierda_celeste" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>flechaD_abajo_izquierda_celeste.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="flechaD_abajo_derecha_negra" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>flechaD_abajo_derecha_negra.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="paralelogramo_relleno_celeste" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>paralelogramo_relleno_celeste.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="flechaD_abajo_derecha_naranja" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>flechaD_abajo_derecha_naranja.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="flecha_izquierda_morada" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>flecha_izquierda_morada.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="flechaD_arriba_izquierda_negra" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>flechaD_arriba_izquierda_negra.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="flecha_derecha_negra" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>flecha_derecha_negra.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="flechaD_arriba_izquierda_morado" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>flechaD_arriba_izquierda_morado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="rectaungulo_vacio_rojo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>rectaungulo_vacio_rojo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="circulo_vacio_negro" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>circulo_vacio_negro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="linea_horizontal_negra" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>linea_horizontal_negra.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="rectaungulo_vacio_celeste" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>rectaungulo_vacio_celeste.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="flecha_abajo_negra" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>flecha_abajo_negra.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="flecha_izquierda_amarilla" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flecha_izquierda_amarilla.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="flechaD_abajo_izquierda_rojo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>flechaD_abajo_izquierda_rojo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="flechaD_arriba_izquierda_negra" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flechaD_arriba_izquierda_negra.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="flechaD_arriba_derecha_naranja" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>flechaD_arriba_derecha_naranja.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="rombo_relleno_celeste" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>rombo_relleno_celeste.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="linea_vertical_negra" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>linea_vertical_negra.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cuadrado_relleno_morado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>cuadrado_relleno_morado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rombo_relleno_rojo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>rombo_relleno_rojo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flechaD_abajo_izquierda_amarillo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flechaD_abajo_izquierda_amarillo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flecha_izquierda_morada" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flecha_izquierda_morada.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flechaD_abajo_izquierda_naranja" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flechaD_abajo_izquierda_naranja.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flecha_derecha_verde" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flecha_derecha_verde.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rombo_vacio_celeste" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>rombo_vacio_celeste.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flecha_izquierda_naranja" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flecha_izquierda_naranja.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lineaD_abajo_izquierda_negro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lineaD_abajo_izquierda_negro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flecha_izquierda_verde" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flecha_izquierda_verde.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cuadrado_vacio_verde" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>cuadrado_vacio_verde.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flecha_derecha_morada" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flecha_derecha_morada.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cuadrado_vacio_negro1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>cuadrado_vacio_negro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flecha_izquierda_celeste - copia (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flecha_izquierda_celeste - copia (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flechaD_abajo_izquierda_morado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flechaD_abajo_izquierda_morado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="paralelogramo_relleno_negro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>paralelogramo_relleno_negro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="circulo_vacio_morado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>circulo_vacio_morado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flecha_derecha_amarilla" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flecha_derecha_amarilla.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="flechaD_arriba_derecha_amarilla" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>flechaD_arriba_derecha_amarilla.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="linea_vertical_negra" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="rombo_relleno_amarillo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>rombo_relleno_amarillo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flecha_arriba_negra" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flecha_arriba_negra.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="linea_horizontal_negra" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>linea_horizontal_negra.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flechaD_abajo_izquierda_negra" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flechaD_abajo_izquierda_negra.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rectaungulo_relleno_negro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>rectaungulo_relleno_negro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="paralelogramo_vacio_morado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>paralelogramo_vacio_morado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="circulo_vacio_verde" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>circulo_vacio_verde.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cuadrado_vacio_celeste" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>cuadrado_vacio_celeste.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flechaD_arriba_derecha_morado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flechaD_arriba_derecha_morado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flechaD_abajo_derecha_rojo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flechaD_abajo_derecha_rojo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="paralelogramo_vacio_naranja" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>paralelogramo_vacio_naranja.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="circulo_relleno_naranja" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>circulo_relleno_naranja.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flechaD_arriba_izquierda_rojo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flechaD_arriba_izquierda_rojo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flecha_abajo_rojo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flecha_abajo_rojo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rombo_relleno_negro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>rombo_relleno_negro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="circulo_vacio_celeste" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>circulo_vacio_celeste.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rombo_relleno_verde" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>rombo_relleno_verde.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flechaD_abajo_derecha_negra" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flechaD_abajo_derecha_negra.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="circulo_relleno_morado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>circulo_relleno_morado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flechaD_abajo_derecha_naranja" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flechaD_abajo_derecha_naranja.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rectaungulo_relleno_amarillo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>rectaungulo_relleno_amarillo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flechaD_abajo_derecha_verde" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flechaD_abajo_derecha_verde.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flechaD_arriba_derecha_verde" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flechaD_arriba_derecha_verde.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rombo_relleno_naranja" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>rombo_relleno_naranja.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flechaD_abajo_derecha_morado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flechaD_abajo_derecha_morado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="paralelogramo_relleno_morado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>paralelogramo_relleno_morado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rectaungulo_relleno_celeste" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>rectaungulo_relleno_celeste.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rectaungulo_relleno_naranja" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>rectaungulo_relleno_naranja.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="paralelogramo_vacio_verde" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>paralelogramo_vacio_verde.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rombo_vacio_verde" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>rombo_vacio_verde.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flechaD_arriba_derecha_rojo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flechaD_arriba_derecha_rojo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rectaungulo_relleno_verde" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>rectaungulo_relleno_verde.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="circulo_relleno_verde" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>circulo_relleno_verde.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cuadrado_vacio_rojo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>cuadrado_vacio_rojo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rectaungulo_vacio_negro1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>rectaungulo_vacio_negro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flechaD_arriba_derecha_celeste" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flechaD_arriba_derecha_celeste.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cuadrado_vacio_negro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>cuadrado_vacio_negro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flecha_izquierda_negra1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flecha_izquierda_negra.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rectaungulo_vacio_naranja" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>rectaungulo_vacio_naranja.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flechaD_arriba_izquierda_naranja" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flechaD_arriba_izquierda_naranja.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flecha_derecha_negra" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flecha_derecha_negra.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rectaungulo_vacio_verde" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>rectaungulo_vacio_verde.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="circulo_relleno_rojo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>circulo_relleno_rojo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flechaD_arriba_izquierda_celeste" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flechaD_arriba_izquierda_celeste.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="paralelogramo_vacio_amarillo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>paralelogramo_vacio_amarillo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rectaungulo_vacio_morado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>rectaungulo_vacio_morado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="circulo_relleno_celeste" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>circulo_relleno_celeste.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cuadrado_relleno_amarillo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>cuadrado_relleno_amarillo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flecha_arriba_rojo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flecha_arriba_rojo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flechaD_abajo_izquierda_verde" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flechaD_abajo_izquierda_verde.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flecha_derecha_celeste" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flecha_derecha_celeste.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flechaD_abajo_derecha_celeste" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flechaD_abajo_derecha_celeste.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="circulo_vacio_naranja" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>circulo_vacio_naranja.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cuadrado_vacio_amarillo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>cuadrado_vacio_amarillo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flechaD_arriba_derecha_negra" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flechaD_arriba_derecha_negra.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rectaungulo_relleno_morado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>rectaungulo_relleno_morado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="paralelogramo_relleno_naranja" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>paralelogramo_relleno_naranja.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cuadrado_relleno_rojo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>cuadrado_relleno_rojo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cuadrado_vacio_naranja" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>cuadrado_vacio_naranja.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rombo_vacio_naranja" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>rombo_vacio_naranja.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="paralelogramo_vacio_rojo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>paralelogramo_vacio_rojo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="paralelogramo_relleno_rojo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>paralelogramo_relleno_rojo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rectaungulo_relleno_rojo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>rectaungulo_relleno_rojo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flechaD_arriba_derecha_naranja" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flechaD_arriba_derecha_naranja.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="paralelogramo_vacio_negro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>paralelogramo_vacio_negro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flecha_derecha_roja" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flecha_derecha_roja.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flecha_abajo_negra" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flecha_abajo_negra.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rombo_relleno_morado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>rombo_relleno_morado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="paralelogramo_vacio_celeste" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>paralelogramo_vacio_celeste.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flecha_derecha_naranja" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flecha_derecha_naranja.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="paralelogramo_vacio_negro1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>paralelogramo_vacio_negro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flecha_izquierda_roja" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flecha_izquierda_roja.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="circulo_vacio_rojo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>circulo_vacio_rojo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="paralelogramo_relleno_amarillo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>paralelogramo_relleno_amarillo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cuadrado_relleno_verde" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>cuadrado_relleno_verde.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rombo_vacio_rojo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>rombo_vacio_rojo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="paralelogramo_relleno_verde" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>paralelogramo_relleno_verde.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rectaungulo_vacio_negro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>rectaungulo_vacio_negro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cuadrado_relleno_negro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>cuadrado_relleno_negro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rombo_vacio_negro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>rombo_vacio_negro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cuadrado_vacio_morado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>cuadrado_vacio_morado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rombo_vacio_amarillo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>rombo_vacio_amarillo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flechaD_arriba_izquierda_morado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flechaD_arriba_izquierda_morado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rombo_vacio_negro1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>rombo_vacio_negro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="circulo_vacio_amarillo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>circulo_vacio_amarillo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flechaD_arriba_izquierda_verde" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flechaD_arriba_izquierda_verde.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="circulo_relleno_amarillo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>circulo_relleno_amarillo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flechaD_abajo_derecha_amarillo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flechaD_abajo_derecha_amarillo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lineaD_arriba_izquierda_negro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lineaD_arriba_izquierda_negro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="circulo_vacio_negro1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>circulo_vacio_negro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flecha_izquierda_negra" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\flecha_izquierda_negra.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flechaD_arriba_izquierda_amarillo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flechaD_arriba_izquierda_amarillo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cuadrado_relleno_naranja" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>cuadrado_relleno_naranja.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flecha_izquierda_celeste" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flecha_izquierda_celeste.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rombo_vacio_morado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>rombo_vacio_morado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="circulo_relleno_negro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>circulo_relleno_negro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flechaD_abajo_izquierda_rojo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flechaD_abajo_izquierda_rojo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cuadrado_relleno_celeste" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>cuadrado_relleno_celeste.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rectaungulo_vacio_amarillo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>rectaungulo_vacio_amarillo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flecha_abajo_amarillo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flecha_abajo_amarillo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flecha_abajo_celeste" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flecha_abajo_celeste.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flecha_abajo_morado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flecha_abajo_morado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flecha_abajo_naranja" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flecha_abajo_naranja.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flecha_abajo_rojo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flecha_abajo_rojo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flecha_abajo_verde" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flecha_abajo_verde.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flecha_arriba_amarillo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flecha_arriba_amarillo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flecha_arriba_celeste" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flecha_arriba_celeste.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flecha_arriba_morado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flecha_arriba_morado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flecha_arriba_naranja" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flecha_arriba_naranja.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flecha_arriba_rojo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flecha_arriba_rojo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flecha_arriba_verde" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flecha_arriba_verde.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flecha_derecha_amarilla1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flecha_derecha_amarilla.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flecha_derecha_celeste1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flecha_derecha_celeste.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flecha_derecha_morada1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flecha_derecha_morada.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flecha_derecha_naranja1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flecha_derecha_naranja.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flecha_derecha_negra1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flecha_derecha_negra.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flecha_derecha_roja1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flecha_derecha_roja.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flecha_derecha_verde1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flecha_derecha_verde.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flecha_izquierda_amarilla1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flecha_izquierda_amarilla.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flecha_izquierda_celeste - copia (2)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flecha_izquierda_celeste - copia (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flecha_izquierda_celeste1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flecha_izquierda_celeste.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flecha_izquierda_morada1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flecha_izquierda_morada.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flecha_izquierda_naranja1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flecha_izquierda_naranja.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flecha_izquierda_negra2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flecha_izquierda_negra.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flecha_izquierda_roja1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flecha_izquierda_roja.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flecha_izquierda_verde1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flecha_izquierda_verde.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flechaD_abajo_derecha_amarillo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flechaD_abajo_derecha_amarillo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flechaD_abajo_derecha_celeste1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flechaD_abajo_derecha_celeste.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flechaD_abajo_derecha_morado1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flechaD_abajo_derecha_morado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flechaD_abajo_derecha_naranja1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flechaD_abajo_derecha_naranja.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flechaD_abajo_derecha_negra1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flechaD_abajo_derecha_negra.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flechaD_abajo_derecha_rojo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flechaD_abajo_derecha_rojo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flechaD_abajo_derecha_verde1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flechaD_abajo_derecha_verde.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flechaD_abajo_izquierda_amarillo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flechaD_abajo_izquierda_amarillo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flechaD_abajo_izquierda_celeste1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flechaD_abajo_izquierda_celeste.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flechaD_abajo_izquierda_morado1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flechaD_abajo_izquierda_morado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flechaD_abajo_izquierda_naranja1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flechaD_abajo_izquierda_naranja.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flechaD_abajo_izquierda_negra1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flechaD_abajo_izquierda_negra.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flechaD_abajo_izquierda_rojo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flechaD_abajo_izquierda_rojo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flechaD_abajo_izquierda_verde1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flechaD_abajo_izquierda_verde.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flechaD_arriba_derecha_amarilla1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flechaD_arriba_derecha_amarilla.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flechaD_arriba_derecha_celeste1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flechaD_arriba_derecha_celeste.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flechaD_arriba_derecha_morado1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flechaD_arriba_derecha_morado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flechaD_arriba_derecha_naranja1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flechaD_arriba_derecha_naranja.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flechaD_arriba_derecha_negra1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flechaD_arriba_derecha_negra.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flechaD_arriba_derecha_rojo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flechaD_arriba_derecha_rojo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flechaD_arriba_derecha_verde1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flechaD_arriba_derecha_verde.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flechaD_arriba_izquierda_amarillo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flechaD_arriba_izquierda_amarillo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flechaD_arriba_izquierda_celeste1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flechaD_arriba_izquierda_celeste.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flechaD_arriba_izquierda_morado1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flechaD_arriba_izquierda_morado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flechaD_arriba_izquierda_naranja1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flechaD_arriba_izquierda_naranja.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flechaD_arriba_izquierda_negra1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flechaD_arriba_izquierda_negra.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flechaD_arriba_izquierda_rojo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flechaD_arriba_izquierda_rojo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flechaD_arriba_izquierda_verde1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>flechaD_arriba_izquierda_verde.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="linea_horizontal_amarillo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>linea_horizontal_amarillo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="linea_horizontal_celeste" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>linea_horizontal_celeste.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="linea_horizontal_morado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>linea_horizontal_morado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="linea_horizontal_naranja" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>linea_horizontal_naranja.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="linea_horizontal_negra1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>linea_horizontal_negra.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="linea_horizontal_roja" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>linea_horizontal_roja.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="linea_horizontal_verde" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>linea_horizontal_verde.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="linea_vertical_amarillo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>linea_vertical_amarillo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="linea_vertical_celeste" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>linea_vertical_celeste.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="linea_vertical_morado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>linea_vertical_morado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="linea_vertical_naranja" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>linea_vertical_naranja.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="linea_vertical_negra1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>linea_vertical_negra.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="linea_vertical_rojo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>linea_vertical_rojo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="linea_vertical_verde" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>linea_vertical_verde.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lineaD_abajo_izquierda_amarilla" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lineaD_abajo_izquierda_amarilla.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lineaD_abajo_izquierda_celeste" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lineaD_abajo_izquierda_celeste.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lineaD_abajo_izquierda_morado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lineaD_abajo_izquierda_morado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lineaD_abajo_izquierda_naranja" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lineaD_abajo_izquierda_naranja.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lineaD_abajo_izquierda_negro1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lineaD_abajo_izquierda_negro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lineaD_abajo_izquierda_rojo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lineaD_abajo_izquierda_rojo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lineaD_abajo_izquierda_verde" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lineaD_abajo_izquierda_verde.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lineaD_arriba_izquierda_amarilla" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lineaD_arriba_izquierda_amarilla.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lineaD_arriba_izquierda_celeste" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lineaD_arriba_izquierda_celeste.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lineaD_arriba_izquierda_morado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lineaD_arriba_izquierda_morado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lineaD_arriba_izquierda_naranja" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lineaD_arriba_izquierda_naranja.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lineaD_arriba_izquierda_negro1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lineaD_arriba_izquierda_negro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lineaD_arriba_izquierda_rojo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lineaD_arriba_izquierda_rojo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lineaD_arriba_izquierda_verde" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lineaD_arriba_izquierda_verde.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
